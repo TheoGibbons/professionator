@@ -1,0 +1,3 @@
+ItemPlanner.settings = {
+    debugEnabled = true,
+}

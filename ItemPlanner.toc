@@ -1,0 +1,77 @@
+## Interface: 11500
+## Version: 0.0.0
+## Title: Item Planner
+## Notes:
+## Author: Theo Gibbons
+## SavedVariables: ItemPlannerDB
+## SavedVariables: BunniesDB
+## OptionalDeps: Ace3 # if a user wants to run Ace3 standalone
+
+# Get the current Interface version by: `\dump select(4, GetBuildInfo())`
+
+Namespace.lua
+
+#ace3
+Libs\ace3\LibStub\LibStub.lua
+Libs\ace3\CallbackHandler-1.0\CallbackHandler-1.0.xml
+Libs\ace3\AceAddon-3.0\AceAddon-3.0.xml
+Libs\ace3\AceEvent-3.0\AceEvent-3.0.xml
+Libs\ace3\AceTimer-3.0\AceTimer-3.0.xml
+Libs\ace3\AceBucket-3.0\AceBucket-3.0.xml
+Libs\ace3\AceHook-3.0\AceHook-3.0.xml
+Libs\ace3\AceDB-3.0\AceDB-3.0.xml
+Libs\ace3\AceDBOptions-3.0\AceDBOptions-3.0.xml
+Libs\ace3\AceLocale-3.0\AceLocale-3.0.xml
+Libs\ace3\AceConsole-3.0\AceConsole-3.0.xml
+Libs\ace3\AceGUI-3.0\AceGUI-3.0.xml
+Libs\ace3\AceConfig-3.0\AceConfig-3.0.xml
+Libs\ace3\AceComm-3.0\AceComm-3.0.xml
+Libs\ace3\AceTab-3.0\AceTab-3.0.xml
+Libs\ace3\AceSerializer-3.0\AceSerializer-3.0.xml
+
+#LibDBIcon
+Libs\LibDBIcon-1.0\LibDataBroker-1.1\LibDataBroker-1.1.lua
+Libs\LibDBIcon-1.0\LibDBIcon-1.0\lib.xml
+
+#Library Scripts
+Libs\json.lua
+Libs\lbase64-master\base64.lua
+
+# Module Loader
+Modules\Libs\ItemPlannerLoader.lua
+
+#Settings
+Settings.lua
+
+#Classes
+Classes\Utils.lua
+Classes\ItemLink.lua
+
+#Models
+Classes\Models\Item.lua
+Classes\Models\StatWeights.lua
+Classes\Models\Filter.lua
+
+# Modules
+Modules\MinimapIcon\MinimapIcon.lua
+Modules\ModalWindow\ModalWindowFilter\ModalWindowFilter.lua
+Modules\ModalWindow\ModalWindowFilter\ModalWindowStatWeights.lua
+Modules\ModalWindow\ModalWindowActions\ModalWindowActions.lua
+Modules\ModalWindow\ModalWindowItemPlanel\ModalWindowItemPlanel.lua
+Modules\ModalWindow\View.lua
+Modules\ModalWindow\ModalWindow.lua
+Modules\Options\Options.lua
+
+#Databases
+Database\Slots.lua
+Database\Races.lua
+Database\Factions.lua
+Database\ArmorProficiencies.lua
+Database\Generated\classicItemDB.lua
+Database\Generated\classicClassMap.lua
+Database\Generated\classicItemSubclassMap.lua
+
+#Unit Tests
+Classes\UnitTester.lua
+
+Core.lua
