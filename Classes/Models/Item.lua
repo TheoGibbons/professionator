@@ -1,33 +1,33 @@
-local ItemPlannerDB = ItemPlannerLoader:ImportModule("ItemPlannerDB")
+local ProfessionatorDB = ProfessionatorLoader:ImportModule("ProfessionatorDB")
 
 --- @class Item
-ItemPlanner.Item = {}
-ItemPlanner.Item.__index = ItemPlanner.Item
+Professionator.Item = {}
+Professionator.Item.__index = Professionator.Item
 
 --- Creates a new Item instance.
 --- @param data table Item data
 --- @return Item
-function ItemPlanner.Item:Create(data)
+function Professionator.Item:Create(data)
     local this = setmetatable({}, self)
     this.data = data
     return this
 end
 
 --- Prints item data.
-function ItemPlanner.Item:printData()
+function Professionator.Item:printData()
     print(self.data)
 end
 
---- The ItemPlannerDB.itemData looks like this { [21] = { [25]={[0]='Worn Shortsword',[1]=2,...},
+--- The ProfessionatorDB.itemData looks like this { [21] = { [25]={[0]='Worn Shortsword',[1]=2,...},
 --- Which the [0] index is the name of the item, [1] is the item level ...
 --- This function will return the index of the data we are looking for.
 --- For example passing "name" to this function will return "0".
-function ItemPlanner.Item:getItemKeyIndex(itemKey)
+function Professionator.Item:getItemKeyIndex(itemKey)
 
-    local dataIndex = ItemPlannerDB.itemKeys[itemKey] or nil
+    local dataIndex = ProfessionatorDB.itemKeys[itemKey] or nil
 
     -- The item key MUST EXIST
-    -- NOTE: It must exist in the ItemPlannerDB.itemKeys array but it may not exist in the itemData array
+    -- NOTE: It must exist in the ProfessionatorDB.itemKeys array but it may not exist in the itemData array
     if (dataIndex == nil) then
         error("Item key not found: " .. itemKey)
     end
@@ -36,76 +36,76 @@ function ItemPlanner.Item:getItemKeyIndex(itemKey)
 
 end
 
-function ItemPlanner.Item:getStat(stat)
+function Professionator.Item:getStat(stat)
     local itemKeyIndex = self:getItemKeyIndex(stat)
     return self.data[itemKeyIndex] or nil
 end
 
 --- Gets the agility value.
 --- @return number Agility value
-function ItemPlanner.Item:getAgility()
+function Professionator.Item:getAgility()
     return self:getStat("agility")
 end
 
 --- Gets the id value.
 --- @return number id value
-function ItemPlanner.Item:getId()
+function Professionator.Item:getId()
     return self:getStat("id")
 end
 
 --- Gets the strength value.
 --- @return number Strength value
-function ItemPlanner.Item:getStrength()
+function Professionator.Item:getStrength()
     return self:getStat("strength")
 end
 
-function ItemPlanner.Item:getName()
+function Professionator.Item:getName()
     return self:getStat("name")
 end
-function ItemPlanner.Item:getSlotId()
+function Professionator.Item:getSlotId()
     return self:getStat("slot")
 end
-function ItemPlanner.Item:getSlotName()
-    local slotId = self:getSlotId()       -- EG: 1, 16, 21 (this matches ItemPlannerDB.slotNames array)
-    return ItemPlanner.Utils.getSlotNameFromId(slotId)       -- EG: "Head", "Main Hand", "One-Hand" (this matches ItemPlannerDB.slotNames array)
+function Professionator.Item:getSlotName()
+    local slotId = self:getSlotId()       -- EG: 1, 16, 21 (this matches ProfessionatorDB.slotNames array)
+    return Professionator.Utils.getSlotNameFromId(slotId)       -- EG: "Head", "Main Hand", "One-Hand" (this matches ProfessionatorDB.slotNames array)
 end
-function ItemPlanner.Item:getSlotId()
+function Professionator.Item:getSlotId()
     return self:getStat("slot")
 end
-function ItemPlanner.Item:getSubclassId()
+function Professionator.Item:getSubclassId()
     return self:getStat("itemSubclass")      -- EG: 1, 2, 4
 end
-function ItemPlanner.Item:getSubclassName()
+function Professionator.Item:getSubclassName()
     local subclassId = self:getSubclassId()      -- EG: 1, 2, 4
-    return ItemPlanner.Utils.getSubclassNameFromId(subclassId)       -- EG: "Chest"
+    return Professionator.Utils.getSubclassNameFromId(subclassId)       -- EG: "Chest"
 end
 
 --- Gets the suffix for items that have a suffix. EG Heavy Lamellar Gauntlets of the Monkey
 --- @return string|nil EG "614"
 --- @see https://warcraft.wiki.gg/wiki/SuffixId
-function ItemPlanner.Item:getSuffixId()
+function Professionator.Item:getSuffixId()
     return self:getStat("suffixId")
 end
 
 --- Gets the suffix text for items that have a suffix. EG Heavy Lamellar Gauntlets of the Monkey
 --- @return string|nil EG "of the Monkey"
 --- @see https://warcraft.wiki.gg/wiki/SuffixId
-function ItemPlanner.Item:getSuffixText()
+function Professionator.Item:getSuffixText()
     return self:getStat("suffixText")
 end
 
 --- Gets the suffix text for items that have a suffix. EG Heavy Lamellar Gauntlets of the Monkey
 --- @return string|nil EG "of the Monkey"
 --- @see https://warcraft.wiki.gg/wiki/SuffixId
-function ItemPlanner.Item:getSuffixText()
+function Professionator.Item:getSuffixText()
     return self:getStat("suffixText")
 end
 
-function ItemPlanner.Item:isUnattainable()
+function Professionator.Item:isUnattainable()
     return self:getStat("isUnattainable") or false
 end
 
-function ItemPlanner.Item:canBeWornByFaction(factionId)
+function Professionator.Item:canBeWornByFaction(factionId)
 
     local usableByFaction = self:getStat("usableByFaction")
 
@@ -120,21 +120,21 @@ function ItemPlanner.Item:canBeWornByFaction(factionId)
     return false
 end
 
-function ItemPlanner.Item:canBeWornByRace(raceName)
+function Professionator.Item:canBeWornByRace(raceName)
     local requiredRaces = self:getStat("reqraces")
 
     if (requiredRaces == nil) then
         return true
     end
 
-    if (ItemPlanner.Utils.inArray(raceName, requiredRaces)) then
+    if (Professionator.Utils.inArray(raceName, requiredRaces)) then
         return true
     end
 
     return false
 end
 
-function ItemPlanner.Item:canBeWornByClass(classId, level, slotId)
+function Professionator.Item:canBeWornByClass(classId, level, slotId)
 
     -- Item requires classes?
     local requiredClass = self:getStat("requiredClass")
@@ -143,7 +143,7 @@ function ItemPlanner.Item:canBeWornByClass(classId, level, slotId)
     if (requiredClass ~= nil) then
 
         -- Check if classId is one of the classes in the requiredClass array
-        if (not ItemPlanner.Utils.inArray(classId, requiredClass)) then
+        if (not Professionator.Utils.inArray(classId, requiredClass)) then
            return false
         end
     end
@@ -156,7 +156,7 @@ function ItemPlanner.Item:canBeWornByClass(classId, level, slotId)
     return true
 end
 
-function ItemPlanner.Item:canBeWornByLevel(level)
+function Professionator.Item:canBeWornByLevel(level)
     local requiredLevel = self:getStat("requiredLevel")
     if (requiredLevel ~= nil) then
         return level >= requiredLevel
@@ -167,14 +167,14 @@ end
 
 -- Can a class wear an item at a certain level
 -- EG a warrior at level 40 can wear plate
-function ItemPlanner.Item:canClassWearItemAtLevel(classId, level, slotId)
+function Professionator.Item:canClassWearItemAtLevel(classId, level, slotId)
     local minLevel = self:getMinEquipLevel(classId, slotId)
 
     return level >= minLevel
 end
 
 -- Pass in EG: "Hunter", "Chest", "Leather"
-function ItemPlanner.Item:getMinEquipLevel(classId)
+function Professionator.Item:getMinEquipLevel(classId)
 
     -- Everyone can wear this item
     local MIN_LEVEL = 1
@@ -188,10 +188,10 @@ function ItemPlanner.Item:getMinEquipLevel(classId)
     end
 
     -- Get the slot name of the item
-    local slotName = self:getSlotName()       -- EG: "Head", "Main Hand", "One-Hand" (this matches ItemPlannerDB.slotNames array)
+    local slotName = self:getSlotName()       -- EG: "Head", "Main Hand", "One-Hand" (this matches ProfessionatorDB.slotNames array)
 
-    -- Get the subclass of the item EG: "Cloth", "One-Handed Swords" (this matches ItemPlannerDB.itemSubclassMap)
-    local subclassName = self:getSubclassName()       -- EG: "Cloth", "One-Handed Swords" (this matches ItemPlannerDB.itemSubclassMap)
+    -- Get the subclass of the item EG: "Cloth", "One-Handed Swords" (this matches ProfessionatorDB.itemSubclassMap)
+    local subclassName = self:getSubclassName()       -- EG: "Cloth", "One-Handed Swords" (this matches ProfessionatorDB.itemSubclassMap)
 
     -- Here are some overrides for the slotName
     if slotName == "Held In Off-hand" then
@@ -213,12 +213,12 @@ function ItemPlanner.Item:getMinEquipLevel(classId)
     -- If the slot doesn't exist then return an impossible level
     if not slotName then
         --print("Slot name missing in map: " .. self:getSlotId())
-        ItemPlanner.Utils.addMissing(self:getId(), self:getSlotId())
+        Professionator.Utils.addMissing(self:getId(), self:getSlotId())
         return IMPOSSIBLE_LEVEL
     end
 
     -- Get the slot eg: Head, Chest, Legs
-    local slot = ItemPlannerDB.armorProficiencies[slotName]
+    local slot = ProfessionatorDB.armorProficiencies[slotName]
 
     -- Sometimes this is true (eg neck, finger) in which case we can just return the minimum level
     if slot == true then
@@ -230,7 +230,7 @@ function ItemPlanner.Item:getMinEquipLevel(classId)
     -- If the slot doesn't exist then return an impossible level
     if slot == nil then
         --print("Slot missing: " .. slotName)
-        ItemPlanner.Utils.addMissing(self:getId(), self:getSlotId(), slotName)
+        Professionator.Utils.addMissing(self:getId(), self:getSlotId(), slotName)
         return IMPOSSIBLE_LEVEL
     end
 
@@ -246,11 +246,11 @@ function ItemPlanner.Item:getMinEquipLevel(classId)
 
     if group == nil then
         --print("Item subclass missing: " .. slotName .. ' | ' .. subclassName)
-        ItemPlanner.Utils.addMissing(self:getId(), self:getSlotId(), slotName, subclassName)
+        Professionator.Utils.addMissing(self:getId(), self:getSlotId(), slotName, subclassName)
         return IMPOSSIBLE_LEVEL
     end
 
-    local className = ItemPlanner.Utils.getClassNameFromId(classId)
+    local className = Professionator.Utils.getClassNameFromId(classId)
 
     if group[className] then
         return group[className]       -- This returns the level required to equip the item

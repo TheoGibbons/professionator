@@ -1,4 +1,4 @@
-local ItemPlannerDB = ItemPlannerLoader:ImportModule("ItemPlannerDB")
+local ProfessionatorDB = ProfessionatorLoader:ImportModule("ProfessionatorDB")
 
 -- Wrath Death Knight - Cloth, Leather, Mail, Plate
 -- Druid - Cloth, Leather
@@ -50,7 +50,7 @@ local USUAL_ARMOR_PROFICIENCIES = {
     [""] = true, -- Quest items like "Gahz'ridian Detector"
 }
 
-ItemPlannerDB.armorProficiencies = {
+ProfessionatorDB.armorProficiencies = {
     Head = USUAL_ARMOR_PROFICIENCIES,
     Shoulder = USUAL_ARMOR_PROFICIENCIES,
     Chest = USUAL_ARMOR_PROFICIENCIES,

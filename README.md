@@ -2,7 +2,7 @@ Ace3 example with options panel and slash commands.
 - https://www.wowace.com/projects/ace3/pages/getting-started
 - https://wowpedia.fandom.com/wiki/Ace3_for_Dummies
 
-![](https://github.com/ketho-wow/ItemPlanner/raw/master/preview.png)
+![](https://github.com/ketho-wow/Professionator/raw/master/preview.png)
 
 ### Update dependencies
 1. https://www.wowace.com/projects/ace3/files

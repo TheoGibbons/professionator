@@ -1,3 +1,3 @@
-ItemPlanner.settings = {
+Professionator.settings = {
     debugEnabled = true,
 }

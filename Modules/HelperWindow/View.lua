@@ -1,9 +1,9 @@
 ---@field Render function
 
-local ModalWindow = ItemPlannerLoader:ImportModule("ModalWindow")
+local HelperWindow = ProfessionatorLoader:ImportModule("HelperWindow")
 
 local AceGUI = LibStub("AceGUI-3.0")
-function ModalWindow:Render()
+function HelperWindow:Render()
     -- Initialization logic
 
 

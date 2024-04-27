@@ -1,11 +1,11 @@
---- @class ItemPlanner.Utils
+--- @class Professionator.Utils
 
 
-local ItemPlannerDB = ItemPlannerLoader:ImportModule("ItemPlannerDB")
+local ProfessionatorDB = ProfessionatorLoader:ImportModule("ProfessionatorDB")
 
 local missing = {};
 
-ItemPlanner.Utils = {
+Professionator.Utils = {
 
     addBackgroundTexture = function(widget, r, g, b, a)
 
@@ -53,7 +53,7 @@ ItemPlanner.Utils = {
 
         for key, value in pairs(original) do
             if type(value) == "table" then
-                copy[key] = ItemPlanner.Utils.deepCopy(value)
+                copy[key] = Professionator.Utils.deepCopy(value)
             else
                 copy[key] = value
             end
@@ -64,13 +64,13 @@ ItemPlanner.Utils = {
     getAllItemsAsClasses = function()
 
         -- Create a deep copy of the item data
-        local items = ItemPlanner.Utils.deepCopy(ItemPlannerDB.itemData)
+        local items = Professionator.Utils.deepCopy(ProfessionatorDB.itemData)
 
         -- Convert the item data into Item instances
         for slotId, itemsInSlot in pairs(items) do
 
             for itemId, item in pairs(itemsInSlot) do
-                itemsInSlot[itemId] = ItemPlanner.Item:Create(item)
+                itemsInSlot[itemId] = Professionator.Item:Create(item)
             end
 
         end
@@ -86,7 +86,7 @@ ItemPlanner.Utils = {
             name = { name }
         end
 
-        for slotId, slotName in pairs(ItemPlannerDB.slotNames) do
+        for slotId, slotName in pairs(ProfessionatorDB.slotNames) do
             for _, nameToMatch in pairs(name) do
                 if (slotName == nameToMatch) then
                     return slotId
@@ -101,7 +101,7 @@ ItemPlanner.Utils = {
 
     getDefaultStatWeights = function()
 
-        return ItemPlanner.StatWeights:Create({
+        return Professionator.StatWeights:Create({
             ["intellect"] = 10,
             ["strength"] = 10,
             ["stamina"] = 50,
@@ -146,29 +146,29 @@ ItemPlanner.Utils = {
     end,
 
     -- Pass in EG 5 and it will return "Chest"
-    -- @see ItemPlannerDB.slotNames
+    -- @see ProfessionatorDB.slotNames
     getSlotNameFromId = function(slotId)
-        return ItemPlannerDB.slotNames[slotId]
+        return ProfessionatorDB.slotNames[slotId]
     end,
 
     -- Pass in EG 5 and it will return "Chest"
-    -- @see ItemPlannerDB.slotNames
+    -- @see ProfessionatorDB.slotNames
     getSubclassNameFromId = function(itemSubClassId)
-        return ItemPlannerDB.itemSubclassMap[itemSubClassId]
+        return ProfessionatorDB.itemSubclassMap[itemSubClassId]
     end,
 
     -- Pass in EG 5 and it will return "Priest"
-    -- @see ItemPlannerDB.classMap
+    -- @see ProfessionatorDB.classMap
     getClassNameFromId = function(classId)
-        return ItemPlannerDB.classMap[classId]
+        return ProfessionatorDB.classMap[classId]
     end,
 
     getFactionNameFromId = function(factionId)
-        return ItemPlannerDB.factions[factionId]
+        return ProfessionatorDB.factions[factionId]
     end,
 
     getFactionIdByName = function(factionName)
-        for factionId, name in pairs(ItemPlannerDB.factions) do
+        for factionId, name in pairs(ProfessionatorDB.factions) do
             if (name == factionName) then
                 return factionId
             end
@@ -176,9 +176,9 @@ ItemPlanner.Utils = {
         error(factionName .. " is not a valid faction name")
     end,
 
-    -- @see ItemPlannerDB.races
+    -- @see ProfessionatorDB.races
     getRaceIdByName = function(raceName)
-        for raceId, name in pairs(ItemPlannerDB.races) do
+        for raceId, name in pairs(ProfessionatorDB.races) do
             if (name == raceName) then
                 return raceId
             end
@@ -186,15 +186,15 @@ ItemPlanner.Utils = {
         error(raceName .. " is not a valid race name")
     end,
 
-    -- @see ItemPlannerDB.races
+    -- @see ProfessionatorDB.races
     getRaceNameFromId = function(raceId)
-        return ItemPlannerDB.races[raceId]
+        return ProfessionatorDB.races[raceId]
     end,
 
     -- Pass in EG "Priest" and it will return 5
-    -- @see ItemPlannerDB.classMap
+    -- @see ProfessionatorDB.classMap
     getClassIdByName = function(className)
-        for classId, name in pairs(ItemPlannerDB.classMap) do
+        for classId, name in pairs(ProfessionatorDB.classMap) do
             if (name == className) then
                 return classId
             end
@@ -206,51 +206,51 @@ ItemPlanner.Utils = {
 
     addMissing = function(itemId, slot, slotName, subclassName)
         -- Add to the missing array if it isn't already in there
-        if (slot and not ItemPlanner.Utils.missing[slot]) then
-            ItemPlanner.Utils.missing[slot] = {}
+        if (slot and not Professionator.Utils.missing[slot]) then
+            Professionator.Utils.missing[slot] = {}
         end
 
         if slot and slotName then
-            if (not ItemPlanner.Utils.missing[slot][slotName]) then
-                ItemPlanner.Utils.missing[slot][slotName] = {
+            if (not Professionator.Utils.missing[slot][slotName]) then
+                Professionator.Utils.missing[slot][slotName] = {
                     ['count'] = 1,
                     ['subclasses'] = {},
                     ['items'] = { itemId }
                 }
             else
-                ItemPlanner.Utils.missing[slot][slotName]['count'] = ItemPlanner.Utils.missing[slot][slotName]['count'] + 1
-                table.insert(ItemPlanner.Utils.missing[slot][slotName]['items'], itemId)
+                Professionator.Utils.missing[slot][slotName]['count'] = Professionator.Utils.missing[slot][slotName]['count'] + 1
+                table.insert(Professionator.Utils.missing[slot][slotName]['items'], itemId)
 
             end
         end
 
         if slot and slotName and subclassName then
 
-            if (not ItemPlanner.Utils.missing[slot][slotName]['subclasses'][subclassName]) then
-                ItemPlanner.Utils.missing[slot][slotName]['subclasses'][subclassName] = {}
-                ItemPlanner.Utils.missing[slot][slotName]['subclasses'][subclassName]['count'] = 1
-                ItemPlanner.Utils.missing[slot][slotName]['subclasses'][subclassName]['items'] = { itemId }
+            if (not Professionator.Utils.missing[slot][slotName]['subclasses'][subclassName]) then
+                Professionator.Utils.missing[slot][slotName]['subclasses'][subclassName] = {}
+                Professionator.Utils.missing[slot][slotName]['subclasses'][subclassName]['count'] = 1
+                Professionator.Utils.missing[slot][slotName]['subclasses'][subclassName]['items'] = { itemId }
             else
-                ItemPlanner.Utils.missing[slot][slotName]['subclasses'][subclassName]['count'] = ItemPlanner.Utils.missing[slot][slotName]['subclasses'][subclassName]['count'] + 1
-                table.insert(ItemPlanner.Utils.missing[slot][slotName]['subclasses'][subclassName]['items'], itemId)
+                Professionator.Utils.missing[slot][slotName]['subclasses'][subclassName]['count'] = Professionator.Utils.missing[slot][slotName]['subclasses'][subclassName]['count'] + 1
+                table.insert(Professionator.Utils.missing[slot][slotName]['subclasses'][subclassName]['items'], itemId)
             end
 
         end
     end,
 
     printAllMissing = function()
-        print("These slots are missing from the ItemPlannerDB.armorProficiencies map:")
-        for slot, slotData in pairs(ItemPlanner.Utils.missing) do
+        print("These slots are missing from the ProfessionatorDB.armorProficiencies map:")
+        for slot, slotData in pairs(Professionator.Utils.missing) do
             print("Slot: " .. slot)
             for slotName, slotNameData in pairs(slotData) do
 
-                local firstTwoItems = ItemPlanner.Utils.arraySlice(slotNameData['items'], 1, 5)
+                local firstTwoItems = Professionator.Utils.arraySlice(slotNameData['items'], 1, 5)
                 firstTwoItems = table.concat(firstTwoItems, ", ")
 
                 print("  Slot Name: " .. slotName .. " (" .. slotNameData['count'] .. ") [" .. firstTwoItems .. "]")
                 for subclassName, subclass in pairs(slotNameData['subclasses']) do
 
-                    firstTwoItems = ItemPlanner.Utils.arraySlice(subclass['items'], 1, 5)
+                    firstTwoItems = Professionator.Utils.arraySlice(subclass['items'], 1, 5)
                     firstTwoItems = table.concat(firstTwoItems, ", ")
 
                     print("    Subclass: " .. subclassName .. " (" .. subclass['count'] .. ") [" .. firstTwoItems .. "]")
@@ -270,13 +270,13 @@ ItemPlanner.Utils = {
     end,
 
     print = function(string, colour)
-        if ItemPlannerDebugPrint and type(ItemPlannerDebugPrint.print) == "function" then
+        if ProfessionatorDebugPrint and type(ProfessionatorDebugPrint.print) == "function" then
 
             if colour then
-                string = ItemPlanner.Utils.colourText(string, colour)
+                string = Professionator.Utils.colourText(string, colour)
             end
 
-            ItemPlannerDebugPrint:print(string)
+            ProfessionatorDebugPrint:print(string)
         else
             print(string)
         end

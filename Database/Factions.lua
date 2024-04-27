@@ -1,3 +1,3 @@
-local ItemPlannerDB = ItemPlannerLoader:ImportModule("ItemPlannerDB")
+local ProfessionatorDB = ProfessionatorLoader:ImportModule("ProfessionatorDB")
 
-ItemPlannerDB.factions = { "Alliance", "Horde" }
+ProfessionatorDB.factions = { "Alliance", "Horde" }

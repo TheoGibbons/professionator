@@ -1,1 +1,1 @@
-ItemPlanner = LibStub("AceAddon-3.0"):NewAddon("ItemPlanner", "AceEvent-3.0", "AceConsole-3.0")
+Professionator = LibStub("AceAddon-3.0"):NewAddon("Professionator", "AceEvent-3.0", "AceConsole-3.0")

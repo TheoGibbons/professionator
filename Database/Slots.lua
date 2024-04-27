@@ -1,8 +1,8 @@
 -- Generated manually from the source code on this page: https://www.wowhead.com/classic/items
 
-local ItemPlannerDB = ItemPlannerLoader:ImportModule("ItemPlannerDB")
+local ProfessionatorDB = ProfessionatorLoader:ImportModule("ProfessionatorDB")
 
-ItemPlannerDB.slotNames = {
+ProfessionatorDB.slotNames = {
     [24] = "Ammo",
     [16] = "Back",
     [18] = "Bag",

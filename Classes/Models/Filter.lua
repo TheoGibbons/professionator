@@ -1,11 +1,11 @@
 --- @class Filter
-ItemPlanner.Filter = {}
-ItemPlanner.Filter.__index = ItemPlanner.Filter
+Professionator.Filter = {}
+Professionator.Filter.__index = Professionator.Filter
 
 --- Creates a new Filter instance.
 --- @param data table Filter data
 --- @return Filter
-function ItemPlanner.Filter:Create(data)
+function Professionator.Filter:Create(data)
     local this = setmetatable({}, self)
     this.data = data or {}
     this.data.level = 1
@@ -13,7 +13,7 @@ function ItemPlanner.Filter:Create(data)
 end
 
 --- Prints Filter data.
-function ItemPlanner.Filter:Matches(item, slotId)
+function Professionator.Filter:Matches(item, slotId)
 
     -- faction check
     local faction = self:getFaction()
@@ -55,67 +55,67 @@ function ItemPlanner.Filter:Matches(item, slotId)
     return true
 end
 
-function ItemPlanner.Filter:setFaction(value)
+function Professionator.Filter:setFaction(value)
     self.data.faction = value
 end
 
-function ItemPlanner.Filter:setRace(value)
+function Professionator.Filter:setRace(value)
     self.data.race = value
 end
 
-function ItemPlanner.Filter:setClass(value)
+function Professionator.Filter:setClass(value)
     self.data.classId = value
 end
 
-function ItemPlanner.Filter:setLevel(value)
+function Professionator.Filter:setLevel(value)
     self.data.level = value
 end
 
-function ItemPlanner.Filter:setStatWeights(value)
+function Professionator.Filter:setStatWeights(value)
     self.data.statWeight = value
 end
 
-function ItemPlanner.Filter:getFaction()
+function Professionator.Filter:getFaction()
     return self.data.faction or nil
 end
 
-function ItemPlanner.Filter:getFactionName()
+function Professionator.Filter:getFactionName()
     if not self.data.faction then
         return nil
     end
-    return ItemPlanner.Utils.getFactionNameFromId(self.data.faction)
+    return Professionator.Utils.getFactionNameFromId(self.data.faction)
 end
 
-function ItemPlanner.Filter:getRace()
+function Professionator.Filter:getRace()
     return self.data.race or nil
 end
 
--- @see ItemPlannerDB.races
-function ItemPlanner.Filter:getRaceName()
+-- @see ProfessionatorDB.races
+function Professionator.Filter:getRaceName()
     local raceId = self:getRace()
     if not raceId then
         return nil
     end
-    return ItemPlanner.Utils.getRaceNameFromId(raceId)
+    return Professionator.Utils.getRaceNameFromId(raceId)
 end
 
-function ItemPlanner.Filter:getClassId()
+function Professionator.Filter:getClassId()
     return self.data.classId or nil
 end
 
-function ItemPlanner.Filter:getLevel()
+function Professionator.Filter:getLevel()
     return self.data.level or nil
 end
 
-function ItemPlanner.Filter:getStatWeights()
-    return self.data.statWeight or ItemPlanner.Utils.getDefaultStatWeights()
+function Professionator.Filter:getStatWeights()
+    return self.data.statWeight or Professionator.Utils.getDefaultStatWeights()
 end
 
 
 
-function ItemPlanner.Filter:getOrderedListOfItems()
+function Professionator.Filter:getOrderedListOfItems()
 
-    local items = ItemPlanner.Utils.getAllItemsAsClasses()
+    local items = Professionator.Utils.getAllItemsAsClasses()
 
     -- For each slot
     for slotId, itemsInSlot in pairs(items) do
@@ -141,7 +141,7 @@ function ItemPlanner.Filter:getOrderedListOfItems()
 
 end
 
-function ItemPlanner.Filter:orderItems(items)
+function Professionator.Filter:orderItems(items)
 
     local statWeights = self:getStatWeights()
     local orderedItems = {}

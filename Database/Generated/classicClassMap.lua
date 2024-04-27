@@ -1,9 +1,9 @@
 -- AUTO GENERATED FILE! DO NOT EDIT!
 
----@type ItemPlannerDB
-local ItemPlannerDB = ItemPlannerLoader:ImportModule("ItemPlannerDB")
+---@type ProfessionatorDB
+local ProfessionatorDB = ProfessionatorLoader:ImportModule("ProfessionatorDB")
 
-ItemPlannerDB.classMap = {
+ProfessionatorDB.classMap = {
 [1] = 'Warrior',
 [8] = 'Mage',
 [7] = 'Shaman',

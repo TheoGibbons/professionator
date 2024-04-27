@@ -1,9 +1,9 @@
 -- AUTO GENERATED FILE! DO NOT EDIT!
 
----@type ItemPlannerDB
-local ItemPlannerDB = ItemPlannerLoader:CreateModule("ItemPlannerDB")
+---@type ProfessionatorDB
+local ProfessionatorDB = ProfessionatorLoader:CreateModule("ProfessionatorDB")
 
-ItemPlannerDB.itemKeys = {
+ProfessionatorDB.itemKeys = {
 ['id'] = 0,
 ['name'] = 1,
 ['itemLevel'] = 2,
@@ -28,7 +28,7 @@ ItemPlannerDB.itemKeys = {
 ['isUnattainable'] = 21,
 }
 
-ItemPlannerDB.itemData = {
+ProfessionatorDB.itemData = {
     [21] = {  -- 21
 [25]={[0]=25,[1]='Worn Shortsword',[2]=2,[3]=0,[8]=21,[9]=1,},
 [36]={[0]=36,[1]='Worn Mace',[2]=2,[3]=2,[8]=21,[9]=1,},
@@ -17677,7 +17677,7 @@ ItemPlannerDB.itemData = {
     },
 }
 
-ItemPlannerDB.slots = {
+ProfessionatorDB.slots = {
 [21] = {
     ['name'] = 21,
     ['count'] = 385,

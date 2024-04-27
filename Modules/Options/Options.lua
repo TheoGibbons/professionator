@@ -1,4 +1,4 @@
-ItemPlanner.defaults = {
+Professionator.defaults = {
 	profile = {
 		someToggle = true,
 		someRange = 7,
@@ -8,10 +8,10 @@ ItemPlanner.defaults = {
 }
 
 -- https://www.wowace.com/projects/ace3/pages/ace-config-3-0-options-tables
-ItemPlanner.options = {
+Professionator.options = {
 	type = "group",
-	name = "ItemPlanner (label 2)",
-	handler = ItemPlanner,
+	name = "Professionator (label 2)",
+	handler = Professionator,
 	args = {
 		someToggle = {
 			type = "toggle",
@@ -19,8 +19,8 @@ ItemPlanner.options = {
 			name = "a checkbox",
 			desc = "some description",
 			-- inline getter/setter example
-			get = function(info) return ItemPlanner.db.profile.someToggle end,
-			set = function(info, value) ItemPlanner.db.profile.someToggle = value end,
+			get = function(info) return Professionator.db.profile.someToggle end,
+			set = function(info, value) Professionator.db.profile.someToggle = value end,
 		},
 		someRange = {
 			type = "range",
@@ -70,20 +70,20 @@ ItemPlanner.options = {
 	},
 }
 
-function ItemPlanner:GetSomeRange(info)
+function Professionator:GetSomeRange(info)
 	return self.db.profile.someRange
 end
 
-function ItemPlanner:SetSomeRange(info, value)
+function Professionator:SetSomeRange(info, value)
 	self.db.profile.someRange = value
 end
 
 -- for documentation on the info table
 -- https://www.wowace.com/projects/ace3/pages/ace-config-3-0-options-tables#title-4-1
-function ItemPlanner:GetValue(info)
+function Professionator:GetValue(info)
 	return self.db.profile[info[#info]]
 end
 
-function ItemPlanner:SetValue(info, value)
+function Professionator:SetValue(info, value)
 	self.db.profile[info[#info]] = value
 end

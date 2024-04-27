@@ -1,18 +1,18 @@
 --- @class StatWeights
-ItemPlanner.StatWeights = {}
-ItemPlanner.StatWeights.__index = ItemPlanner.StatWeights
+Professionator.StatWeights = {}
+Professionator.StatWeights.__index = Professionator.StatWeights
 
 --- Creates a new StatWeights instance.
 --- @param data table StatWeights data
 --- @return StatWeights
-function ItemPlanner.StatWeights:Create(data)
+function Professionator.StatWeights:Create(data)
     local this = setmetatable({}, self)
     this.data = data
     return this
 end
 
 --- Prints StatWeights data.
-function ItemPlanner.StatWeights:calculateScore(item)
+function Professionator.StatWeights:calculateScore(item)
 
     local score = 0
 

@@ -52,7 +52,7 @@ ItemLinkHelper = {
     -- Returns: table (a sequence table containing the substrings)
     split = function(text, pattern, plain)
         local ret = {}
-        for match in ItemPlanner.ItemLinkHelper.gsplit(text, pattern, plain) do
+        for match in Professionator.ItemLinkHelper.gsplit(text, pattern, plain) do
             table.insert(ret, match)
         end
         return ret
@@ -63,13 +63,13 @@ ItemLinkHelper = {
     -- 2. "|cff1eff00|Hitem:10242::::::614:::::::::::|h[Heavy Lamellar Gauntlets of the Monkey]|h|r"
     addSuffixToItemLink = function(itemLink, suffixId, suffixText)
         -- Split the string on "|"
-        local parts = ItemPlanner.ItemLinkHelper.split(itemLink, "|")
+        local parts = Professionator.ItemLinkHelper.split(itemLink, "|")
 
         -- Add suffixText to the end of the third part
         parts[4] = parts[4]:sub(1, -2) .. suffixText .. "]"
 
         -- Split the second part using ":"
-        local itemParts = ItemPlanner.ItemLinkHelper.split(parts[3], ":")
+        local itemParts = Professionator.ItemLinkHelper.split(parts[3], ":")
 
         -- Replace the 8th item if it exists
         if itemParts[8] then
@@ -106,7 +106,7 @@ ItemLinkHelper = {
         -- If suffixId is provided then continue
         if suffixId then
             itemLinkLinkable = itemLinkLinkable .. suffixText
-            itemLinkHoverable = ItemPlanner.ItemLinkHelper.addSuffixToItemLink(itemLinkHoverable, suffixId, suffixText)
+            itemLinkHoverable = Professionator.ItemLinkHelper.addSuffixToItemLink(itemLinkHoverable, suffixId, suffixText)
         end
 
         return {
@@ -118,4 +118,4 @@ ItemLinkHelper = {
 
 }
 
-ItemPlanner.ItemLinkHelper = ItemLinkHelper
+Professionator.ItemLinkHelper = ItemLinkHelper

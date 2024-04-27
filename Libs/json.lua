@@ -385,4 +385,4 @@ function json.decode(str)
 end
 
 
-ItemPlanner.Json = json
+Professionator.Json = json

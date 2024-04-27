@@ -1,36 +1,36 @@
 --- @class UnitTester
-ItemPlanner.UnitTester = {}
-ItemPlanner.UnitTester.__index = ItemPlanner.UnitTester
+Professionator.UnitTester = {}
+Professionator.UnitTester.__index = Professionator.UnitTester
 
 --- Creates a new UnitTester instance.
 --- @param data table UnitTester data
 --- @return UnitTester
-function ItemPlanner.UnitTester:Create(data)
+function Professionator.UnitTester:Create(data)
     local this = setmetatable({}, self)
     this.data = data
     return this
 end
 
-function ItemPlanner.UnitTester:RunTests()
+function Professionator.UnitTester:RunTests()
 
     self:TestFilter()
 
 end
 
 -- Helper function to get a list of items matching a filter
-function ItemPlanner.UnitTester:getAllItemsAsClasses(
-        faction, -- "Alliance", "Horde" (Modules/ModalWindow/ModalWindowFilter/ModalWindowFilter.lua:14)
-        race, -- "Night Elf", "Gnome", "Tauren", etc (Modules/ModalWindow/ModalWindowFilter/ModalWindowFilter.lua:14)
+function Professionator.UnitTester:getAllItemsAsClasses(
+        faction, -- "Alliance", "Horde" (Modules/HelperWindow/HelperWindowFilter/HelperWindowFilter.lua:14)
+        race, -- "Night Elf", "Gnome", "Tauren", etc (Modules/HelperWindow/HelperWindowFilter/HelperWindowFilter.lua:14)
         class, -- "Priest", "Warrior", "Paladin", etc(Database/Generated/classicClassMap.lua:6)
         level, --
-        slotName      -- "Shoulder", "Off Hand", "One-Hand", etc (Modules/ModalWindow/ModalWindowItemPlanel/ModalWindowItemPlanel.lua:135)
+        slotName      -- "Shoulder", "Off Hand", "One-Hand", etc (Modules/HelperWindow/HelperWindowItemPlanel/HelperWindowItemPlanel.lua:135)
 )
 
-    faction = ItemPlanner.Utils.getFactionIdByName(faction)
-    race = ItemPlanner.Utils.getRaceIdByName(race)
-    class = ItemPlanner.Utils.getClassIdByName(class)
+    faction = Professionator.Utils.getFactionIdByName(faction)
+    race = Professionator.Utils.getRaceIdByName(race)
+    class = Professionator.Utils.getClassIdByName(class)
 
-    local filter = ItemPlanner.Filter:Create()
+    local filter = Professionator.Filter:Create()
     filter:setFaction(faction)
     filter:setRace(race)
     filter:setClass(class)
@@ -39,13 +39,13 @@ function ItemPlanner.UnitTester:getAllItemsAsClasses(
     local listOfItems = filter:getOrderedListOfItems()
 
     -- Get all the items that fit in this slot
-    local slotId = ItemPlanner.Utils.getSlotIdByName(slotName)
+    local slotId = Professionator.Utils.getSlotIdByName(slotName)
 
     return listOfItems[slotId] or {}
 
 end
 
-function ItemPlanner.UnitTester:TestFilter()
+function Professionator.UnitTester:TestFilter()
 
     local listOfItems
 
@@ -268,11 +268,11 @@ function ItemPlanner.UnitTester:TestFilter()
 
 end
 
-function ItemPlanner.UnitTester:assertListContainsItem(shouldContain, listOfItems, itemId, itemName)
+function Professionator.UnitTester:assertListContainsItem(shouldContain, listOfItems, itemId, itemName)
 
     local found
     for _, item in pairs(listOfItems) do
-        --ItemPlanner.Utils.print("Test:" .. item:getId() .. ' - ' .. item:getName(), "000000ff")
+        --Professionator.Utils.print("Test:" .. item:getId() .. ' - ' .. item:getName(), "000000ff")
         if (item:getId() .. '' == itemId .. '') then
             found = item
             break
@@ -284,25 +284,25 @@ function ItemPlanner.UnitTester:assertListContainsItem(shouldContain, listOfItem
         if found then
 
             if found:getName() == itemName then
-                ItemPlanner.Utils.print("Success: Item " .. itemId .. " (" .. itemName .. ") found in list.", "0028a745")
+                Professionator.Utils.print("Success: Item " .. itemId .. " (" .. itemName .. ") found in list.", "0028a745")
             else
-                ItemPlanner.Utils.print("Failed: Item " .. itemId .. " found in list. However the name is incorrect. Expected: " .. itemName .. " Actual: " .. found:getName(), "00ffc107")
+                Professionator.Utils.print("Failed: Item " .. itemId .. " found in list. However the name is incorrect. Expected: " .. itemName .. " Actual: " .. found:getName(), "00ffc107")
             end
 
         else
-            ItemPlanner.Utils.print("Failed: Item " .. itemId .. " (" .. itemName .. ") not found in list", "00dc3545")
+            Professionator.Utils.print("Failed: Item " .. itemId .. " (" .. itemName .. ") not found in list", "00dc3545")
         end
 
     else
 
         if found then
             if found:getName() == itemName then
-                ItemPlanner.Utils.print("Failed: Item " .. itemId .. " (" .. itemName .. ") found in list when it shouldn't be.", "00dc3545")
+                Professionator.Utils.print("Failed: Item " .. itemId .. " (" .. itemName .. ") found in list when it shouldn't be.", "00dc3545")
             else
-                ItemPlanner.Utils.print("Failed: Item " .. itemId .. " found in list when it shouldn't be. Also, the name is incorrect. Expected: " .. itemName .. " Actual: " .. found:getName(), "00ffc107")
+                Professionator.Utils.print("Failed: Item " .. itemId .. " found in list when it shouldn't be. Also, the name is incorrect. Expected: " .. itemName .. " Actual: " .. found:getName(), "00ffc107")
             end
         else
-            ItemPlanner.Utils.print("Success: Item " .. itemId .. " (" .. itemName .. ") not found in list.", "0028a745")
+            Professionator.Utils.print("Success: Item " .. itemId .. " (" .. itemName .. ") not found in list.", "0028a745")
         end
 
     end

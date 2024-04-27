@@ -1,9 +1,9 @@
 ## Interface: 11500
 ## Version: 0.0.0
-## Title: Item Planner
+## Title: Professionator
 ## Notes:
 ## Author: Theo Gibbons
-## SavedVariables: ItemPlannerDB
+## SavedVariables: ProfessionatorDB
 ## SavedVariables: BunniesDB
 ## OptionalDeps: Ace3 # if a user wants to run Ace3 standalone
 
@@ -38,7 +38,7 @@ Libs\json.lua
 Libs\lbase64-master\base64.lua
 
 # Module Loader
-Modules\Libs\ItemPlannerLoader.lua
+Modules\Libs\ProfessionatorLoader.lua
 
 #Settings
 Settings.lua
@@ -53,13 +53,9 @@ Classes\Models\StatWeights.lua
 Classes\Models\Filter.lua
 
 # Modules
-Modules\MinimapIcon\MinimapIcon.lua
-Modules\ModalWindow\ModalWindowFilter\ModalWindowFilter.lua
-Modules\ModalWindow\ModalWindowFilter\ModalWindowStatWeights.lua
-Modules\ModalWindow\ModalWindowActions\ModalWindowActions.lua
-Modules\ModalWindow\ModalWindowItemPlanel\ModalWindowItemPlanel.lua
-Modules\ModalWindow\View.lua
-Modules\ModalWindow\ModalWindow.lua
+Modules\CharacterKnownRecipes\CharacterKnownRecipes.lua
+Modules\HelperWindow\View.lua
+Modules\HelperWindow\HelperWindow.lua
 Modules\Options\Options.lua
 
 #Databases
