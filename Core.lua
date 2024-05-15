@@ -2,11 +2,14 @@
 local AC = LibStub("AceConfig-3.0")
 local ACD = LibStub("AceConfigDialog-3.0")
 
----@type HelperWindow
-local HelperWindow = ProfessionatorLoader:ImportModule("HelperWindow")
+---@type ProfessionatorWindow
+local ProfessionatorWindow = ProfessionatorLoader:ImportModule("ProfessionatorWindow")
 
 ---@type CharacterKnownRecipes
 local CharacterKnownRecipes = ProfessionatorLoader:ImportModule("CharacterKnownRecipes")
+
+---@type CreateWindow
+local CreateWindow = ProfessionatorLoader:ImportModule("CreateWindow")
 
 function Professionator:OnInitialize()
 
@@ -30,12 +33,12 @@ function Professionator:OnInitialize()
 	self:GetCharacterInfo()
 
 	-- The help window (that pops up to the right of the trade skills window)
-	HelperWindow:Register()
+	ProfessionatorWindow:Register()
 
 	-- Keep track of know recipes
 	CharacterKnownRecipes:Register()
 
-	--Professionator.Utils:printAllGlobals()
+	--Professionator.Utils.printAllGlobals()
 end
 
 function Professionator:OnEnable()
@@ -55,6 +58,10 @@ function Professionator:SlashCommand(input, editbox)
 
 		local unitTester = Professionator.UnitTester:Create()
 		unitTester:RunTests()
+
+	elseif input == "test-window" then
+
+		CreateWindow:Test()
 
 	else
 		self:Print("Some useful help message.")

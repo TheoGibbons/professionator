@@ -1,289 +1,298 @@
 --- @class Professionator.Utils
 
-
 local ProfessionatorDB = ProfessionatorLoader:ImportModule("ProfessionatorDB")
-
-local missing = {};
 
 Professionator.Utils = {
 
-    addBackgroundTexture = function(widget, r, g, b, a)
+    -- GetSpellIdFromSpellName
+    -- @param professionName string EG "Enchanting", "Tailoring"
+    -- @param spellName string EG "Enchant Bracer - Minor Health", "Bolt of Linen Cloth"
+    -- @return number OR nil
+    GetSpellIdFromSpellName = function(professionName, spellName)
 
-        r = r or 200
-        g = g or 200
-        b = b or 200
-        a = a or 0.5
+        professionName = professionName:lower()
 
-        -- Add a texture to simulate the background color
-        local bgTexture = widget.frame:CreateTexture(nil, "BACKGROUND")
-        bgTexture:SetColorTexture(r, g, b, a)  -- Set the background color (RGBA: 0, 0, 0, 0.3)
-        bgTexture:SetAllPoints(widget.frame)
-    end,
+        local possibleRecipes = ProfessionatorDB[professionName] or nil
 
-    base64DecodeUrlSafe = function(data)
-
-        data = string.gsub(data, "+", ".")
-        data = string.gsub(data, "/", "_")
-        data = string.gsub(data, "=", "-")
-
-        return base64.decode(data)
-
-    end,
-
-    base64EncodeUrlSafe = function(data)
-
-        local ret = base64.encode(data)
-
-        ret = string.gsub(ret, "+", ".")
-        ret = string.gsub(ret, "/", "_")
-        ret = string.gsub(ret, "=", "-")
-
-        return ret
-
-    end,
-
-    -- Create a deep copy of a table
-    deepCopy = function(original)
-        local copy = {}
-
-        -- If the original is not a table then return it
-        if type(original) ~= "table" then
-            return original
+        if possibleRecipes == nil then
+            DEFAULT_CHAT_FRAME:AddMessage("ERROR: Unknown profession '" .. professionName .. "'", 1, 0, 0)
+            return nil
         end
 
-        for key, value in pairs(original) do
-            if type(value) == "table" then
-                copy[key] = Professionator.Utils.deepCopy(value)
-            else
-                copy[key] = value
-            end
-        end
-        return copy
-    end,
-
-    getAllItemsAsClasses = function()
-
-        -- Create a deep copy of the item data
-        local items = Professionator.Utils.deepCopy(ProfessionatorDB.itemData)
-
-        -- Convert the item data into Item instances
-        for slotId, itemsInSlot in pairs(items) do
-
-            for itemId, item in pairs(itemsInSlot) do
-                itemsInSlot[itemId] = Professionator.Item:Create(item)
-            end
-
-        end
-
-        return items
-
-    end,
-
-    getSlotIdByName = function(name)
-
-        -- If name isn't an array then convert it to an array
-        if (type(name) ~= "table") then
-            name = { name }
-        end
-
-        for slotId, slotName in pairs(ProfessionatorDB.slotNames) do
-            for _, nameToMatch in pairs(name) do
-                if (slotName == nameToMatch) then
-                    return slotId
-                end
+        for spellId, recipe in pairs(possibleRecipes) do
+            if recipe.name == spellName then
+                return spellId
             end
         end
 
-        -- Throw error
-        error("Invalid slot name: " .. table.concat(name, "/"))
+        return nil
 
-    end,
-
-    getDefaultStatWeights = function()
-
-        return Professionator.StatWeights:Create({
-            ["intellect"] = 10,
-            ["strength"] = 10,
-            ["stamina"] = 50,
-        })
-
-    end,
-
-    tableLimit = function(inputTable, n)
-        local count = 0
-        local newTable = {}
-
-        -- Iterate through the original table and copy the first n elements to a new table
-        for key, value in pairs(inputTable) do
-            count = count + 1
-            if count <= n then
-                newTable[key] = value
-            else
-                break
-            end
-        end
-
-        return newTable
-
-    end,
-
-    tableCountKeys = function(inputTable)
-        local count = 0
-        for _, _ in pairs(inputTable) do
-            count = count + 1
-        end
-        return count
-    end,
-
-    -- Pass in EG "Warrior" and it will return 1
-    inArray = function(needle, haystack)
-        for _, value in ipairs(haystack) do
-            if (value == needle) then
-                return true
-            end
-        end
-        return false
-    end,
-
-    -- Pass in EG 5 and it will return "Chest"
-    -- @see ProfessionatorDB.slotNames
-    getSlotNameFromId = function(slotId)
-        return ProfessionatorDB.slotNames[slotId]
-    end,
-
-    -- Pass in EG 5 and it will return "Chest"
-    -- @see ProfessionatorDB.slotNames
-    getSubclassNameFromId = function(itemSubClassId)
-        return ProfessionatorDB.itemSubclassMap[itemSubClassId]
-    end,
-
-    -- Pass in EG 5 and it will return "Priest"
-    -- @see ProfessionatorDB.classMap
-    getClassNameFromId = function(classId)
-        return ProfessionatorDB.classMap[classId]
-    end,
-
-    getFactionNameFromId = function(factionId)
-        return ProfessionatorDB.factions[factionId]
-    end,
-
-    getFactionIdByName = function(factionName)
-        for factionId, name in pairs(ProfessionatorDB.factions) do
-            if (name == factionName) then
-                return factionId
-            end
-        end
-        error(factionName .. " is not a valid faction name")
-    end,
-
-    -- @see ProfessionatorDB.races
-    getRaceIdByName = function(raceName)
-        for raceId, name in pairs(ProfessionatorDB.races) do
-            if (name == raceName) then
-                return raceId
-            end
-        end
-        error(raceName .. " is not a valid race name")
-    end,
-
-    -- @see ProfessionatorDB.races
-    getRaceNameFromId = function(raceId)
-        return ProfessionatorDB.races[raceId]
-    end,
-
-    -- Pass in EG "Priest" and it will return 5
-    -- @see ProfessionatorDB.classMap
-    getClassIdByName = function(className)
-        for classId, name in pairs(ProfessionatorDB.classMap) do
-            if (name == className) then
-                return classId
-            end
-        end
-        error(className .. " is not a valid class name")
-    end,
-
-    missing = {},
-
-    addMissing = function(itemId, slot, slotName, subclassName)
-        -- Add to the missing array if it isn't already in there
-        if (slot and not Professionator.Utils.missing[slot]) then
-            Professionator.Utils.missing[slot] = {}
-        end
-
-        if slot and slotName then
-            if (not Professionator.Utils.missing[slot][slotName]) then
-                Professionator.Utils.missing[slot][slotName] = {
-                    ['count'] = 1,
-                    ['subclasses'] = {},
-                    ['items'] = { itemId }
-                }
-            else
-                Professionator.Utils.missing[slot][slotName]['count'] = Professionator.Utils.missing[slot][slotName]['count'] + 1
-                table.insert(Professionator.Utils.missing[slot][slotName]['items'], itemId)
-
-            end
-        end
-
-        if slot and slotName and subclassName then
-
-            if (not Professionator.Utils.missing[slot][slotName]['subclasses'][subclassName]) then
-                Professionator.Utils.missing[slot][slotName]['subclasses'][subclassName] = {}
-                Professionator.Utils.missing[slot][slotName]['subclasses'][subclassName]['count'] = 1
-                Professionator.Utils.missing[slot][slotName]['subclasses'][subclassName]['items'] = { itemId }
-            else
-                Professionator.Utils.missing[slot][slotName]['subclasses'][subclassName]['count'] = Professionator.Utils.missing[slot][slotName]['subclasses'][subclassName]['count'] + 1
-                table.insert(Professionator.Utils.missing[slot][slotName]['subclasses'][subclassName]['items'], itemId)
-            end
-
-        end
-    end,
-
-    printAllMissing = function()
-        print("These slots are missing from the ProfessionatorDB.armorProficiencies map:")
-        for slot, slotData in pairs(Professionator.Utils.missing) do
-            print("Slot: " .. slot)
-            for slotName, slotNameData in pairs(slotData) do
-
-                local firstTwoItems = Professionator.Utils.arraySlice(slotNameData['items'], 1, 5)
-                firstTwoItems = table.concat(firstTwoItems, ", ")
-
-                print("  Slot Name: " .. slotName .. " (" .. slotNameData['count'] .. ") [" .. firstTwoItems .. "]")
-                for subclassName, subclass in pairs(slotNameData['subclasses']) do
-
-                    firstTwoItems = Professionator.Utils.arraySlice(subclass['items'], 1, 5)
-                    firstTwoItems = table.concat(firstTwoItems, ", ")
-
-                    print("    Subclass: " .. subclassName .. " (" .. subclass['count'] .. ") [" .. firstTwoItems .. "]")
-                end
-            end
-        end
-    end,
-
-    arraySlice = function(array, start, stop)
-        local ret = {}
-        for i = start, stop do
-            if array[i] then
-                table.insert(ret, array[i])
-            end
-        end
-        return ret
     end,
 
     print = function(string, colour)
-        if ProfessionatorDebugPrint and type(ProfessionatorDebugPrint.print) == "function" then
+        if ItemPlannerDebugPrint and type(ItemPlannerDebugPrint.print) == "function" then
 
             if colour then
                 string = Professionator.Utils.colourText(string, colour)
             end
 
-            ProfessionatorDebugPrint:print(string)
+            ItemPlannerDebugPrint:print(string)
         else
             print(string)
         end
     end,
 
-    colourText = function(string, color)
-        return "|c" .. color .. string.gsub(string, "|", "||") .. "|r"
+    colourText = function(inputString, color)
+        -- Escape any existing color codes in the input string
+        local escapedString = inputString:gsub("|", "||")
+        -- Construct the colored text with the provided color
+        return "|c" .. color .. escapedString .. "|r"
+    end,
+
+    dd = function(value)
+        Professionator.Utils.print(Professionator.Utils.dumpVariable(value))
+    end,
+
+    debugPrint = function(value)
+        if Professionator.settings.debugEnabled then
+            Professionator.Utils.print(Professionator.Utils.dumpVariable(value))
+        end
+    end,
+
+    isArray = function(table)
+        local isArray = true
+        local i = 1
+        for k, _ in pairs(table) do
+            if k ~= i then
+                isArray = false
+                break
+            end
+            i = i + 1
+        end
+
+        return isArray
+    end,
+
+    dumpVariable = function(var, indent)
+        indent = indent or 0
+        local result = ""
+        local varType = type(var)
+        if varType == "table" then
+            local isArray = Professionator.Utils.isArray(var)
+            if isArray then
+                result = result .. "[ "
+                local first = true
+                for _, v in ipairs(var) do
+                    if not first then
+                        result = result .. ", "
+                    end
+                    result = result .. Professionator.Utils.dumpVariable(v, indent)
+                    first = false
+                end
+                result = result .. " ]"
+            else
+                result = result .. "{\n"
+                for k, v in pairs(var) do
+                    result = result .. string.rep(" ", indent + 4) .. "\"" .. k .. "\": "
+                    result = result .. Professionator.Utils.dumpVariable(v, indent + 4) .. ",\n"
+                end
+                result = result .. string.rep(" ", indent) .. "}"
+            end
+        elseif varType == "string" then
+            result = result .. "\"" .. var .. "\""
+        elseif varType == "boolean" or var == nil then
+            result = result .. tostring(var)
+        else
+            result = result .. var
+        end
+        return result
+    end,
+
+    getRecipeCraftCost = function(professionName, spellId)
+
+        if professionName == 'enchanting' then
+            return Professionator.Utils.getEnchantingCraftCost(professionName, spellId)
+        else
+            return Professionator.Utils.getCraftCost(professionName, spellId)
+        end
+
+    end,
+
+    getLinkFromItemId = function(itemId)
+
+        local itemName, itemLink, itemRarity, itemLevel, itemMinLevel, itemType,
+        itemSubType, itemStackCount, itemEquipLoc, itemTexture, itemSellPrice =
+        GetItemInfo(itemId)
+
+        return itemLink
+
+    end,
+
+    -- Enchanting is different to all other professions for some reason
+    getEnchantingCraftCost = function(professionName, spellId)
+
+        -- Make sure we're only calling this for Enchanting
+        if professionName ~= 'enchanting' then
+            Professionator.Utils.debugPrint("ERROR: getEnchantingCraftCost called with professionName '" .. professionName .. "'")
+            return nil
+        end
+
+        local possibleRecipes = ProfessionatorDB[professionName:lower()] or nil
+        local recipe = possibleRecipes[spellId] or nil
+
+        if recipe == nil then
+            Professionator.Utils.debugPrint("ERROR: Recipe not found for spellId '" .. spellId .. "'")
+            return nil
+        end
+
+        local cost = 0
+
+        for reagentId, reagent in pairs(recipe.reagents) do
+            local link = Professionator.Utils.getLinkFromItemId(reagentId)
+            if link ~= nil then
+
+                local quantity = reagent['quantity']
+
+                local vendorPrice = Auctionator.API.v1.GetVendorPriceByItemLink(AUCTIONATOR_L_REAGENT_SEARCH, link)
+                local auctionPrice = Auctionator.API.v1.GetAuctionPriceByItemLink(AUCTIONATOR_L_REAGENT_SEARCH, link)
+
+                local unitPrice = vendorPrice or auctionPrice
+
+                if unitPrice ~= nil then
+                    cost = cost + (quantity * unitPrice)
+                end
+            end
+
+        end
+
+        return cost
+
+    end,
+
+    -- This works for all professions except Enchanting
+    getCraftCost = function(professionName, spellId)
+
+        -- Make sure we're only calling this for Enchanting
+        if professionName == 'enchanting' then
+            Professionator.Utils.debugPrint("ERROR: getCraftCost called with professionName '" .. professionName .. "'")
+            return nil
+        end
+
+        -- TODO
+        Professionator.Utils.debugPrint("ERROR: TODO")
+    end,
+
+    getRecipeCraftProfit = function(professionName, recipe)
+
+    end,
+
+    formatNumericWithCommas = function(amount)
+        local k
+        while true do
+            amount, k = string_gsub(amount, "^(-?%d+)(%d%d%d)", '%1,%2')
+            if k == 0 then
+                break
+            end
+        end
+        return amount
+    end,
+
+    GetMoneyString = function(amount)
+        if amount > 0 then
+            local formatted
+            local gold,silver,copper = math.floor(amount / 100 / 100), math.floor((amount / 100) % 100), math.floor(amount % 100)
+            if gold > 0 then
+                formatted = Professionator.Utils.formatNumericWithCommas(gold) .. "|TInterface\\MONEYFRAME\\UI-GoldIcon:0|t"
+            end
+            if silver > 0 then
+                formatted = (formatted or "") .. silver .. "|TInterface\\MONEYFRAME\\UI-SilverIcon:0|t"
+            end
+            if copper > 0 then
+                formatted = (formatted or "") .. copper .. "|TInterface\\MONEYFRAME\\UI-CopperIcon:0|t"
+            end
+            return formatted
+        end
+        return amount
+    end,
+
+    -- Sort a table by the value of a field in the table
+    -- Lua's table.sort() is limited by the fact that it only works on tables with sequential numeric keys
+    -- This function is not limited in that way
+    -- @param tbl table EG: { [-1] = { index = 3, name = "y" }, [0] = { index = 2, name = "z" }, ["hello"] = { index = 8, name = "world" }}
+    -- @param sortFunc function EG: function(a, b) return a.index < b.index end
+    -- @return table with sequential numeric keys (original keys are lost)
+    --      EG: { [1] = { index = 2, name = "z" }, [2] = { index = 2, name = "z" }, [3] = { index = 8, name = "world" }}
+    sortTable = function(tbl, sortFunc)
+        local sequence = {}
+        for k, v in pairs(tbl) do
+            table.insert(sequence, v)
+        end
+
+        table.sort(sequence, function(a, b)
+            return sortFunc(a, b)
+        end)
+
+        return sequence
+    end,
+
+    -- Crafting "Enchant Bracer - Minor Stamina" at skill level 125 has a chance of leveling up the Enchanting skill of 37.5%
+    -- This function calculates that percentage
+    -- @see https://www.reddit.com/r/woweconomy/comments/9epibc/crafting_skillups_exact_skillup_chance/
+    chanceForCraftToLevel = function(level, grey, yellow)
+        local percent = (grey - level) / (grey - yellow)
+        return math.min(1, math.max(0, percent))
+    end,
+
+    -- pass in a number like 0.1234567
+    -- get back a number like 12%
+    prettyPercentage = function(percentage)
+        percentage = Professionator.Utils.sigfig(percentage)
+        return (percentage * 100) .. '%'
+    end,
+
+    -- EG:
+    -- 0.1234567 -> 0.12
+    -- 1234567 -> 1200000
+    sigfig = function(number, figures)
+        figures = figures or 2  -- default to 2 significant figures
+        local scale = 10 ^ (figures - math.floor(math.log10(math.abs(number))) - 1)
+        local rounded = math.floor(number * scale + 0.5) / scale
+        return rounded
+    end,
+
+    -- This deepCopy function recursively copies tables and their contents, ensuring that original is an independent
+    -- copy of the result rather than just referencing the same table.
+    deepCopy = function(original)
+        local copy
+        if type(original) == "table" then
+            copy = {}
+            for k, v in pairs(original) do
+                copy[k] = Professionator.Utils.deepCopy(v)
+            end
+        else
+            copy = original
+        end
+        return copy
+    end,
+
+    tableMin = function(t)
+        local minValue = math.huge -- Initialize with a large value
+        for _, v in pairs(t) do
+            if v < minValue then
+                minValue = v
+            end
+        end
+        return minValue
+    end,
+
+    tableMax = function(t)
+        local maxValue = -math.huge -- Initialize with a very small value
+        for _, v in pairs(t) do
+            if v > maxValue then
+                maxValue = v
+            end
+        end
+        return maxValue
     end,
 
 }

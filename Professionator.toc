@@ -33,12 +33,13 @@ Libs\ace3\AceSerializer-3.0\AceSerializer-3.0.xml
 Libs\LibDBIcon-1.0\LibDataBroker-1.1\LibDataBroker-1.1.lua
 Libs\LibDBIcon-1.0\LibDBIcon-1.0\lib.xml
 
+# Module Loader
+Modules\Libs\ProfessionatorLoader.lua
+
 #Library Scripts
 Libs\json.lua
 Libs\lbase64-master\base64.lua
-
-# Module Loader
-Modules\Libs\ProfessionatorLoader.lua
+Libs\CreateWindow\CreateWindow.lua
 
 #Settings
 Settings.lua
@@ -48,26 +49,19 @@ Classes\Utils.lua
 Classes\ItemLink.lua
 
 #Models
-Classes\Models\Item.lua
-Classes\Models\StatWeights.lua
-Classes\Models\Filter.lua
 
 # Modules
 Modules\CharacterKnownRecipes\CharacterKnownRecipes.lua
-Modules\HelperWindow\View.lua
-Modules\HelperWindow\HelperWindow.lua
+Modules\ProfessionatorWindow\View.lua
+Modules\ProfessionatorWindow\ProfessionatorWindow.lua
 Modules\Options\Options.lua
+Modules\CalculationEngine\CalculationEngine.lua
+Modules\GameTooltip\GameTooltip.lua
 
 #Databases
-Database\Slots.lua
-Database\Races.lua
-Database\Factions.lua
-Database\ArmorProficiencies.lua
-Database\Generated\classicItemDB.lua
-Database\Generated\classicClassMap.lua
-Database\Generated\classicItemSubclassMap.lua
+Database\Generated\classicRecipes.lua
 
 #Unit Tests
-Classes\UnitTester.lua
+#Classes\UnitTester.lua
 
 Core.lua

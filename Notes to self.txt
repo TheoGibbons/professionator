@@ -1,2 +1,32 @@
  • Use Professionator.Utils:base64EncodeUrlSafeOther when the function is intended to be a method of an object, where self will be passed automatically as the first argument. This is typically used when you're working with object-oriented Lua code, where methods are defined as functions that accept self as the first parameter. It's akin to instance methods in other object-oriented languages.
  • Use Professionator.Utils.base64EncodeUrlSafe when the function is not intended to be a method of an object, similar to static methods in other languages. This syntax is used for standalone functions or utility functions that do not rely on an object instance and don't need to be called with an object reference.
+
+ Example illustrating the difference between ipairs and pairs:
+ In short, use pairs for everything except: use ipairs when the table is ordered and has integer keys starting from 1 (not 0) with no gaps.
+ https://stackoverflow.com/questions/55108794/what-is-the-difference-between-pairs-and-ipairs-in-lua
+ > u = {}
+ > u[-1] = "y"
+ > u[0] = "z"
+ > u[1] = "a"
+ > u[3] = "b"
+ > u[2] = "c"
+ > u[4] = "d"
+ > u[6] = "e"
+ > u["hello"] = "world"
+ >
+ > for key, value in ipairs(u) do print(key, value) end
+ 1       a
+ 2       c
+ 3       b
+ 4       d
+ >
+ > for key, value in pairs(u) do print(key, value) end
+ 1       a
+ 2       c
+ 3       b
+ 4       d
+ 6       e
+ 0       z
+ hello   world
+ -1      y
+ >
