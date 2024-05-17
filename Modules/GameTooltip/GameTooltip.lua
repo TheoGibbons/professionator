@@ -38,23 +38,29 @@ function GameTooltip:SetupTooltip(options)
         -- Create background texture
         targetElement.tooltipFrame.backgroundTexture = targetElement.tooltipFrame:CreateTexture(nil, "BACKGROUND")
         targetElement.tooltipFrame.backgroundTexture:SetAllPoints(targetElement.tooltipFrame)
-        targetElement.tooltipFrame.backgroundTexture:SetColorTexture(100, 100, 100, 0.7) -- Black with 70% opacity
+        targetElement.tooltipFrame.backgroundTexture:SetColorTexture(0, 0, 0, 0.7) -- Black with 70% opacity
+        -- Add a nice background
+        --targetElement.tooltipFrame.backgroundTexture:SetTexture("Interface\\DialogFrame\\UI-DialogBox-Border")
+        --targetElement.tooltipFrame.backgroundTexture:SetTexture("Interface\\Tooltips\\UI-Tooltip-Border")
+        targetElement.tooltipFrame.backgroundTexture:SetTexture("Interface\\Tooltips\\ChatBubble-Backdrop")
 
         -- Create font string for text
         targetElement.tooltipFrame.text = targetElement.tooltipFrame:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
-        targetElement.tooltipFrame.text:SetPoint("TOPLEFT", targetElement.tooltipFrame, "TOPLEFT")
-        targetElement.tooltipFrame.text:SetPoint("TOPRIGHT", targetElement.tooltipFrame, "TOPRIGHT")
+        targetElement.tooltipFrame.text:SetPoint("TOPLEFT", targetElement.tooltipFrame, "TOPLEFT", padding, -padding)
+        targetElement.tooltipFrame.text:SetPoint("BOTTOMRIGHT", targetElement.tooltipFrame, "BOTTOMRIGHT", -padding, padding)
+        targetElement.tooltipFrame.text:SetJustifyH("LEFT") -- Align text to the left
+        targetElement.tooltipFrame.text:SetJustifyV("TOP") -- Align text to the top
         targetElement.tooltipFrame.text:SetWordWrap(true) -- Enable word wrapping for the text
     end
 
     -- Set text and adjust tooltip size based on text width
     targetElement.tooltipFrame.text:SetText(text)
-    targetElement.tooltipFrame.text:SetWidth(maxWidth - padding) -- Subtracting padding
+    targetElement.tooltipFrame.text:SetWidth(maxWidth - (padding * 2)) -- Subtracting padding
     targetElement.tooltipFrame.text:SetHeight(0) -- Reset height to auto-adjust based on content
     local textHeight = targetElement.tooltipFrame.text:GetStringHeight()
-    local tooltipWidth = math.min(maxWidth, targetElement.tooltipFrame.text:GetStringWidth() + padding) -- Adding padding
+    local tooltipWidth = math.min(maxWidth, targetElement.tooltipFrame.text:GetStringWidth() + (padding * 2)) -- Adding padding
 
-    targetElement.tooltipFrame:SetSize(tooltipWidth, textHeight + (padding / 2)) -- Adding padding
+    targetElement.tooltipFrame:SetSize(tooltipWidth, textHeight + (padding * 2)) -- Adding padding
 
     targetElement.tooltipFrame:SetPoint(anchor1, targetElement, anchor2)
 
@@ -65,4 +71,13 @@ function GameTooltip:SetupTooltip(options)
     targetElement:SetScript("OnLeave", function()
         targetElement.tooltipFrame:Hide()
     end)
+
+
+    --GameTooltip_SetDefaultAnchor(GameTooltip,UIParent)
+    GameTooltip:SetOwner(parentFrame, "ANCHOR_BOTTOM", 0,0	)
+    GameTooltip:ClearLines()
+    GameTooltip:AddLine("test",0.9,0.9,0.9,1)
+    --GameTooltip:AddLine(string.format(GBB.L["msgLastTime"],GBB.formatTime(time()-req.last)).."|n"..string.format(GBB.L["msgTotalTime"],GBB.formatTime(time()-req.start)))
+
+    GameTooltip:Show()
 end
