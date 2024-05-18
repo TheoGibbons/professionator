@@ -63,7 +63,7 @@ local function getRecipesByLevel(possibleRecipes, startLevel, endLevel)
                 -- is the recipe gray at this level?
                 if recipe.grey > level then
 
-                    table.insert(recipes, recipe)
+                    table.insert(recipes, Professionator.Utils.deepCopy(recipe))
 
                 end
 
@@ -85,11 +85,9 @@ local function getOrderedRecipesByLevel(recipesByLevel)
 
     for level, recipesAtThisLevel in pairs(recipesByLevel) do
 
-        Professionator.Utils.sortTable(recipesAtThisLevel, function(a, b)
+        orderedRecipesByLevel[level] = Professionator.Utils.sortTable(recipesAtThisLevel, function(a, b)
             return a.averageCostToLevel < b.averageCostToLevel
         end)
-
-        orderedRecipesByLevel[level] = recipesAtThisLevel
 
     end
 

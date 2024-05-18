@@ -9,7 +9,7 @@
 local ProfessionatorWindow = ProfessionatorLoader:CreateModule("ProfessionatorWindow")
 local CreateWindow = ProfessionatorLoader:ImportModule("CreateWindow")
 local CalculationEngine = ProfessionatorLoader:ImportModule("CalculationEngine")
-local GameTooltip = ProfessionatorLoader:ImportModule("GameTooltip")
+local MyGameTooltip = ProfessionatorLoader:ImportModule("MyGameTooltip")
 
 -- Create a local variable for the frame this should be immediately hidden because it isn't even setup yet
 local modalWindow
@@ -90,26 +90,60 @@ function RecipeListPrintRow(frame, printRowData, yOffset)
     )
 
     recipeText:SetText(printLevel ..
-            " " .. cleanUpName(printRowData.name) ..
-            " - ave:" .. printRowData.averageCostToLevel ..
-            " - craft:" .. (printRowData.costToCraft or 'Unknown') ..
-            " - chanc:" .. rangePrint(
-                    Professionator.Utils.prettyPercentage(Professionator.Utils.tableMin(printRowData.chancePerCastToLevel)),
-                    Professionator.Utils.prettyPercentage(Professionator.Utils.tableMax(printRowData.chancePerCastToLevel))
-            ) ..
-            " - casts:" .. printRowData.averageCastsToLevel
+            " " .. cleanUpName(printRowData.recipe.name) ..
+            " x " .. Professionator.Utils.round(printRowData.averageCastsToLevel)
     )
 
-    GameTooltip:SetupTooltip({
+    MyGameTooltip:SetupTooltip({
         targetElement = recipeText,
-        parentFrame = frame,
-        text = printRowData.name .. "\n" ..
-                "Average Cost to Level " .. printLevel .. ": " .. printRowData.averageCostToLevel .. "\n" ..
-                "Chance to level: " .. rangePrint(
-                        Professionator.Utils.prettyPercentage(Professionator.Utils.tableMin(printRowData.chancePerCastToLevel)),
-                        Professionator.Utils.prettyPercentage(Professionator.Utils.tableMax(printRowData.chancePerCastToLevel))
-                ) .. "\n" ..
-                "Average number of casts: " .. printRowData.averageCastsToLevel,
+        beforeShow = function(tooltip)
+            tooltip:ClearLines()
+            tooltip:AddSpellByID(printRowData.recipe.id)
+            tooltip:AddLine(" ", 1, 1, 1)
+            tooltip:AddLine("-----------------------------", 1, 1, 1)
+            tooltip:AddLine("Right click to use a different recipe", 1, 1, 1)
+            tooltip:AddLine("-----------------------------", 1, 1, 1)
+            tooltip:AddLine("Average Cost to Level " .. printLevel .. ": " .. Professionator.Utils.GetMoneyString(printRowData.averageCostToLevel))
+            tooltip:AddLine("Chance to level: " .. rangePrint(
+                    Professionator.Utils.prettyPercentage(Professionator.Utils.tableMax(printRowData.chancePerCastToLevel)),
+                    Professionator.Utils.prettyPercentage(Professionator.Utils.tableMin(printRowData.chancePerCastToLevel))
+            ))
+            tooltip:AddLine("Time spent casting: " .. Professionator.Utils.round(printRowData.recipe.cast_time * printRowData.averageCastsToLevel, 1) .. 'sec')
+
+            -- Print recipe location/cost
+            if UnitFactionGroup("player") == "Horde" then
+                if printRowData.recipe.recipe_source_horde_long ~= nil then
+                    tooltip:AddLine("Recipe Source (" .. printRowData.recipe.learnedat .. "): " .. printRowData.recipe.recipe_source_horde_long)
+
+                    if printRowData.recipe.recipe_item_id_bop == false and printRowData.recipe.recipe_item_id_horde ~= nil then
+                        tooltip:AddLine("Recipe cost on AH: " .. Professionator.Utils.GetMoneyString(Professionator.Utils.cost(printRowData.recipe.recipe_item_id_horde)))
+                    end
+                end
+            else
+                if printRowData.recipe.recipe_source_alliance_long ~= nil then
+                    tooltip:AddLine("Recipe Source (" .. printRowData.recipe.learnedat .. "): " .. printRowData.recipe.recipe_source_alliance_long)
+
+                    if printRowData.recipe.recipe_item_id_bop == false and printRowData.recipe.recipe_item_id_alliance ~= nil then
+                        tooltip:AddLine("Recipe cost on AH: " .. Professionator.Utils.GetMoneyString(Professionator.Utils.getItemCost(printRowData.recipe.recipe_item_id_alliance)))
+                    end
+                end
+            end
+
+            if #printRowData.alternatives > 0 then
+                tooltip:AddLine("Alternatives: " .. Professionator.Utils.implode(', ', Professionator.Utils.arrayUnique(printRowData.alternatives)))
+            end
+
+            if printRowData.count > 7 or printRowData.count == 1 then
+                tooltip:AddLine("Average number of casts to level: " .. Professionator.Utils.round(printRowData.averageCastsToLevel))
+            else
+                tooltip:AddLine("Average number of casts:")
+                for level, averageCastsToLevel in Professionator.Utils.orderedPairs(printRowData.averageCastsToLevels) do
+                    tooltip:AddLine("  " .. level .. ": " .. Professionator.Utils.round(averageCastsToLevel, 2))
+                end
+                tooltip:AddLine("  total: " .. Professionator.Utils.round(printRowData.averageCastsToLevel))
+            end
+
+        end,
     })
 
 end
@@ -128,14 +162,14 @@ function GenerateRecipeList(professionName)
     -- There is no need to print 30 rows for this let's combine them into 2 rows
     -- That is the point of these rowData and initialRowData variables
     local initialPrintRowData = {
-        id = nil,
-        name = nil,
-        costToCraft = nil,
+        recipe = nil,
         count = 0,
         levels = {},
         averageCastsToLevel = 0,
+        averageCastsToLevels = {},
         chancePerCastToLevel = {},
         averageCostToLevel = 0,
+        alternatives = {},
     }
     local printRowData = Professionator.Utils.deepCopy(initialPrintRowData)
 
@@ -148,8 +182,8 @@ function GenerateRecipeList(professionName)
         end
 
         -- Print this row?
-        if printRowData.id ~= nil then
-            if printRowData.id ~= recipe.id then
+        if printRowData.recipe ~= nil and printRowData.recipe.id ~= nil then
+            if printRowData.recipe.id ~= recipe.id then
                 RecipeListPrintRow(frame, printRowData, yOffset)
                 yOffset = yOffset - 20 -- Adjusting y offset for the next recipe name
                 printRowData = Professionator.Utils.deepCopy(initialPrintRowData)
@@ -157,17 +191,25 @@ function GenerateRecipeList(professionName)
         end
 
         -- update printRowData
-        printRowData.id = recipe.id
-        printRowData.name = recipe.name
-        printRowData.costToCraft = recipe.costToCraft
+        printRowData.recipe = recipe
         printRowData.count = printRowData.count + 1
         table.insert(printRowData.levels, level)
         printRowData.averageCastsToLevel = printRowData.averageCastsToLevel + recipe.averageCastsToLevel
+        printRowData.averageCastsToLevels[level] = recipe.averageCastsToLevel
         table.insert(printRowData.chancePerCastToLevel, recipe.chancePerCastToLevel)
         printRowData.averageCostToLevel = printRowData.averageCastsToLevel * recipe.costToCraft
+
+        if recipesAtLevel[2] then
+            table.insert(printRowData.alternatives, cleanUpName(recipesAtLevel[2].name))
+        end
+
+        -- TODO testing
+        if(level == 275) then
+            Professionator.Utils.dd(recipesAtLevel)
+        end
     end
 
-    if printRowData.id ~= nil then
+    if printRowData.recipe ~= nil and printRowData.recipe.id ~= nil then
         RecipeListPrintRow(frame, printRowData, yOffset)
     end
 

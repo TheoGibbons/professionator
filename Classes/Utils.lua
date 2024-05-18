@@ -129,6 +129,14 @@ Professionator.Utils = {
     end,
 
     -- Enchanting is different to all other professions for some reason
+    getItemCost = function(itemId)
+        local vendorPrice = Auctionator.API.v1.GetVendorPriceByItemID(AUCTIONATOR_L_REAGENT_SEARCH, itemId)
+        local auctionPrice = Auctionator.API.v1.GetAuctionPriceByItemID(AUCTIONATOR_L_REAGENT_SEARCH, itemId)
+
+        return vendorPrice or auctionPrice
+    end,
+
+    -- Enchanting is different to all other professions for some reason
     getEnchantingCraftCost = function(professionName, spellId)
 
         -- Make sure we're only calling this for Enchanting
@@ -182,14 +190,10 @@ Professionator.Utils = {
         Professionator.Utils.debugPrint("ERROR: TODO")
     end,
 
-    getRecipeCraftProfit = function(professionName, recipe)
-
-    end,
-
     formatNumericWithCommas = function(amount)
         local k
         while true do
-            amount, k = string_gsub(amount, "^(-?%d+)(%d%d%d)", '%1,%2')
+            amount, k = tostring(amount):gsub("^(-?%d+)(%d%d%d)", '%1,%2')
             if k == 0 then
                 break
             end
@@ -198,6 +202,9 @@ Professionator.Utils = {
     end,
 
     GetMoneyString = function(amount)
+        if amount == nil then
+            return "none"
+        end
         if amount > 0 then
             local formatted
             local gold,silver,copper = math.floor(amount / 100 / 100), math.floor((amount / 100) % 100), math.floor(amount % 100)
@@ -293,6 +300,62 @@ Professionator.Utils = {
             end
         end
         return maxValue
+    end,
+
+    round = function(num)
+        return math.floor(num + 0.5)
+    end,
+
+    -- lua has #table to get the length of a table, but it only works for tables with sequential numeric keys
+    arrayLength = function(arr)
+        local count = 0
+        for _ in pairs(arr) do
+            count = count + 1
+        end
+        return count
+    end,
+
+    -- In lua pairs doesn't guarantee the order of keys
+    -- This function returns an iterator that will return the keys in order
+    -- Only works for tables with numeric keys
+    orderedPairs = function(t)
+        local keys = {}
+        for k in pairs(t) do
+            keys[#keys + 1] = k
+        end
+        table.sort(keys)
+        local i = 0
+        return function()
+            i = i + 1
+            if keys[i] then
+                return keys[i], t[keys[i]]
+            end
+        end
+    end,
+
+    arrayUnique = function(arr)
+        local unique = {}
+        for _, v in ipairs(arr) do
+            unique[v] = true
+        end
+        local result = {}
+        for k, _ in pairs(unique) do
+            table.insert(result, k)
+        end
+        return result
+    end,
+
+    implode = function(separator, arr)
+        local result = ""
+        local firstItem = true
+        for _, v in ipairs(arr) do
+            if not firstItem then
+                result = result .. separator
+            end
+            result = result .. v
+            firstItem = false
+        end
+        return result
     end,
 
 }
