@@ -1,34 +1,50 @@
--- CharacterKnownRecipes.lua
+-- CharacterKnownRecipesModule.lua
 
 -- The entire purpose of this module is to keep track of all the recipes that the player knows
 -- This information will be kept track of by this `CachedRecipes` variable
 
----@class CharacterKnownRecipes
+---@class CharacterKnownRecipesModule
 ---@field Initialize function
 ---@field Toggle function
 ---@field Show function
 ---@field Hide function
 
-local CharacterKnownRecipes = ProfessionatorLoader:CreateModule("CharacterKnownRecipes")
+local CharacterKnownRecipesModule = ProfessionatorLoader:CreateModule("CharacterKnownRecipesModule")
 
 -- This is an array of all recipes known by the player
--- It will look like {"<character_name>-<server_name>": {"Enchanting": {123, 456, ...}, "Blacksmithing": {789, 1011, ...}, ...}}
+-- It will look like {"<character_name>-<server_name>": {"enchanting": {"currentSkillLevel":115, "maxSkillLevel" : 300, "recipes" : {123, 456, ...}, "blacksmithing": ...}}
 local CachedRecipes = {}
 
 local function getCharacterId()
-    return UnitName("player") .. "-" .. GetRealmName()
+    return Professionator.Utils.getCharacterId()
 end
 
-function CharacterKnownRecipes:Get(professionName)
+function CharacterKnownRecipesModule:Get(professionName)
     return CachedRecipes[getCharacterId()] and CachedRecipes[getCharacterId()][professionName] or {}
 end
 
-function CharacterKnownRecipes:Register()
+function CharacterKnownRecipesModule:GetKnownRecipes()
+    return CachedRecipes[getCharacterId()] or {}
+end
+
+function CharacterKnownRecipesModule:SetKnownRecipes(recipes)
+    CachedRecipes[getCharacterId()] = recipes
+end
+
+function CharacterKnownRecipesModule:KnowsRecipe(professionName, recipeSpellId)
+    if self:Get(professionName).recipes == nil then
+        return false
+    end
+
+    return tableContains(self:Get(professionName).recipes, recipeSpellId)
+end
+
+function CharacterKnownRecipesModule:Register()
 
     -- Register the event
     -- When any trade window is opened, we want to show the helper window
     -- Which is a window off to the right of their trade window
-    -- The actual content of the window will come from: CharacterKnownRecipes:Viewify(self)
+    -- The actual content of the window will come from: CharacterKnownRecipesModule:Viewify(self)
 
     local frame = CreateFrame("Frame")
     frame:RegisterEvent("TRADE_SKILL_SHOW");
@@ -135,6 +151,8 @@ function tableContains(table, value)
 end
 
 function addToCache(skillName, skillLevel, skillMaxLevel, recipes)
+
+    skillName = skillName:lower()
 
     local characterId = getCharacterId()
 

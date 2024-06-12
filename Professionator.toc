@@ -1,15 +1,11 @@
-## Interface: 11500
+## Interface: 11502
 ## Version: 0.0.0
 ## Title: Professionator
 ## Notes:
 ## Author: Theo Gibbons
-## SavedVariables: ProfessionatorDB
-## SavedVariables: BunniesDB
 ## OptionalDeps: Ace3 # if a user wants to run Ace3 standalone
 
-# Get the current Interface version by: `\dump select(4, GetBuildInfo())`
-
-Namespace.lua
+# Get the current Interface version by: `/dump select(4, GetBuildInfo())`
 
 #ace3
 Libs\ace3\LibStub\LibStub.lua
@@ -33,6 +29,8 @@ Libs\ace3\AceSerializer-3.0\AceSerializer-3.0.xml
 Libs\LibDBIcon-1.0\LibDataBroker-1.1\LibDataBroker-1.1.lua
 Libs\LibDBIcon-1.0\LibDBIcon-1.0\lib.xml
 
+Namespace.lua
+
 # Module Loader
 Modules\Libs\ProfessionatorLoader.lua
 
@@ -46,25 +44,38 @@ Settings.lua
 
 #Classes
 Classes\Utils.lua
+Classes\Pricer.lua
 Classes\ItemLink.lua
+Classes\Stopwatch.lua
+
+#unit tests
+Classes\UnitTester.lua
+CLasses\Tests\test_basic_functionality.lua
+CLasses\Tests\test_use_cheapest_recipe.lua
+CLasses\Tests\test_high_training_cost.lua
+CLasses\Tests\test_cast_time_penalty.lua
+CLasses\Tests\test_known_recipe.lua
+CLasses\Tests\test_prioritize_recipe_with_inventory_reagents_2.lua
+CLasses\Tests\test_prioritize_recipe_with_inventory_reagents.lua
+CLasses\Tests\test_inventory_item_quantity.lua
 
 #Models
+Classes\Models\PlayersInventory.lua
+Classes\Models\Reagent.lua
+Classes\Models\Recipe.lua
+Classes\Models\RecipeGroup.lua
 
 # Modules
-Modules\CharacterKnownRecipes\CharacterKnownRecipes.lua
+Modules\CharacterKnownRecipesModule\CharacterKnownRecipesModule.lua
 Modules\ProfessionatorWindow\View.lua
 Modules\ProfessionatorWindow\ProfessionatorWindow.lua
 Modules\Options\Options.lua
 Modules\GameTooltip\GameTooltip.lua
-
+Modules\PlayersInventoryModule\PlayersInventoryModule.lua
 Modules\CalculationEngine\CalculationEngine.lua
-Modules\CalculationEngine\BigRecipeList.lua
-Modules\CalculationEngine\Recipe.lua
+Modules\CalculationEngine\CalculationResult.lua
 
 #Databases
 Database\Generated\classicRecipes.lua
-
-#Unit Tests
-#Classes\UnitTester.lua
 
 Core.lua

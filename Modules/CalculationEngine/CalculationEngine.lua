@@ -1,17 +1,13 @@
+
+local ProfessionatorDB = ProfessionatorLoader:ImportModule("ProfessionatorDB")
+local PlayersInventoryModule = ProfessionatorLoader:ImportModule("PlayersInventoryModule")
+
 Professionator.CalculationEngine = {}
 Professionator.CalculationEngine.__index = Professionator.CalculationEngine
-function Professionator.CalculationEngine:Create(professionName, startLevel, endLevel, BigRecipeList)
-
-    -- Create a BigRecipeList if one is not provided
-    if not BigRecipeList then
-        BigRecipeList = Professionator.BigRecipeList:Create(professionName, startLevel, endLevel)
-        BigRecipeList:Init()
-    end
-
+function Professionator.CalculationEngine:Create(professionName, startLevel, endLevel)
     local this =
     {
         professionName = professionName,
-        BigRecipeList = BigRecipeList,
         startLevel = startLevel,
         endLevel = endLevel,
     }
@@ -19,46 +15,67 @@ function Professionator.CalculationEngine:Create(professionName, startLevel, end
     return this
 end
 
-
-local function getOrderedRecipesByLevel(recipesByLevel)
-
-    local orderedRecipesByLevel = {}
-
-    for level, recipesAtThisLevel in pairs(recipesByLevel) do
-
-        orderedRecipesByLevel[level] = Professionator.Utils.sortTable(recipesAtThisLevel, function(a, b)
-            return a.averageCostToLevel < b.averageCostToLevel
-        end)
-
-    end
-
-    return orderedRecipesByLevel
-
-end
-
 function Professionator.CalculationEngine:Calculate()
 
-    local result = {}
+    local possibleRecipes = ProfessionatorDB[self.professionName]
 
-    -- Loop from startLevel to endLevel
-    for level = self.startLevel, self.endLevel do
+    -- print(self.professionName)
 
-        local recipes = self.BigRecipeList.RecipeList[level]
+    local result = Professionator.CalculationResult:Create(self.professionName, self.startLevel, self.endLevel, PlayersInventoryModule:GetInventory():Clone())
 
-        if recipes then
+    -- Loop from startLevel to endLevel and populate self.result with the best recipe at each level
+    for level = self.startLevel, self.endLevel - 1 do
 
-            local orderedRecipes = Professionator.Utils.sortTable(recipes, function(a, b)
-                return a:getAverageCostToLevel(level) < b:getAverageCostToLevel(level)
-            end)
+        local bestScoreForThisLevel = math.huge
 
-            result[level] = orderedRecipes[1]
+        -- for every possible recipe
+        if possibleRecipes ~= nil then
+            for spellId, recipe in pairs(possibleRecipes) do
 
+                recipe = Professionator.Recipe:Create(self.professionName, recipe)
+
+                -- If the recipe is a candidate for the current level (i.e. it can be used to level up)
+                if self:recipeIsCandidate(recipe, level) then
+
+                    -- Save the current recipe at this level
+                    local saveRecipeAtLevel = result:getRecipeAtLevel(level)
+                    local saveInventory = result:getInventory(level - 1):Clone()
+
+                    -- Try place this recipe here and see what the overall score is
+                    result:placeRecipeAtLevel(recipe, level)
+                    local score = result:getPreliminaryScore()
+
+                    if score < bestScoreForThisLevel then
+                        -- If this recipe is better than the current best recipe at this level
+                        bestScoreForThisLevel = score
+                    else
+                        -- If not, revert the change
+                        if saveRecipeAtLevel ~= nil then
+                            result:setRecipeAtLevel(level, saveRecipeAtLevel)
+                        end
+                    end
+
+                end
+
+            end
         end
 
     end
 
-    self.result = result
-
-    return self
+    return result
 
 end
+
+function Professionator.CalculationEngine:recipeIsCandidate(recipe, level)
+
+    -- Can the player make this recipe at this level?
+    -- and the recipe isn't grey at this level
+    if not recipe:canGiveSkillUp(level) then
+        return false
+    end
+
+    return true
+
+end
+
+

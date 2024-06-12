@@ -82,7 +82,7 @@ ItemLinkHelper = {
         local newItemLink = table.concat(parts, "|")
 
         -- // Print but replace all | with \|
-        print(newItemLink:gsub("|", "||"))
+        --print(newItemLink:gsub("|", "||"))
 
         return newItemLink
     end,

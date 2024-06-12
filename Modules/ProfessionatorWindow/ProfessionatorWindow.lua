@@ -77,7 +77,20 @@ function rangePrint(start, finish)
     end
 end
 
-function RecipeListPrintRow(frame, printRowData, yOffset)
+function printChancePerCastToLevel(recipeGroup)
+
+    local min = Professionator.Utils.prettyPercentage(recipeGroup:getMinChancePerCastToLevel())
+    local max = Professionator.Utils.prettyPercentage(recipeGroup:getMaxChancePerCastToLevel())
+
+    if min == max then
+        return min
+    else
+        return max .. " at level " .. recipeGroup:getMinLevel() .. " | " .. min .. " at level " .. recipeGroup:getMaxLevel()
+    end
+
+end
+
+function RecipeListPrintRow(recipeGroup, frame, yOffset)
 
     local recipeText = frame:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
     recipeText:SetPoint("TOPLEFT", 10, yOffset)
@@ -85,62 +98,41 @@ function RecipeListPrintRow(frame, printRowData, yOffset)
     -- Calculate printLevel
     -- Level should be shown as a range eg "20-30" or if there is just one level then eg "40"
     local printLevel = rangePrint(
-            Professionator.Utils.tableMin(printRowData.levels),
-            Professionator.Utils.tableMax(printRowData.levels)
+            recipeGroup:getMinLevel(),
+            recipeGroup:getMaxLevel()
     )
 
+    local recipe = recipeGroup:getRecipe()
+    local recipeName = recipe:getName()
+    local recipeId = recipe:getId()
+
     recipeText:SetText(printLevel ..
-            " " .. cleanUpName(printRowData.recipe.name) ..
-            " x " .. Professionator.Utils.round(printRowData.averageCastsToLevel)
+            " " .. cleanUpName(recipeName) ..
+            " x " .. Professionator.Utils.round(recipeGroup:getAverageCastsToLevel(), 0)
     )
 
     MyGameTooltip:SetupTooltip({
         targetElement = recipeText,
         beforeShow = function(tooltip)
             tooltip:ClearLines()
-            tooltip:AddSpellByID(printRowData.recipe.id)
+            tooltip:AddSpellByID(recipeId)
             tooltip:AddLine(" ", 1, 1, 1)
             tooltip:AddLine("-----------------------------", 1, 1, 1)
             tooltip:AddLine("Right click to use a different recipe", 1, 1, 1)
             tooltip:AddLine("-----------------------------", 1, 1, 1)
-            tooltip:AddLine("Average Cost to Level " .. printLevel .. ": " .. Professionator.Utils.GetMoneyString(printRowData.averageCostToLevel))
-            tooltip:AddLine("Chance to level: " .. rangePrint(
-                    Professionator.Utils.prettyPercentage(Professionator.Utils.tableMax(printRowData.chancePerCastToLevel)),
-                    Professionator.Utils.prettyPercentage(Professionator.Utils.tableMin(printRowData.chancePerCastToLevel))
-            ))
-            tooltip:AddLine("Time spent casting: " .. Professionator.Utils.round(printRowData.recipe.cast_time * printRowData.averageCastsToLevel, 1) .. 'sec')
+            tooltip:AddLine("Average Cost to Level " .. printLevel .. ": " .. Professionator.Utils.GetMoneyString(recipeGroup:getAverageCostToLevel()))
+            tooltip:AddLine("Chance per cast to level: " .. printChancePerCastToLevel(recipeGroup))
+            tooltip:AddLine("Time spent casting: " .. Professionator.Utils.PrettySeconds(recipeGroup:castTime()) .. '')
 
-            -- Print recipe location/cost
-            if UnitFactionGroup("player") == "Horde" then
-                if printRowData.recipe.recipe_source_horde_long ~= nil then
-                    tooltip:AddLine("Recipe Source (" .. printRowData.recipe.learnedat .. "): " .. printRowData.recipe.recipe_source_horde_long)
+            --if #printRowData.alternatives > 0 then
+            --    tooltip:AddLine("Alternatives: " .. Professionator.Utils.implode(', ', Professionator.Utils.arrayUnique(printRowData.alternatives)))
+            --end
 
-                    if printRowData.recipe.recipe_item_id_bop == false and printRowData.recipe.recipe_item_id_horde ~= nil then
-                        tooltip:AddLine("Recipe cost on AH: " .. Professionator.Utils.GetMoneyString(Professionator.Utils.cost(printRowData.recipe.recipe_item_id_horde)))
-                    end
-                end
-            else
-                if printRowData.recipe.recipe_source_alliance_long ~= nil then
-                    tooltip:AddLine("Recipe Source (" .. printRowData.recipe.learnedat .. "): " .. printRowData.recipe.recipe_source_alliance_long)
+            tooltip:AddLine("Average number of casts to level: " .. Professionator.Utils.round(recipeGroup:getAverageCastsToLevel()))
 
-                    if printRowData.recipe.recipe_item_id_bop == false and printRowData.recipe.recipe_item_id_alliance ~= nil then
-                        tooltip:AddLine("Recipe cost on AH: " .. Professionator.Utils.GetMoneyString(Professionator.Utils.getItemCost(printRowData.recipe.recipe_item_id_alliance)))
-                    end
-                end
-            end
-
-            if #printRowData.alternatives > 0 then
-                tooltip:AddLine("Alternatives: " .. Professionator.Utils.implode(', ', Professionator.Utils.arrayUnique(printRowData.alternatives)))
-            end
-
-            if printRowData.count > 7 or printRowData.count == 1 then
-                tooltip:AddLine("Average number of casts to level: " .. Professionator.Utils.round(printRowData.averageCastsToLevel))
-            else
-                tooltip:AddLine("Average number of casts:")
-                for level, averageCastsToLevel in Professionator.Utils.orderedPairs(printRowData.averageCastsToLevels) do
-                    tooltip:AddLine("  " .. level .. ": " .. Professionator.Utils.round(averageCastsToLevel, 2))
-                end
-                tooltip:AddLine("  total: " .. Professionator.Utils.round(printRowData.averageCastsToLevel))
+            local sourceString = recipe:getSourceString(PlayersInventoryModule:GetInventory())
+            if sourceString ~= nil then
+                tooltip:AddLine("\n" .. sourceString)
             end
 
         end,
@@ -150,58 +142,26 @@ end
 
 -- Function to generate a frame element containing a list of fake recipe names
 function GenerateRecipeList(professionName)
+
+    local generateListStartTime = debugprofilestop()
+
     local frame = CreateFrame("Frame", nil)
-    frame:SetSize(300, 200)
+    frame:SetSize(1, 1)     -- I don't know why 1x1 works but it does
 
     local yOffset = -10 -- Initial y offset for positioning recipe names
 
     local calculationEngine = Professionator.CalculationEngine:Create(professionName, 1, 300)
-    calculationEngine = calculationEngine:Calculate()
 
-    -- for example from level 1-19 you might craft "Enchant Minor Stats"
-    -- Then 20-30 you might craft "Enchant Lesser Stats"
-    -- There is no need to print 30 rows for this let's combine them into 2 rows
-    -- That is the point of these rowData and initialRowData variables
-    local initialPrintRowData = {
-        recipe = nil,
-        count = 0,
-        levels = {},
-        averageCastsToLevel = 0,
-        averageCastsToLevels = {},
-        chancePerCastToLevel = {},
-        averageCostToLevel = 0,
-        alternatives = {},
-    }
-    local printRowData = Professionator.Utils.deepCopy(initialPrintRowData)
+    local calculationResult = calculationEngine:Calculate()
 
-    for level, recipe in Professionator.Utils.orderedPairs(calculationEngine.result) do
+    local calculationRecipeGroup = calculationResult:GetRecipeGroups()
 
-        if recipe == nil then
-            print("No recipe found for level " .. level .. " in " .. professionName)
-        end
-
-        -- Print this row?
-        if printRowData.recipe ~= nil and printRowData.recipe.id ~= nil then
-            if printRowData.recipe.id ~= recipe:getId() then
-                RecipeListPrintRow(frame, printRowData, yOffset)
-                yOffset = yOffset - 20 -- Adjusting y offset for the next recipe name
-                printRowData = Professionator.Utils.deepCopy(initialPrintRowData)
-            end
-        end
-
-        -- update printRowData
-        printRowData.recipe = recipe
-        printRowData.count = printRowData.count + 1
-        table.insert(printRowData.levels, level)
-        printRowData.averageCastsToLevel = printRowData.averageCastsToLevel + recipe:getAverageCastsToLevel()
-        printRowData.averageCastsToLevels[level] = recipe:getAverageCastsToLevel()
-        table.insert(printRowData.chancePerCastToLevel, recipe:getGetChancePerCastToLevel())
-        printRowData.averageCostToLevel = printRowData.averageCastsToLevel * recipe:GetCostToCraft()
+    for i, recipeGroup in ipairs(calculationRecipeGroup) do
+        RecipeListPrintRow(recipeGroup, frame, yOffset)
+        yOffset = yOffset - 20
     end
 
-    if printRowData.recipe ~= nil and printRowData.recipe:getId() ~= nil then
-        RecipeListPrintRow(frame, printRowData, yOffset)
-    end
+    print("GenerateList: " .. Professionator.Utils.PrettySeconds((debugprofilestop() - generateListStartTime) / 1000) )
 
     return frame
 end
@@ -221,7 +181,7 @@ function ActuallyShow(professionName)
     end
     modalWindow = CreateWindow:Create("Test", {
         title = "Professionator - " .. professionName,
-        width = 600,
+        width = 350,
         --height = 300,
         referenceFrame = referenceFrame,
         content = GenerateRecipeList(professionName:lower()),

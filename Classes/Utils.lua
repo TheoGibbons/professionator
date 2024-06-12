@@ -108,16 +108,6 @@ Professionator.Utils = {
         return result
     end,
 
-    getRecipeCraftCost = function(professionName, spellId)
-
-        if professionName == 'enchanting' then
-            return Professionator.Utils.getEnchantingCraftCost(professionName, spellId)
-        else
-            return Professionator.Utils.getCraftCost(professionName, spellId)
-        end
-
-    end,
-
     getLinkFromItemId = function(itemId)
 
         local itemName, itemLink, itemRarity, itemLevel, itemMinLevel, itemType,
@@ -126,68 +116,6 @@ Professionator.Utils = {
 
         return itemLink
 
-    end,
-
-    -- Enchanting is different to all other professions for some reason
-    getItemCost = function(itemId)
-        local vendorPrice = Auctionator.API.v1.GetVendorPriceByItemID(AUCTIONATOR_L_REAGENT_SEARCH, itemId)
-        local auctionPrice = Auctionator.API.v1.GetAuctionPriceByItemID(AUCTIONATOR_L_REAGENT_SEARCH, itemId)
-
-        return vendorPrice or auctionPrice
-    end,
-
-    -- Enchanting is different to all other professions for some reason
-    getEnchantingCraftCost = function(professionName, spellId)
-
-        -- Make sure we're only calling this for Enchanting
-        if professionName ~= 'enchanting' then
-            Professionator.Utils.debugPrint("ERROR: getEnchantingCraftCost called with professionName '" .. professionName .. "'")
-            return nil
-        end
-
-        local possibleRecipes = ProfessionatorDB[professionName:lower()] or nil
-        local recipe = possibleRecipes[spellId] or nil
-
-        if recipe == nil then
-            Professionator.Utils.debugPrint("ERROR: Recipe not found for spellId '" .. spellId .. "'")
-            return nil
-        end
-
-        local cost = 0
-
-        for reagentId, reagent in pairs(recipe.reagents) do
-            local link = Professionator.Utils.getLinkFromItemId(reagentId)
-            if link ~= nil then
-
-                local quantity = reagent['quantity']
-
-                local vendorPrice = Auctionator.API.v1.GetVendorPriceByItemLink(AUCTIONATOR_L_REAGENT_SEARCH, link)
-                local auctionPrice = Auctionator.API.v1.GetAuctionPriceByItemLink(AUCTIONATOR_L_REAGENT_SEARCH, link)
-
-                local unitPrice = vendorPrice or auctionPrice
-
-                if unitPrice ~= nil then
-                    cost = cost + (quantity * unitPrice)
-                end
-            end
-
-        end
-
-        return cost
-
-    end,
-
-    -- This works for all professions except Enchanting
-    getCraftCost = function(professionName, spellId)
-
-        -- Make sure we're only calling this for Enchanting
-        if professionName == 'enchanting' then
-            Professionator.Utils.debugPrint("ERROR: getCraftCost called with professionName '" .. professionName .. "'")
-            return nil
-        end
-
-        -- TODO
-        Professionator.Utils.debugPrint("ERROR: TODO")
     end,
 
     formatNumericWithCommas = function(amount)
@@ -276,11 +204,14 @@ Professionator.Utils = {
             for k, v in pairs(original) do
                 copy[k] = Professionator.Utils.deepCopy(v)
             end
+            -- Copy the metatable
+            setmetatable(copy, getmetatable(original))
         else
             copy = original
         end
         return copy
     end,
+
 
     tableMin = function(t)
         local minValue = math.huge -- Initialize with a large value
@@ -356,6 +287,108 @@ Professionator.Utils = {
             firstItem = false
         end
         return result
+    end,
+
+    mergeTable = function(t1, t2)
+        local t = {}
+        for k, v in pairs(t1) do
+            t[k] = v
+        end
+        for k, v in pairs(t2) do
+            t[k] = v
+        end
+        return t
+    end,
+
+    tableEqual = function(t1, t2)
+        for k, v in pairs(t1) do
+            if t2[k] ~= v then
+                return false
+            end
+        end
+        for k, v in pairs(t2) do
+            if t1[k] ~= v then
+                return false
+            end
+        end
+        return true
+    end,
+
+    getCharacterId = function()
+        return UnitName("player") .. "-" .. GetRealmName()
+    end,
+
+    isAlliance = function()
+        local faction = UnitFactionGroup("player")
+        return faction == "Alliance"
+    end,
+
+    isHorde = function()
+        local faction = UnitFactionGroup("player")
+        return faction == "Horde"
+    end,
+
+    ArrayFirst = function(arr)
+        for _, v in Professionator.Utils.orderedPairs(arr) do
+            return v
+        end
+        return nil
+    end,
+
+    tryCatchFinally = function(tryBlock, catchBlock, finallyBlock)
+        local status, err = pcall(tryBlock)
+        if not status then
+            if catchBlock then catchBlock(err) end
+        end
+        if finallyBlock then finallyBlock() end
+    end,
+
+    tableCountKeys = function(t)
+        local count = 0
+        for _ in pairs(t) do
+            count = count + 1
+        end
+        return count
+    end,
+
+    PrettySeconds = function(inputSeconds)
+        local neg = 1
+        if inputSeconds < 0 then
+            neg = -1
+            inputSeconds = math.abs(inputSeconds)
+        end
+
+        local years = math.floor(inputSeconds / 31536000)
+        local months = math.floor((inputSeconds % 31536000) / 2628000)
+        local weeks = math.floor((inputSeconds % 2628000) / 604800)
+        local days = math.floor((inputSeconds % 604800) / 86400)
+        local hours = math.floor((inputSeconds % 86400) / 3600)
+        local minutes = math.floor((inputSeconds % 3600) / 60)
+        local seconds = Professionator.Utils.sigfig(inputSeconds % 60, 2)
+
+        years = neg * years
+        months = neg * months
+        weeks = neg * weeks
+        days = neg * days
+        hours = neg * hours
+        minutes = neg * minutes
+        seconds = neg * seconds
+
+        if years ~= 0 then
+            return string.format("%d year%s%s", years, (math.abs(years) > 1 and "s" or ""), (months ~= 0 and string.format(" %d month%s", months, (math.abs(months) > 1 and "s" or "")) or ""))
+        elseif months ~= 0 then
+            return string.format("%d month%s%s", months, (math.abs(months) > 1 and "s" or ""), (weeks ~= 0 and string.format(" %d week%s", weeks, (math.abs(weeks) > 1 and "s" or "")) or ""))
+        elseif weeks ~= 0 then
+            return string.format("%d week%s%s", weeks, (math.abs(weeks) > 1 and "s" or ""), (days ~= 0 and string.format(" %d day%s", days, (math.abs(days) > 1 and "s" or "")) or ""))
+        elseif days ~= 0 then
+            return string.format("%d day%s%s", days, (math.abs(days) > 1 and "s" or ""), (hours ~= 0 and string.format(" %d hr%s", hours, (math.abs(hours) > 1 and "s" or "")) or ""))
+        elseif hours ~= 0 then
+            return string.format("%d hr%s%s", hours, (math.abs(hours) > 1 and "s" or ""), (minutes ~= 0 and string.format(" %d min%s", minutes, (math.abs(minutes) > 1 and "s" or "")) or ""))
+        elseif minutes ~= 0 then
+            return string.format("%d min%s%s", minutes, (math.abs(minutes) > 1 and "s" or ""), (seconds ~= 0 and string.format(" %d sec%s", seconds, (math.abs(seconds) > 1 and "s" or "")) or ""))
+        else
+            return string.format("%d sec%s", seconds, (math.abs(seconds) ~= 1 and "s" or ""))
+        end
     end,
 
 }
