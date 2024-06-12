@@ -155,7 +155,8 @@ function GenerateRecipeList(professionName)
 
     local yOffset = -10 -- Initial y offset for positioning recipe names
 
-    local recipesByLevel = CalculationEngine:Calculate(professionName, 1, 300)
+    local calculationEngine = Professionator.CalculationEngine:Create(professionName, 1, 300)
+    calculationEngine = calculationEngine:Calculate()
 
     -- for example from level 1-19 you might craft "Enchant Minor Stats"
     -- Then 20-30 you might craft "Enchant Lesser Stats"
@@ -173,9 +174,7 @@ function GenerateRecipeList(professionName)
     }
     local printRowData = Professionator.Utils.deepCopy(initialPrintRowData)
 
-    for level, recipesAtLevel in pairs(recipesByLevel) do
-
-        local recipe = recipesAtLevel[1]
+    for level, recipe in Professionator.Utils.orderedPairs(calculationEngine.result) do
 
         if recipe == nil then
             print("No recipe found for level " .. level .. " in " .. professionName)
@@ -183,7 +182,7 @@ function GenerateRecipeList(professionName)
 
         -- Print this row?
         if printRowData.recipe ~= nil and printRowData.recipe.id ~= nil then
-            if printRowData.recipe.id ~= recipe.id then
+            if printRowData.recipe.id ~= recipe:getId() then
                 RecipeListPrintRow(frame, printRowData, yOffset)
                 yOffset = yOffset - 20 -- Adjusting y offset for the next recipe name
                 printRowData = Professionator.Utils.deepCopy(initialPrintRowData)
@@ -194,22 +193,13 @@ function GenerateRecipeList(professionName)
         printRowData.recipe = recipe
         printRowData.count = printRowData.count + 1
         table.insert(printRowData.levels, level)
-        printRowData.averageCastsToLevel = printRowData.averageCastsToLevel + recipe.averageCastsToLevel
-        printRowData.averageCastsToLevels[level] = recipe.averageCastsToLevel
-        table.insert(printRowData.chancePerCastToLevel, recipe.chancePerCastToLevel)
-        printRowData.averageCostToLevel = printRowData.averageCastsToLevel * recipe.costToCraft
-
-        if recipesAtLevel[2] then
-            table.insert(printRowData.alternatives, cleanUpName(recipesAtLevel[2].name))
-        end
-
-        -- TODO testing
-        if(level == 275) then
-            Professionator.Utils.dd(recipesAtLevel)
-        end
+        printRowData.averageCastsToLevel = printRowData.averageCastsToLevel + recipe:getAverageCastsToLevel()
+        printRowData.averageCastsToLevels[level] = recipe:getAverageCastsToLevel()
+        table.insert(printRowData.chancePerCastToLevel, recipe:getGetChancePerCastToLevel())
+        printRowData.averageCostToLevel = printRowData.averageCastsToLevel * recipe:GetCostToCraft()
     end
 
-    if printRowData.recipe ~= nil and printRowData.recipe.id ~= nil then
+    if printRowData.recipe ~= nil and printRowData.recipe:getId() ~= nil then
         RecipeListPrintRow(frame, printRowData, yOffset)
     end
 

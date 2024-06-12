@@ -1,83 +1,24 @@
--- CalculationEngine.lua
+Professionator.CalculationEngine = {}
+Professionator.CalculationEngine.__index = Professionator.CalculationEngine
+function Professionator.CalculationEngine:Create(professionName, startLevel, endLevel, BigRecipeList)
 
----@class CalculationEngine
----@field Initialize function
----@field Toggle function
----@field Show function
----@field Hide function
-
-local CalculationEngine = ProfessionatorLoader:CreateModule("CalculationEngine")
-local CharacterKnownRecipes = ProfessionatorLoader:ImportModule("CharacterKnownRecipes")
-local ProfessionatorDB = ProfessionatorLoader:ImportModule("ProfessionatorDB")
-
-
--- Update the possibleRecipes table to include the cost of each recipe
-local function addCostToCraft(professionName, recipes)
-
-    for spellId, recipe in pairs(recipes) do
-
-        recipes[spellId].costToCraft = Professionator.Utils.getRecipeCraftCost(professionName, spellId)
-
+    -- Create a BigRecipeList if one is not provided
+    if not BigRecipeList then
+        BigRecipeList = Professionator.BigRecipeList:Create(professionName, startLevel, endLevel)
+        BigRecipeList:Init()
     end
 
-    return recipes
-
+    local this =
+    {
+        professionName = professionName,
+        BigRecipeList = BigRecipeList,
+        startLevel = startLevel,
+        endLevel = endLevel,
+    }
+    setmetatable(this, self)
+    return this
 end
 
--- Update the possibleRecipes table to include the cost of each recipe
-local function addAdditionalBitsForRecipesAtLevel(recipesByLevel)
-
-    for level, recipesAtThisLevel in pairs(recipesByLevel) do
-
-        for key, recipe in pairs(recipesAtThisLevel) do
-
-            recipesByLevel[level][key].chancePerCastToLevel = Professionator.Utils.chanceForCraftToLevel(level, recipe.grey, recipe.yellow)
-            recipesByLevel[level][key].averageCastsToLevel = 1 / recipesByLevel[level][key].chancePerCastToLevel
-            if recipesByLevel[level][key].costToCraft == nil then
-                recipesByLevel[level][key].averageCostToLevel = nil
-            else
-                recipesByLevel[level][key].averageCostToLevel = recipesByLevel[level][key].costToCraft * recipesByLevel[level][key].averageCastsToLevel
-            end
-
-        end
-
-    end
-
-    return recipesByLevel
-
-end
-
-local function getRecipesByLevel(possibleRecipes, startLevel, endLevel)
-
-    local recipesByLevel = {}
-
-    for level = startLevel, endLevel do
-
-        local recipes = {}
-
-        for spellId, recipe in pairs(possibleRecipes) do
-
-            -- Can the player make this recipe at this level?
-            if recipe.learnedat <= level then
-
-                -- is the recipe gray at this level?
-                if recipe.grey > level then
-
-                    table.insert(recipes, Professionator.Utils.deepCopy(recipe))
-
-                end
-
-            end
-
-        end
-
-        recipesByLevel[level] = recipes
-
-    end
-
-    return recipesByLevel
-
-end
 
 local function getOrderedRecipesByLevel(recipesByLevel)
 
@@ -95,30 +36,29 @@ local function getOrderedRecipesByLevel(recipesByLevel)
 
 end
 
-local function calculate(professionName, knownRecipes, possibleRecipes, startLevel, endLevel)
+function Professionator.CalculationEngine:Calculate()
 
-    -- now we need to calculate the cost of each recipe
-    possibleRecipes = addCostToCraft(professionName, possibleRecipes)
+    local result = {}
 
-    -- now lets create an array from startLevel to endLevel
-    -- where each element is an array of recipes that can be made at that level (excluding the ones that are grey)
-    local recipesByLevel = getRecipesByLevel(possibleRecipes, startLevel, endLevel)
+    -- Loop from startLevel to endLevel
+    for level = self.startLevel, self.endLevel do
 
-    recipesByLevel = addAdditionalBitsForRecipesAtLevel(recipesByLevel)
+        local recipes = self.BigRecipeList.RecipeList[level]
 
-    -- now arrange the recipes by cost
-    return getOrderedRecipesByLevel(recipesByLevel)
+        if recipes then
 
-end
+            local orderedRecipes = Professionator.Utils.sortTable(recipes, function(a, b)
+                return a:getAverageCostToLevel(level) < b:getAverageCostToLevel(level)
+            end)
 
+            result[level] = orderedRecipes[1]
 
-function CalculationEngine:Calculate(professionName, startLevel, endLevel)
+        end
 
-    local knownRecipes = CharacterKnownRecipes:Get(professionName)
-    local possibleRecipes = ProfessionatorDB[professionName]
-    print("test: " .. professionName .. " " .. #possibleRecipes)
-    --Professionator.Utils.debugPrint(possibleRecipes);
+    end
 
-    return calculate(professionName, knownRecipes, possibleRecipes, startLevel, endLevel)
+    self.result = result
+
+    return self
 
 end

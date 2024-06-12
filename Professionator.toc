@@ -55,8 +55,11 @@ Modules\CharacterKnownRecipes\CharacterKnownRecipes.lua
 Modules\ProfessionatorWindow\View.lua
 Modules\ProfessionatorWindow\ProfessionatorWindow.lua
 Modules\Options\Options.lua
-Modules\CalculationEngine\CalculationEngine.lua
 Modules\GameTooltip\GameTooltip.lua
+
+Modules\CalculationEngine\CalculationEngine.lua
+Modules\CalculationEngine\BigRecipeList.lua
+Modules\CalculationEngine\Recipe.lua
 
 #Databases
 Database\Generated\classicRecipes.lua
