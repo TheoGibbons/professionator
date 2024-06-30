@@ -1,7 +1,7 @@
 -- AUTO GENERATED FILE! DO NOT EDIT!
 
 ---@type ProfessionatorDB
-local ProfessionatorDB = ProfessionatorLoader:CreateModule("ProfessionatorDB")
+local ProfessionatorDB = ProfessionatorLoader:ImportModule("ProfessionatorDB")
 
 ProfessionatorDB.enchanting = {
 [7418] = {
@@ -37,6 +37,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [7420] = {
   id = 7420,
@@ -71,6 +72,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [7421] = {
   id = 7421,
@@ -109,6 +111,7 @@ ProfessionatorDB.enchanting = {
   tools = {
   },
 
+  creates_item = {6218,1,1},
 },
 [7426] = {
   id = 7426,
@@ -147,6 +150,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [7428] = {
   id = 7428,
@@ -185,6 +189,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [7443] = {
   id = 7443,
@@ -219,6 +224,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [7454] = {
   id = 7454,
@@ -257,6 +263,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [7457] = {
   id = 7457,
@@ -291,6 +298,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [7745] = {
   id = 7745,
@@ -329,6 +337,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [7748] = {
   id = 7748,
@@ -367,6 +376,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [7766] = {
   id = 7766,
@@ -401,6 +411,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [7771] = {
   id = 7771,
@@ -439,16 +450,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [7776] = {
   id = 7776,
   name = 'Enchant Chest - Lesser Mana',
   recipe_source_alliance_short = 'Enchant Chest - Lesser Mana',
-  recipe_source_alliance_medium = 'Sold by: Kithas <Enchanting Supplies> (O), Sold by: Lilly <Enchanting Supplies> (SF)',
-  recipe_source_alliance_long = 'Sold by: Kithas <Enchanting Supplies> (Orgrimmar), Sold by: Lilly <Enchanting Supplies> (Silverpine Forest)',
+  recipe_source_alliance_medium = 'Sold by: Kithas <Enchanting Supplies> (O)\nSold by: Lilly <Enchanting Supplies> (SF)',
+  recipe_source_alliance_long = 'Sold by: Kithas <Enchanting Supplies> (Orgrimmar)\nSold by: Lilly <Enchanting Supplies> (Silverpine Forest)',
   recipe_source_horde_short = 'Enchant Chest - Lesser Mana',
-  recipe_source_horde_medium = 'Sold by: Kithas <Enchanting Supplies> (O), Sold by: Lilly <Enchanting Supplies> (SF)',
-  recipe_source_horde_long = 'Sold by: Kithas <Enchanting Supplies> (Orgrimmar), Sold by: Lilly <Enchanting Supplies> (Silverpine Forest)',
+  recipe_source_horde_medium = 'Sold by: Kithas <Enchanting Supplies> (O)\nSold by: Lilly <Enchanting Supplies> (SF)',
+  recipe_source_horde_long = 'Sold by: Kithas <Enchanting Supplies> (Orgrimmar)\nSold by: Lilly <Enchanting Supplies> (Silverpine Forest)',
   recipe_item_id_alliance = 6346,
   recipe_item_id_horde = 6346,
   recipe_item_id_bop = false,
@@ -477,6 +489,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [7779] = {
   id = 7779,
@@ -515,6 +528,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [7782] = {
   id = 7782,
@@ -549,6 +563,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [7786] = {
   id = 7786,
@@ -587,6 +602,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [7788] = {
   id = 7788,
@@ -629,6 +645,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [7793] = {
   id = 7793,
@@ -663,6 +680,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [7795] = {
   id = 7795,
@@ -705,6 +723,7 @@ ProfessionatorDB.enchanting = {
   tools = {
   },
 
+  creates_item = {6339,1,1},
 },
 [7857] = {
   id = 7857,
@@ -743,6 +762,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [7859] = {
   id = 7859,
@@ -777,6 +797,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [7861] = {
   id = 7861,
@@ -815,6 +836,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [7863] = {
   id = 7863,
@@ -849,16 +871,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [7867] = {
   id = 7867,
   name = 'Enchant Boots - Minor Agility',
   recipe_source_alliance_short = 'Enchant Boots - Minor Agility',
-  recipe_source_alliance_medium = 'Sold by: Nata Dawnstrider <Enchanting Supplies> (TB), Sold by: Zixil <Merchant Supreme> (HF)',
-  recipe_source_alliance_long = 'Sold by: Nata Dawnstrider <Enchanting Supplies> (Thunder Bluff), Sold by: Zixil <Merchant Supreme> (Hillsbrad Foothills)',
+  recipe_source_alliance_medium = 'Sold by: Nata Dawnstrider <Enchanting Supplies> (TB)\nSold by: Zixil <Merchant Supreme> (HF)',
+  recipe_source_alliance_long = 'Sold by: Nata Dawnstrider <Enchanting Supplies> (Thunder Bluff)\nSold by: Zixil <Merchant Supreme> (Hillsbrad Foothills)',
   recipe_source_horde_short = 'Enchant Boots - Minor Agility',
-  recipe_source_horde_medium = 'Sold by: Nata Dawnstrider <Enchanting Supplies> (TB), Sold by: Zixil <Merchant Supreme> (HF)',
-  recipe_source_horde_long = 'Sold by: Nata Dawnstrider <Enchanting Supplies> (Thunder Bluff), Sold by: Zixil <Merchant Supreme> (Hillsbrad Foothills)',
+  recipe_source_horde_medium = 'Sold by: Nata Dawnstrider <Enchanting Supplies> (TB)\nSold by: Zixil <Merchant Supreme> (HF)',
+  recipe_source_horde_long = 'Sold by: Nata Dawnstrider <Enchanting Supplies> (Thunder Bluff)\nSold by: Zixil <Merchant Supreme> (Hillsbrad Foothills)',
   recipe_item_id_alliance = 6377,
   recipe_item_id_horde = 6377,
   recipe_item_id_bop = false,
@@ -887,6 +910,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13378] = {
   id = 13378,
@@ -925,6 +949,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13380] = {
   id = 13380,
@@ -963,6 +988,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13419] = {
   id = 13419,
@@ -997,6 +1023,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13421] = {
   id = 13421,
@@ -1035,6 +1062,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13464] = {
   id = 13464,
@@ -1077,6 +1105,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13485] = {
   id = 13485,
@@ -1115,6 +1144,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13501] = {
   id = 13501,
@@ -1149,6 +1179,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13503] = {
   id = 13503,
@@ -1187,6 +1218,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13522] = {
   id = 13522,
@@ -1225,6 +1257,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13529] = {
   id = 13529,
@@ -1263,16 +1296,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13536] = {
   id = 13536,
   name = 'Enchant Bracer - Lesser Strength',
   recipe_source_alliance_short = 'Enchant Bracer - Lesser Strength',
-  recipe_source_alliance_medium = 'Sold by: Dalria <Trade Goods> (A), Sold by: Kulwia <Trade Supplies> (SM)',
-  recipe_source_alliance_long = 'Sold by: Dalria <Trade Goods> (Ashenvale), Sold by: Kulwia <Trade Supplies> (Stonetalon Mountains)',
+  recipe_source_alliance_medium = 'Sold by: Dalria <Trade Goods> (A)\nSold by: Kulwia <Trade Supplies> (SM)',
+  recipe_source_alliance_long = 'Sold by: Dalria <Trade Goods> (Ashenvale)\nSold by: Kulwia <Trade Supplies> (Stonetalon Mountains)',
   recipe_source_horde_short = 'Enchant Bracer - Lesser Strength',
-  recipe_source_horde_medium = 'Sold by: Dalria <Trade Goods> (A), Sold by: Kulwia <Trade Supplies> (SM)',
-  recipe_source_horde_long = 'Sold by: Dalria <Trade Goods> (Ashenvale), Sold by: Kulwia <Trade Supplies> (Stonetalon Mountains)',
+  recipe_source_horde_medium = 'Sold by: Dalria <Trade Goods> (A)\nSold by: Kulwia <Trade Supplies> (SM)',
+  recipe_source_horde_long = 'Sold by: Dalria <Trade Goods> (Ashenvale)\nSold by: Kulwia <Trade Supplies> (Stonetalon Mountains)',
   recipe_item_id_alliance = 11101,
   recipe_item_id_horde = 11101,
   recipe_item_id_bop = false,
@@ -1297,6 +1331,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13538] = {
   id = 13538,
@@ -1339,6 +1374,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13607] = {
   id = 13607,
@@ -1377,6 +1413,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13612] = {
   id = 13612,
@@ -1415,6 +1452,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13617] = {
   id = 13617,
@@ -1453,6 +1491,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13620] = {
   id = 13620,
@@ -1491,6 +1530,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13622] = {
   id = 13622,
@@ -1525,6 +1565,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13626] = {
   id = 13626,
@@ -1567,6 +1608,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13628] = {
   id = 13628,
@@ -1609,16 +1651,17 @@ ProfessionatorDB.enchanting = {
   tools = {
   },
 
+  creates_item = {11130,1,1},
 },
 [13631] = {
   id = 13631,
   name = 'Enchant Shield - Lesser Stamina',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U), Kitta Firewind <Artisan Enchanter> (EF)',
-  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman), Kitta Firewind <Artisan Enchanter> (Elwynn Forest)',
+  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U)\nKitta Firewind <Artisan Enchanter> (EF)',
+  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman)\nKitta Firewind <Artisan Enchanter> (Elwynn Forest)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Annora <Master Enchanter> (U), Hgarth <Artisan Enchanter> (SM)',
-  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman), Hgarth <Artisan Enchanter> (Stonetalon Mountains)',
+  recipe_source_horde_medium = 'Annora <Master Enchanter> (U)\nHgarth <Artisan Enchanter> (SM)',
+  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman)\nHgarth <Artisan Enchanter> (Stonetalon Mountains)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -1647,16 +1690,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13635] = {
   id = 13635,
   name = 'Enchant Cloak - Defense',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U), Kitta Firewind <Artisan Enchanter> (EF)',
-  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman), Kitta Firewind <Artisan Enchanter> (Elwynn Forest)',
+  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U)\nKitta Firewind <Artisan Enchanter> (EF)',
+  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman)\nKitta Firewind <Artisan Enchanter> (Elwynn Forest)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Annora <Master Enchanter> (U), Hgarth <Artisan Enchanter> (SM)',
-  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman), Hgarth <Artisan Enchanter> (Stonetalon Mountains)',
+  recipe_source_horde_medium = 'Annora <Master Enchanter> (U)\nHgarth <Artisan Enchanter> (SM)',
+  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman)\nHgarth <Artisan Enchanter> (Stonetalon Mountains)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -1685,16 +1729,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13637] = {
   id = 13637,
   name = 'Enchant Boots - Lesser Agility',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U), Kitta Firewind <Artisan Enchanter> (EF)',
-  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman), Kitta Firewind <Artisan Enchanter> (Elwynn Forest)',
+  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U)\nKitta Firewind <Artisan Enchanter> (EF)',
+  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman)\nKitta Firewind <Artisan Enchanter> (Elwynn Forest)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Annora <Master Enchanter> (U), Hgarth <Artisan Enchanter> (SM)',
-  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman), Hgarth <Artisan Enchanter> (Stonetalon Mountains)',
+  recipe_source_horde_medium = 'Annora <Master Enchanter> (U)\nHgarth <Artisan Enchanter> (SM)',
+  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman)\nHgarth <Artisan Enchanter> (Stonetalon Mountains)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -1723,16 +1768,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13640] = {
   id = 13640,
   name = 'Enchant Chest - Greater Health',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U), Kitta Firewind <Artisan Enchanter> (EF)',
-  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman), Kitta Firewind <Artisan Enchanter> (Elwynn Forest)',
+  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U)\nKitta Firewind <Artisan Enchanter> (EF)',
+  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman)\nKitta Firewind <Artisan Enchanter> (Elwynn Forest)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Annora <Master Enchanter> (U), Hgarth <Artisan Enchanter> (SM)',
-  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman), Hgarth <Artisan Enchanter> (Stonetalon Mountains)',
+  recipe_source_horde_medium = 'Annora <Master Enchanter> (U)\nHgarth <Artisan Enchanter> (SM)',
+  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman)\nHgarth <Artisan Enchanter> (Stonetalon Mountains)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -1757,16 +1803,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13642] = {
   id = 13642,
   name = 'Enchant Bracer - Spirit',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U), Kitta Firewind <Artisan Enchanter> (EF)',
-  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman), Kitta Firewind <Artisan Enchanter> (Elwynn Forest)',
+  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U)\nKitta Firewind <Artisan Enchanter> (EF)',
+  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman)\nKitta Firewind <Artisan Enchanter> (Elwynn Forest)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Annora <Master Enchanter> (U), Hgarth <Artisan Enchanter> (SM)',
-  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman), Hgarth <Artisan Enchanter> (Stonetalon Mountains)',
+  recipe_source_horde_medium = 'Annora <Master Enchanter> (U)\nHgarth <Artisan Enchanter> (SM)',
+  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman)\nHgarth <Artisan Enchanter> (Stonetalon Mountains)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -1791,16 +1838,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13644] = {
   id = 13644,
   name = 'Enchant Boots - Lesser Stamina',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U), Kitta Firewind <Artisan Enchanter> (EF)',
-  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman), Kitta Firewind <Artisan Enchanter> (Elwynn Forest)',
+  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U)\nKitta Firewind <Artisan Enchanter> (EF)',
+  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman)\nKitta Firewind <Artisan Enchanter> (Elwynn Forest)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Annora <Master Enchanter> (U), Hgarth <Artisan Enchanter> (SM)',
-  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman), Hgarth <Artisan Enchanter> (Stonetalon Mountains)',
+  recipe_source_horde_medium = 'Annora <Master Enchanter> (U)\nHgarth <Artisan Enchanter> (SM)',
+  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman)\nHgarth <Artisan Enchanter> (Stonetalon Mountains)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -1825,16 +1873,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13646] = {
   id = 13646,
   name = 'Enchant Bracer - Lesser Deflection',
   recipe_source_alliance_short = 'Enchant Bracer - Lesser Deflection',
-  recipe_source_alliance_medium = 'Sold by: Micha Yance <Trade Goods> (HF), Sold by: Keena <Trade Goods> (AH)',
-  recipe_source_alliance_long = 'Sold by: Micha Yance <Trade Goods> (Hillsbrad Foothills), Sold by: Keena <Trade Goods> (Arathi Highlands)',
+  recipe_source_alliance_medium = 'Sold by: Micha Yance <Trade Goods> (HF)\nSold by: Keena <Trade Goods> (AH)',
+  recipe_source_alliance_long = 'Sold by: Micha Yance <Trade Goods> (Hillsbrad Foothills)\nSold by: Keena <Trade Goods> (Arathi Highlands)',
   recipe_source_horde_short = 'Enchant Bracer - Lesser Deflection',
-  recipe_source_horde_medium = 'Sold by: Micha Yance <Trade Goods> (HF), Sold by: Keena <Trade Goods> (AH)',
-  recipe_source_horde_long = 'Sold by: Micha Yance <Trade Goods> (Hillsbrad Foothills), Sold by: Keena <Trade Goods> (Arathi Highlands)',
+  recipe_source_horde_medium = 'Sold by: Micha Yance <Trade Goods> (HF)\nSold by: Keena <Trade Goods> (AH)',
+  recipe_source_horde_long = 'Sold by: Micha Yance <Trade Goods> (Hillsbrad Foothills)\nSold by: Keena <Trade Goods> (Arathi Highlands)',
   recipe_item_id_alliance = 11163,
   recipe_item_id_horde = 11163,
   recipe_item_id_bop = false,
@@ -1863,16 +1912,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13648] = {
   id = 13648,
   name = 'Enchant Bracer - Stamina',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U), Kitta Firewind <Artisan Enchanter> (EF)',
-  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman), Kitta Firewind <Artisan Enchanter> (Elwynn Forest)',
+  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U)\nKitta Firewind <Artisan Enchanter> (EF)',
+  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman)\nKitta Firewind <Artisan Enchanter> (Elwynn Forest)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Annora <Master Enchanter> (U), Hgarth <Artisan Enchanter> (SM)',
-  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman), Hgarth <Artisan Enchanter> (Stonetalon Mountains)',
+  recipe_source_horde_medium = 'Annora <Master Enchanter> (U)\nHgarth <Artisan Enchanter> (SM)',
+  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman)\nHgarth <Artisan Enchanter> (Stonetalon Mountains)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -1897,6 +1947,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13653] = {
   id = 13653,
@@ -1939,6 +1990,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13655] = {
   id = 13655,
@@ -1981,16 +2033,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13657] = {
   id = 13657,
   name = 'Enchant Cloak - Fire Resistance',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U), Kitta Firewind <Artisan Enchanter> (EF)',
-  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman), Kitta Firewind <Artisan Enchanter> (Elwynn Forest)',
+  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U)\nKitta Firewind <Artisan Enchanter> (EF)',
+  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman)\nKitta Firewind <Artisan Enchanter> (Elwynn Forest)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Annora <Master Enchanter> (U), Hgarth <Artisan Enchanter> (SM)',
-  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman), Hgarth <Artisan Enchanter> (Stonetalon Mountains)',
+  recipe_source_horde_medium = 'Annora <Master Enchanter> (U)\nHgarth <Artisan Enchanter> (SM)',
+  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman)\nHgarth <Artisan Enchanter> (Stonetalon Mountains)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -2019,16 +2072,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13659] = {
   id = 13659,
   name = 'Enchant Shield - Spirit',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U), Kitta Firewind <Artisan Enchanter> (EF)',
-  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman), Kitta Firewind <Artisan Enchanter> (Elwynn Forest)',
+  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U)\nKitta Firewind <Artisan Enchanter> (EF)',
+  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman)\nKitta Firewind <Artisan Enchanter> (Elwynn Forest)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Annora <Master Enchanter> (U), Hgarth <Artisan Enchanter> (SM)',
-  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman), Hgarth <Artisan Enchanter> (Stonetalon Mountains)',
+  recipe_source_horde_medium = 'Annora <Master Enchanter> (U)\nHgarth <Artisan Enchanter> (SM)',
+  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman)\nHgarth <Artisan Enchanter> (Stonetalon Mountains)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -2057,16 +2111,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13661] = {
   id = 13661,
   name = 'Enchant Bracer - Strength',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U), Kitta Firewind <Artisan Enchanter> (EF)',
-  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman), Kitta Firewind <Artisan Enchanter> (Elwynn Forest)',
+  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U)\nKitta Firewind <Artisan Enchanter> (EF)',
+  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman)\nKitta Firewind <Artisan Enchanter> (Elwynn Forest)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Annora <Master Enchanter> (U), Hgarth <Artisan Enchanter> (SM)',
-  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman), Hgarth <Artisan Enchanter> (Stonetalon Mountains)',
+  recipe_source_horde_medium = 'Annora <Master Enchanter> (U)\nHgarth <Artisan Enchanter> (SM)',
+  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman)\nHgarth <Artisan Enchanter> (Stonetalon Mountains)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -2091,16 +2146,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13663] = {
   id = 13663,
   name = 'Enchant Chest - Greater Mana',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U), Kitta Firewind <Artisan Enchanter> (EF)',
-  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman), Kitta Firewind <Artisan Enchanter> (Elwynn Forest)',
+  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U)\nKitta Firewind <Artisan Enchanter> (EF)',
+  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman)\nKitta Firewind <Artisan Enchanter> (Elwynn Forest)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Annora <Master Enchanter> (U), Hgarth <Artisan Enchanter> (SM)',
-  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman), Hgarth <Artisan Enchanter> (Stonetalon Mountains)',
+  recipe_source_horde_medium = 'Annora <Master Enchanter> (U)\nHgarth <Artisan Enchanter> (SM)',
+  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman)\nHgarth <Artisan Enchanter> (Stonetalon Mountains)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -2125,6 +2181,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13687] = {
   id = 13687,
@@ -2163,6 +2220,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13689] = {
   id = 13689,
@@ -2205,16 +2263,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13693] = {
   id = 13693,
   name = 'Enchant Weapon - Striking',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U), Kitta Firewind <Artisan Enchanter> (EF)',
-  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman), Kitta Firewind <Artisan Enchanter> (Elwynn Forest)',
+  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U)\nKitta Firewind <Artisan Enchanter> (EF)',
+  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman)\nKitta Firewind <Artisan Enchanter> (Elwynn Forest)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Annora <Master Enchanter> (U), Hgarth <Artisan Enchanter> (SM)',
-  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman), Hgarth <Artisan Enchanter> (Stonetalon Mountains)',
+  recipe_source_horde_medium = 'Annora <Master Enchanter> (U)\nHgarth <Artisan Enchanter> (SM)',
+  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman)\nHgarth <Artisan Enchanter> (Stonetalon Mountains)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -2243,16 +2302,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13695] = {
   id = 13695,
   name = 'Enchant 2H Weapon - Impact',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U), Kitta Firewind <Artisan Enchanter> (EF)',
-  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman), Kitta Firewind <Artisan Enchanter> (Elwynn Forest)',
+  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U)\nKitta Firewind <Artisan Enchanter> (EF)',
+  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman)\nKitta Firewind <Artisan Enchanter> (Elwynn Forest)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Annora <Master Enchanter> (U), Hgarth <Artisan Enchanter> (SM)',
-  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman), Hgarth <Artisan Enchanter> (Stonetalon Mountains)',
+  recipe_source_horde_medium = 'Annora <Master Enchanter> (U)\nHgarth <Artisan Enchanter> (SM)',
+  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman)\nHgarth <Artisan Enchanter> (Stonetalon Mountains)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -2281,6 +2341,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13698] = {
   id = 13698,
@@ -2319,16 +2380,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13700] = {
   id = 13700,
   name = 'Enchant Chest - Lesser Stats',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U), Kitta Firewind <Artisan Enchanter> (EF)',
-  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman), Kitta Firewind <Artisan Enchanter> (Elwynn Forest)',
+  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U)\nKitta Firewind <Artisan Enchanter> (EF)',
+  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman)\nKitta Firewind <Artisan Enchanter> (Elwynn Forest)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Annora <Master Enchanter> (U), Hgarth <Artisan Enchanter> (SM)',
-  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman), Hgarth <Artisan Enchanter> (Stonetalon Mountains)',
+  recipe_source_horde_medium = 'Annora <Master Enchanter> (U)\nHgarth <Artisan Enchanter> (SM)',
+  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman)\nHgarth <Artisan Enchanter> (Stonetalon Mountains)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -2361,16 +2423,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13702] = {
   id = 13702,
   name = 'Runed Truesilver Rod',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U), Kitta Firewind <Artisan Enchanter> (EF)',
-  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman), Kitta Firewind <Artisan Enchanter> (Elwynn Forest)',
+  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U)\nKitta Firewind <Artisan Enchanter> (EF)',
+  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman)\nKitta Firewind <Artisan Enchanter> (Elwynn Forest)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Annora <Master Enchanter> (U), Hgarth <Artisan Enchanter> (SM)',
-  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman), Hgarth <Artisan Enchanter> (Stonetalon Mountains)',
+  recipe_source_horde_medium = 'Annora <Master Enchanter> (U)\nHgarth <Artisan Enchanter> (SM)',
+  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman)\nHgarth <Artisan Enchanter> (Stonetalon Mountains)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -2403,16 +2466,17 @@ ProfessionatorDB.enchanting = {
   tools = {
   },
 
+  creates_item = {11145,1,1},
 },
 [13746] = {
   id = 13746,
   name = 'Enchant Cloak - Greater Defense',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U), Kitta Firewind <Artisan Enchanter> (EF)',
-  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman), Kitta Firewind <Artisan Enchanter> (Elwynn Forest)',
+  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U)\nKitta Firewind <Artisan Enchanter> (EF)',
+  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman)\nKitta Firewind <Artisan Enchanter> (Elwynn Forest)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Annora <Master Enchanter> (U), Hgarth <Artisan Enchanter> (SM)',
-  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman), Hgarth <Artisan Enchanter> (Stonetalon Mountains)',
+  recipe_source_horde_medium = 'Annora <Master Enchanter> (U)\nHgarth <Artisan Enchanter> (SM)',
+  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman)\nHgarth <Artisan Enchanter> (Stonetalon Mountains)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -2437,16 +2501,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13794] = {
   id = 13794,
   name = 'Enchant Cloak - Resistance',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U), Kitta Firewind <Artisan Enchanter> (EF)',
-  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman), Kitta Firewind <Artisan Enchanter> (Elwynn Forest)',
+  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U)\nKitta Firewind <Artisan Enchanter> (EF)',
+  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman)\nKitta Firewind <Artisan Enchanter> (Elwynn Forest)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Annora <Master Enchanter> (U), Hgarth <Artisan Enchanter> (SM)',
-  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman), Hgarth <Artisan Enchanter> (Stonetalon Mountains)',
+  recipe_source_horde_medium = 'Annora <Master Enchanter> (U)\nHgarth <Artisan Enchanter> (SM)',
+  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman)\nHgarth <Artisan Enchanter> (Stonetalon Mountains)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -2471,16 +2536,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13815] = {
   id = 13815,
   name = 'Enchant Gloves - Agility',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U), Kitta Firewind <Artisan Enchanter> (EF)',
-  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman), Kitta Firewind <Artisan Enchanter> (Elwynn Forest)',
+  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U)\nKitta Firewind <Artisan Enchanter> (EF)',
+  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman)\nKitta Firewind <Artisan Enchanter> (Elwynn Forest)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Annora <Master Enchanter> (U), Hgarth <Artisan Enchanter> (SM)',
-  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman), Hgarth <Artisan Enchanter> (Stonetalon Mountains)',
+  recipe_source_horde_medium = 'Annora <Master Enchanter> (U)\nHgarth <Artisan Enchanter> (SM)',
+  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman)\nHgarth <Artisan Enchanter> (Stonetalon Mountains)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -2509,6 +2575,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13817] = {
   id = 13817,
@@ -2543,16 +2610,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13822] = {
   id = 13822,
   name = 'Enchant Bracer - Intellect',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U), Kitta Firewind <Artisan Enchanter> (EF)',
-  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman), Kitta Firewind <Artisan Enchanter> (Elwynn Forest)',
+  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U)\nKitta Firewind <Artisan Enchanter> (EF)',
+  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman)\nKitta Firewind <Artisan Enchanter> (Elwynn Forest)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Annora <Master Enchanter> (U), Hgarth <Artisan Enchanter> (SM)',
-  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman), Hgarth <Artisan Enchanter> (Stonetalon Mountains)',
+  recipe_source_horde_medium = 'Annora <Master Enchanter> (U)\nHgarth <Artisan Enchanter> (SM)',
+  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman)\nHgarth <Artisan Enchanter> (Stonetalon Mountains)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -2577,16 +2645,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13836] = {
   id = 13836,
   name = 'Enchant Boots - Stamina',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U), Kitta Firewind <Artisan Enchanter> (EF)',
-  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman), Kitta Firewind <Artisan Enchanter> (Elwynn Forest)',
+  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U)\nKitta Firewind <Artisan Enchanter> (EF)',
+  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman)\nKitta Firewind <Artisan Enchanter> (Elwynn Forest)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Annora <Master Enchanter> (U), Hgarth <Artisan Enchanter> (SM)',
-  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman), Hgarth <Artisan Enchanter> (Stonetalon Mountains)',
+  recipe_source_horde_medium = 'Annora <Master Enchanter> (U)\nHgarth <Artisan Enchanter> (SM)',
+  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman)\nHgarth <Artisan Enchanter> (Stonetalon Mountains)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -2611,6 +2680,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13841] = {
   id = 13841,
@@ -2649,6 +2719,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13846] = {
   id = 13846,
@@ -2687,16 +2758,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13858] = {
   id = 13858,
   name = 'Enchant Chest - Superior Health',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U), Kitta Firewind <Artisan Enchanter> (EF)',
-  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman), Kitta Firewind <Artisan Enchanter> (Elwynn Forest)',
+  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U)\nKitta Firewind <Artisan Enchanter> (EF)',
+  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman)\nKitta Firewind <Artisan Enchanter> (Elwynn Forest)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Annora <Master Enchanter> (U), Hgarth <Artisan Enchanter> (SM)',
-  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman), Hgarth <Artisan Enchanter> (Stonetalon Mountains)',
+  recipe_source_horde_medium = 'Annora <Master Enchanter> (U)\nHgarth <Artisan Enchanter> (SM)',
+  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman)\nHgarth <Artisan Enchanter> (Stonetalon Mountains)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -2721,6 +2793,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13868] = {
   id = 13868,
@@ -2759,16 +2832,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13882] = {
   id = 13882,
   name = 'Enchant Cloak - Lesser Agility',
   recipe_source_alliance_short = 'Enchant Cloak - Lesser Agility',
   recipe_source_alliance_medium = 'Dropped in: "Alterac Mountains", "Tanaris"',
-  recipe_source_alliance_long = 'Dropped by: Syndicate Assassin (Alterac Mountains), Dropped by: Wastewander Assassin (Tanaris), Dropped by: Wastewander Scofflaw (Tanaris)',
+  recipe_source_alliance_long = 'Dropped by: Syndicate Assassin (Alterac Mountains)\nDropped by: Wastewander Assassin (Tanaris)\nDropped by: Wastewander Scofflaw (Tanaris)',
   recipe_source_horde_short = 'Enchant Cloak - Lesser Agility',
   recipe_source_horde_medium = 'Dropped in: "Alterac Mountains", "Tanaris"',
-  recipe_source_horde_long = 'Dropped by: Syndicate Assassin (Alterac Mountains), Dropped by: Wastewander Assassin (Tanaris), Dropped by: Wastewander Scofflaw (Tanaris)',
+  recipe_source_horde_long = 'Dropped by: Syndicate Assassin (Alterac Mountains)\nDropped by: Wastewander Assassin (Tanaris)\nDropped by: Wastewander Scofflaw (Tanaris)',
   recipe_item_id_alliance = 11206,
   recipe_item_id_horde = 11206,
   recipe_item_id_bop = false,
@@ -2793,16 +2867,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13887] = {
   id = 13887,
   name = 'Enchant Gloves - Strength',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U), Kitta Firewind <Artisan Enchanter> (EF)',
-  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman), Kitta Firewind <Artisan Enchanter> (Elwynn Forest)',
+  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U)\nKitta Firewind <Artisan Enchanter> (EF)',
+  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman)\nKitta Firewind <Artisan Enchanter> (Elwynn Forest)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Annora <Master Enchanter> (U), Hgarth <Artisan Enchanter> (SM)',
-  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman), Hgarth <Artisan Enchanter> (Stonetalon Mountains)',
+  recipe_source_horde_medium = 'Annora <Master Enchanter> (U)\nHgarth <Artisan Enchanter> (SM)',
+  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman)\nHgarth <Artisan Enchanter> (Stonetalon Mountains)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -2831,16 +2906,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13890] = {
   id = 13890,
   name = 'Enchant Boots - Minor Speed',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U), Kitta Firewind <Artisan Enchanter> (EF)',
-  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman), Kitta Firewind <Artisan Enchanter> (Elwynn Forest)',
+  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U)\nKitta Firewind <Artisan Enchanter> (EF)',
+  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman)\nKitta Firewind <Artisan Enchanter> (Elwynn Forest)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Annora <Master Enchanter> (U), Hgarth <Artisan Enchanter> (SM)',
-  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman), Hgarth <Artisan Enchanter> (Stonetalon Mountains)',
+  recipe_source_horde_medium = 'Annora <Master Enchanter> (U)\nHgarth <Artisan Enchanter> (SM)',
+  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman)\nHgarth <Artisan Enchanter> (Stonetalon Mountains)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -2873,6 +2949,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13898] = {
   id = 13898,
@@ -2911,6 +2988,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13905] = {
   id = 13905,
@@ -2949,6 +3027,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13915] = {
   id = 13915,
@@ -2991,6 +3070,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13917] = {
   id = 13917,
@@ -3029,16 +3109,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13931] = {
   id = 13931,
   name = 'Enchant Bracer - Deflection',
   recipe_source_alliance_short = 'Enchant Bracer - Deflection',
-  recipe_source_alliance_medium = 'Sold by: Banalash <Trade Goods> (SOS), Sold by: Mythrin\'dir <General Trade Supplier> (D)',
-  recipe_source_alliance_long = 'Sold by: Banalash <Trade Goods> (Swamp of Sorrows), Sold by: Mythrin\'dir <General Trade Supplier> (Darnassus)',
+  recipe_source_alliance_medium = 'Sold by: Banalash <Trade Goods> (SOS)\nSold by: Mythrin\'dir <General Trade Supplier> (D)',
+  recipe_source_alliance_long = 'Sold by: Banalash <Trade Goods> (Swamp of Sorrows)\nSold by: Mythrin\'dir <General Trade Supplier> (Darnassus)',
   recipe_source_horde_short = 'Enchant Bracer - Deflection',
-  recipe_source_horde_medium = 'Sold by: Banalash <Trade Goods> (SOS), Sold by: Mythrin\'dir <General Trade Supplier> (D)',
-  recipe_source_horde_long = 'Sold by: Banalash <Trade Goods> (Swamp of Sorrows), Sold by: Mythrin\'dir <General Trade Supplier> (Darnassus)',
+  recipe_source_horde_medium = 'Sold by: Banalash <Trade Goods> (SOS)\nSold by: Mythrin\'dir <General Trade Supplier> (D)',
+  recipe_source_horde_long = 'Sold by: Banalash <Trade Goods> (Swamp of Sorrows)\nSold by: Mythrin\'dir <General Trade Supplier> (Darnassus)',
   recipe_item_id_alliance = 11223,
   recipe_item_id_horde = 11223,
   recipe_item_id_bop = false,
@@ -3067,6 +3148,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13933] = {
   id = 13933,
@@ -3105,6 +3187,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13935] = {
   id = 13935,
@@ -3139,6 +3222,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13937] = {
   id = 13937,
@@ -3177,6 +3261,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13939] = {
   id = 13939,
@@ -3215,6 +3300,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13941] = {
   id = 13941,
@@ -3257,6 +3343,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13943] = {
   id = 13943,
@@ -3295,6 +3382,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13945] = {
   id = 13945,
@@ -3329,6 +3417,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13947] = {
   id = 13947,
@@ -3367,6 +3456,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [13948] = {
   id = 13948,
@@ -3405,6 +3495,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [14293] = {
   id = 14293,
@@ -3443,6 +3534,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = {11287,1,1},
 },
 [14807] = {
   id = 14807,
@@ -3481,16 +3573,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = {11288,1,1},
 },
 [14809] = {
   id = 14809,
   name = 'Lesser Mystic Wand',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U), Kitta Firewind <Artisan Enchanter> (EF)',
-  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman), Kitta Firewind <Artisan Enchanter> (Elwynn Forest)',
+  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U)\nKitta Firewind <Artisan Enchanter> (EF)',
+  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman)\nKitta Firewind <Artisan Enchanter> (Elwynn Forest)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Annora <Master Enchanter> (U), Hgarth <Artisan Enchanter> (SM)',
-  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman), Hgarth <Artisan Enchanter> (Stonetalon Mountains)',
+  recipe_source_horde_medium = 'Annora <Master Enchanter> (U)\nHgarth <Artisan Enchanter> (SM)',
+  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman)\nHgarth <Artisan Enchanter> (Stonetalon Mountains)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -3523,16 +3616,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = {11289,1,1},
 },
 [14810] = {
   id = 14810,
   name = 'Greater Mystic Wand',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U), Kitta Firewind <Artisan Enchanter> (EF)',
-  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman), Kitta Firewind <Artisan Enchanter> (Elwynn Forest)',
+  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U)\nKitta Firewind <Artisan Enchanter> (EF)',
+  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman)\nKitta Firewind <Artisan Enchanter> (Elwynn Forest)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Annora <Master Enchanter> (U), Hgarth <Artisan Enchanter> (SM)',
-  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman), Hgarth <Artisan Enchanter> (Stonetalon Mountains)',
+  recipe_source_horde_medium = 'Annora <Master Enchanter> (U)\nHgarth <Artisan Enchanter> (SM)',
+  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman)\nHgarth <Artisan Enchanter> (Stonetalon Mountains)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -3565,6 +3659,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = {11290,1,1},
 },
 [15596] = {
   id = 15596,
@@ -3603,6 +3698,7 @@ ProfessionatorDB.enchanting = {
   tools = {
   },
 
+  creates_item = {11811,1,1},
 },
 [17180] = {
   id = 17180,
@@ -3641,6 +3737,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = {12655,1,1},
 },
 [17181] = {
   id = 17181,
@@ -3679,6 +3776,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = {12810,1,1},
 },
 [20008] = {
   id = 20008,
@@ -3713,6 +3811,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [20009] = {
   id = 20009,
@@ -3751,6 +3850,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [20010] = {
   id = 20010,
@@ -3789,6 +3889,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [20011] = {
   id = 20011,
@@ -3823,6 +3924,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [20012] = {
   id = 20012,
@@ -3861,6 +3963,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [20013] = {
   id = 20013,
@@ -3899,16 +4002,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [20014] = {
   id = 20014,
   name = 'Enchant Cloak - Greater Resistance',
   recipe_source_alliance_short = 'Enchant Cloak - Greater Resistance',
-  recipe_source_alliance_medium = 'Dropped by: Atal\'ai Witch Doctor (TTOA), Dropped by: Atal\'ai Witch Doctor (TTOA)',
-  recipe_source_alliance_long = 'Dropped by: Atal\'ai Witch Doctor (The Temple of Atal\'Hakkar), Dropped by: Atal\'ai Witch Doctor (The Temple of Atal\'Hakkar)',
+  recipe_source_alliance_medium = 'Dropped by: Atal\'ai Witch Doctor (TTOA)\nDropped by: Atal\'ai Witch Doctor (TTOA)',
+  recipe_source_alliance_long = 'Dropped by: Atal\'ai Witch Doctor (The Temple of Atal\'Hakkar)\nDropped by: Atal\'ai Witch Doctor (The Temple of Atal\'Hakkar)',
   recipe_source_horde_short = 'Enchant Cloak - Greater Resistance',
-  recipe_source_horde_medium = 'Dropped by: Atal\'ai Witch Doctor (TTOA), Dropped by: Atal\'ai Witch Doctor (TTOA)',
-  recipe_source_horde_long = 'Dropped by: Atal\'ai Witch Doctor (The Temple of Atal\'Hakkar), Dropped by: Atal\'ai Witch Doctor (The Temple of Atal\'Hakkar)',
+  recipe_source_horde_medium = 'Dropped by: Atal\'ai Witch Doctor (TTOA)\nDropped by: Atal\'ai Witch Doctor (TTOA)',
+  recipe_source_horde_long = 'Dropped by: Atal\'ai Witch Doctor (The Temple of Atal\'Hakkar)\nDropped by: Atal\'ai Witch Doctor (The Temple of Atal\'Hakkar)',
   recipe_item_id_alliance = 16216,
   recipe_item_id_horde = 16216,
   recipe_item_id_bop = false,
@@ -3953,6 +4057,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [20015] = {
   id = 20015,
@@ -3987,6 +4092,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [20016] = {
   id = 20016,
@@ -4025,16 +4131,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [20017] = {
   id = 20017,
   name = 'Enchant Shield - Greater Stamina',
   recipe_source_alliance_short = 'Enchant Shield - Greater Stamina',
-  recipe_source_alliance_medium = 'Sold by: Mythrin\'dir <General Trade Supplier> (D), Sold by: Daniel Bartlett <General Trade Supplier> (U)',
-  recipe_source_alliance_long = 'Sold by: Mythrin\'dir <General Trade Supplier> (Darnassus), Sold by: Daniel Bartlett <General Trade Supplier> (Undercity)',
+  recipe_source_alliance_medium = 'Sold by: Mythrin\'dir <General Trade Supplier> (D)\nSold by: Daniel Bartlett <General Trade Supplier> (U)',
+  recipe_source_alliance_long = 'Sold by: Mythrin\'dir <General Trade Supplier> (Darnassus)\nSold by: Daniel Bartlett <General Trade Supplier> (Undercity)',
   recipe_source_horde_short = 'Enchant Shield - Greater Stamina',
-  recipe_source_horde_medium = 'Sold by: Mythrin\'dir <General Trade Supplier> (D), Sold by: Daniel Bartlett <General Trade Supplier> (U)',
-  recipe_source_horde_long = 'Sold by: Mythrin\'dir <General Trade Supplier> (Darnassus), Sold by: Daniel Bartlett <General Trade Supplier> (Undercity)',
+  recipe_source_horde_medium = 'Sold by: Mythrin\'dir <General Trade Supplier> (D)\nSold by: Daniel Bartlett <General Trade Supplier> (U)',
+  recipe_source_horde_long = 'Sold by: Mythrin\'dir <General Trade Supplier> (Darnassus)\nSold by: Daniel Bartlett <General Trade Supplier> (Undercity)',
   recipe_item_id_alliance = 16217,
   recipe_item_id_horde = 16217,
   recipe_item_id_bop = true,
@@ -4059,6 +4166,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [20020] = {
   id = 20020,
@@ -4093,6 +4201,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [20023] = {
   id = 20023,
@@ -4127,6 +4236,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [20024] = {
   id = 20024,
@@ -4165,6 +4275,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [20025] = {
   id = 20025,
@@ -4207,6 +4318,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [20026] = {
   id = 20026,
@@ -4245,6 +4357,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [20028] = {
   id = 20028,
@@ -4283,6 +4396,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [20029] = {
   id = 20029,
@@ -4329,6 +4443,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [20030] = {
   id = 20030,
@@ -4367,6 +4482,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [20031] = {
   id = 20031,
@@ -4405,6 +4521,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [20032] = {
   id = 20032,
@@ -4447,6 +4564,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [20033] = {
   id = 20033,
@@ -4485,6 +4603,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [20034] = {
   id = 20034,
@@ -4523,6 +4642,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [20035] = {
   id = 20035,
@@ -4561,6 +4681,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [20036] = {
   id = 20036,
@@ -4599,6 +4720,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [20051] = {
   id = 20051,
@@ -4649,16 +4771,17 @@ ProfessionatorDB.enchanting = {
   tools = {
   },
 
+  creates_item = {16207,1,1},
 },
 [21931] = {
   id = 21931,
   name = 'Enchant Weapon - Winter\'s Might',
   recipe_source_alliance_short = 'Enchant Weapon - Winter\'s Might',
   recipe_source_alliance_medium = 'Found in: ',
-  recipe_source_alliance_long = 'Contained in: Smokywood Pastures Special Gift, Contained in: Ticking Present, Contained in: Ticking Present',
+  recipe_source_alliance_long = 'Contained in: Smokywood Pastures Special Gift\nContained in: Ticking Present\nContained in: Ticking Present',
   recipe_source_horde_short = 'Enchant Weapon - Winter\'s Might',
   recipe_source_horde_medium = 'Found in: ',
-  recipe_source_horde_long = 'Contained in: Smokywood Pastures Special Gift, Contained in: Ticking Present, Contained in: Ticking Present',
+  recipe_source_horde_long = 'Contained in: Smokywood Pastures Special Gift\nContained in: Ticking Present\nContained in: Ticking Present',
   recipe_item_id_alliance = 17725,
   recipe_item_id_horde = 17725,
   recipe_item_id_bop = false,
@@ -4695,6 +4818,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [22749] = {
   id = 22749,
@@ -4749,6 +4873,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [22750] = {
   id = 22750,
@@ -4799,6 +4924,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [23799] = {
   id = 23799,
@@ -4845,6 +4971,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [23800] = {
   id = 23800,
@@ -4891,16 +5018,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [23801] = {
   id = 23801,
   name = 'Enchant Bracer - Mana Regeneration',
   recipe_source_alliance_short = 'Enchant Bracer - Mana Regeneration',
   recipe_source_alliance_medium = 'Sold in: ',
-  recipe_source_alliance_long = 'Sold by: Argent Quartermaster Hasana <The Argent Dawn> (Tirisfal Glades), Sold by: Argent Quartermaster Lightspark <The Argent Dawn> (Western Plaguelands), Sold by: Quartermaster Miranda Breechlock <The Argent Dawn> (Eastern Plaguelands)',
+  recipe_source_alliance_long = 'Sold by: Argent Quartermaster Hasana <The Argent Dawn> (Tirisfal Glades)\nSold by: Argent Quartermaster Lightspark <The Argent Dawn> (Western Plaguelands)\nSold by: Quartermaster Miranda Breechlock <The Argent Dawn> (Eastern Plaguelands)',
   recipe_source_horde_short = 'Enchant Bracer - Mana Regeneration',
   recipe_source_horde_medium = 'Sold in: ',
-  recipe_source_horde_long = 'Sold by: Argent Quartermaster Hasana <The Argent Dawn> (Tirisfal Glades), Sold by: Argent Quartermaster Lightspark <The Argent Dawn> (Western Plaguelands), Sold by: Quartermaster Miranda Breechlock <The Argent Dawn> (Eastern Plaguelands)',
+  recipe_source_horde_long = 'Sold by: Argent Quartermaster Hasana <The Argent Dawn> (Tirisfal Glades)\nSold by: Argent Quartermaster Lightspark <The Argent Dawn> (Western Plaguelands)\nSold by: Quartermaster Miranda Breechlock <The Argent Dawn> (Eastern Plaguelands)',
   recipe_item_id_alliance = 19446,
   recipe_item_id_horde = 19446,
   recipe_item_id_bop = true,
@@ -4933,16 +5061,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [23802] = {
   id = 23802,
   name = 'Enchant Bracer - Healing Power',
   recipe_source_alliance_short = 'Enchant Bracer - Healing',
   recipe_source_alliance_medium = 'Sold in: ',
-  recipe_source_alliance_long = 'Sold by: Argent Quartermaster Hasana <The Argent Dawn> (Tirisfal Glades), Sold by: Argent Quartermaster Lightspark <The Argent Dawn> (Western Plaguelands), Sold by: Quartermaster Miranda Breechlock <The Argent Dawn> (Eastern Plaguelands)',
+  recipe_source_alliance_long = 'Sold by: Argent Quartermaster Hasana <The Argent Dawn> (Tirisfal Glades)\nSold by: Argent Quartermaster Lightspark <The Argent Dawn> (Western Plaguelands)\nSold by: Quartermaster Miranda Breechlock <The Argent Dawn> (Eastern Plaguelands)',
   recipe_source_horde_short = 'Enchant Bracer - Healing',
   recipe_source_horde_medium = 'Sold in: ',
-  recipe_source_horde_long = 'Sold by: Argent Quartermaster Hasana <The Argent Dawn> (Tirisfal Glades), Sold by: Argent Quartermaster Lightspark <The Argent Dawn> (Western Plaguelands), Sold by: Quartermaster Miranda Breechlock <The Argent Dawn> (Eastern Plaguelands)',
+  recipe_source_horde_long = 'Sold by: Argent Quartermaster Hasana <The Argent Dawn> (Tirisfal Glades)\nSold by: Argent Quartermaster Lightspark <The Argent Dawn> (Western Plaguelands)\nSold by: Quartermaster Miranda Breechlock <The Argent Dawn> (Eastern Plaguelands)',
   recipe_item_id_alliance = 19447,
   recipe_item_id_horde = 19447,
   recipe_item_id_bop = true,
@@ -4979,6 +5108,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [23803] = {
   id = 23803,
@@ -5021,6 +5151,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [23804] = {
   id = 23804,
@@ -5063,6 +5194,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [25072] = {
   id = 25072,
@@ -5105,6 +5237,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [25073] = {
   id = 25073,
@@ -5147,6 +5280,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [25074] = {
   id = 25074,
@@ -5189,6 +5323,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [25078] = {
   id = 25078,
@@ -5231,6 +5366,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [25079] = {
   id = 25079,
@@ -5273,6 +5409,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [25080] = {
   id = 25080,
@@ -5315,6 +5452,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [25081] = {
   id = 25081,
@@ -5357,6 +5495,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [25082] = {
   id = 25082,
@@ -5399,6 +5538,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [25083] = {
   id = 25083,
@@ -5441,6 +5581,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [25084] = {
   id = 25084,
@@ -5483,6 +5624,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [25086] = {
   id = 25086,
@@ -5525,6 +5667,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [25124] = {
   id = 25124,
@@ -5567,6 +5710,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = {20744,0,0},
 },
 [25125] = {
   id = 25125,
@@ -5609,6 +5753,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = {20745,0,0},
 },
 [25126] = {
   id = 25126,
@@ -5651,6 +5796,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = {20746,0,0},
 },
 [25127] = {
   id = 25127,
@@ -5693,6 +5839,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = {20747,0,0},
 },
 [25128] = {
   id = 25128,
@@ -5735,6 +5882,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = {20750,0,0},
 },
 [25129] = {
   id = 25129,
@@ -5777,6 +5925,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = {20749,0,0},
 },
 [25130] = {
   id = 25130,
@@ -5819,6 +5968,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = {20748,0,0},
 },
 [27837] = {
   id = 27837,
@@ -5865,6 +6015,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [430409] = {
   id = 430409,
@@ -5907,6 +6058,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = {211848,0,0},
 },
 [435481] = {
   id = 435481,
@@ -5949,6 +6101,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [435903] = {
   id = 435903,
@@ -5987,16 +6140,17 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = nil,
 },
 [439134] = {
   id = 439134,
   name = 'Greater Mystic Wand',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U), Kitta Firewind <Artisan Enchanter> (EF)',
-  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman), Kitta Firewind <Artisan Enchanter> (Elwynn Forest)',
+  recipe_source_alliance_medium = 'Annora <Master Enchanter> (U)\nKitta Firewind <Artisan Enchanter> (EF)',
+  recipe_source_alliance_long = 'Annora <Master Enchanter> (Uldaman)\nKitta Firewind <Artisan Enchanter> (Elwynn Forest)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Annora <Master Enchanter> (U), Hgarth <Artisan Enchanter> (SM)',
-  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman), Hgarth <Artisan Enchanter> (Stonetalon Mountains)',
+  recipe_source_horde_medium = 'Annora <Master Enchanter> (U)\nHgarth <Artisan Enchanter> (SM)',
+  recipe_source_horde_long = 'Annora <Master Enchanter> (Uldaman)\nHgarth <Artisan Enchanter> (Stonetalon Mountains)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -6029,6 +6183,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = {217287,1,1},
 },
 [439156] = {
   id = 439156,
@@ -6063,6 +6218,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = {217308,1,1},
 },
 [446243] = {
   id = 446243,
@@ -6101,6 +6257,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = {221028,1,1},
 },
 [448624] = {
   id = 448624,
@@ -6139,6 +6296,7 @@ ProfessionatorDB.enchanting = {
     },
   },
 
+  creates_item = {220792,1,1},
 },
 }
 
@@ -6173,6 +6331,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {4357,1,1},
 },
 [3919] = {
   id = 3919,
@@ -6207,6 +6366,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {4358,2,2},
 },
 [3920] = {
   id = 3920,
@@ -6241,6 +6401,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {8067,200,200},
 },
 [3922] = {
   id = 3922,
@@ -6275,6 +6436,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4359,1,1},
 },
 [3923] = {
   id = 3923,
@@ -6321,6 +6483,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4360,2,2},
 },
 [3924] = {
   id = 3924,
@@ -6359,6 +6522,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4361,1,1},
 },
 [3925] = {
   id = 3925,
@@ -6401,6 +6565,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4362,1,1},
 },
 [3926] = {
   id = 3926,
@@ -6447,6 +6612,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4363,1,1},
 },
 [3928] = {
   id = 3928,
@@ -6497,6 +6663,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4401,1,1},
 },
 [3929] = {
   id = 3929,
@@ -6527,6 +6694,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {4364,1,1},
 },
 [3930] = {
   id = 3930,
@@ -6561,6 +6729,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {8068,200,200},
 },
 [3931] = {
   id = 3931,
@@ -6595,6 +6764,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {4365,1,3},
 },
 [3932] = {
   id = 3932,
@@ -6604,7 +6774,7 @@ ProfessionatorDB.engineering = {
   recipe_source_alliance_long = 'Trainers',
   recipe_source_horde_short = 'Trainers',
   recipe_source_horde_medium = 'Trainers',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Franklin Lloyd <Expert Engineer> (Undercity), Nogg <Expert Engineer> (Orgrimmar), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nFranklin Lloyd <Expert Engineer> (Undercity)\nNogg <Expert Engineer> (Orgrimmar)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -6645,6 +6815,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4366,1,1},
 },
 [3933] = {
   id = 3933,
@@ -6687,6 +6858,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {4367,1,1},
 },
 [3934] = {
   id = 3934,
@@ -6696,7 +6868,7 @@ ProfessionatorDB.engineering = {
   recipe_source_alliance_long = 'Trainers',
   recipe_source_horde_short = 'Trainers',
   recipe_source_horde_medium = 'Trainers',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Franklin Lloyd <Expert Engineer> (Undercity), Nogg <Expert Engineer> (Orgrimmar), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nFranklin Lloyd <Expert Engineer> (Undercity)\nNogg <Expert Engineer> (Orgrimmar)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -6725,6 +6897,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4368,1,1},
 },
 [3936] = {
   id = 3936,
@@ -6734,7 +6907,7 @@ ProfessionatorDB.engineering = {
   recipe_source_alliance_long = 'Trainers',
   recipe_source_horde_short = 'Trainers',
   recipe_source_horde_medium = 'Trainers',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Franklin Lloyd <Expert Engineer> (Undercity), Nogg <Expert Engineer> (Orgrimmar), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nFranklin Lloyd <Expert Engineer> (Undercity)\nNogg <Expert Engineer> (Orgrimmar)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -6775,6 +6948,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4369,1,1},
 },
 [3937] = {
   id = 3937,
@@ -6784,7 +6958,7 @@ ProfessionatorDB.engineering = {
   recipe_source_alliance_long = 'Trainers',
   recipe_source_horde_short = 'Trainers',
   recipe_source_horde_medium = 'Trainers',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Franklin Lloyd <Expert Engineer> (Undercity), Nogg <Expert Engineer> (Orgrimmar), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nFranklin Lloyd <Expert Engineer> (Undercity)\nNogg <Expert Engineer> (Orgrimmar)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -6817,6 +6991,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4370,2,4},
 },
 [3938] = {
   id = 3938,
@@ -6826,7 +7001,7 @@ ProfessionatorDB.engineering = {
   recipe_source_alliance_long = 'Trainers',
   recipe_source_horde_short = 'Trainers',
   recipe_source_horde_medium = 'Trainers',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Franklin Lloyd <Expert Engineer> (Undercity), Nogg <Expert Engineer> (Orgrimmar), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nFranklin Lloyd <Expert Engineer> (Undercity)\nNogg <Expert Engineer> (Orgrimmar)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -6855,16 +7030,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4371,1,1},
 },
 [3939] = {
   id = 3939,
   name = 'Lovingly Crafted Boomstick',
   recipe_source_alliance_short = 'Schematic: Lovingly Crafted Boomstick',
-  recipe_source_alliance_medium = 'Sold by: Fradd Swiftgear <Engineering Supplies> (W), Sold by: Jinky Twizzlefixxit <Engineering Supplies> (TN)',
-  recipe_source_alliance_long = 'Sold by: Fradd Swiftgear <Engineering Supplies> (Wetlands), Sold by: Jinky Twizzlefixxit <Engineering Supplies> (Thousand Needles)',
+  recipe_source_alliance_medium = 'Sold by: Fradd Swiftgear <Engineering Supplies> (W)\nSold by: Jinky Twizzlefixxit <Engineering Supplies> (TN)',
+  recipe_source_alliance_long = 'Sold by: Fradd Swiftgear <Engineering Supplies> (Wetlands)\nSold by: Jinky Twizzlefixxit <Engineering Supplies> (Thousand Needles)',
   recipe_source_horde_short = 'Schematic: Lovingly Crafted Boomstick',
-  recipe_source_horde_medium = 'Sold by: Fradd Swiftgear <Engineering Supplies> (W), Sold by: Jinky Twizzlefixxit <Engineering Supplies> (TN)',
-  recipe_source_horde_long = 'Sold by: Fradd Swiftgear <Engineering Supplies> (Wetlands), Sold by: Jinky Twizzlefixxit <Engineering Supplies> (Thousand Needles)',
+  recipe_source_horde_medium = 'Sold by: Fradd Swiftgear <Engineering Supplies> (W)\nSold by: Jinky Twizzlefixxit <Engineering Supplies> (TN)',
+  recipe_source_horde_long = 'Sold by: Fradd Swiftgear <Engineering Supplies> (Wetlands)\nSold by: Jinky Twizzlefixxit <Engineering Supplies> (Thousand Needles)',
   recipe_item_id_alliance = 13309,
   recipe_item_id_horde = 13309,
   recipe_item_id_bop = false,
@@ -6905,6 +7081,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4372,1,1},
 },
 [3940] = {
   id = 3940,
@@ -6939,6 +7116,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {4373,1,1},
 },
 [3941] = {
   id = 3941,
@@ -6948,7 +7126,7 @@ ProfessionatorDB.engineering = {
   recipe_source_alliance_long = 'Trainers',
   recipe_source_horde_short = 'Trainers',
   recipe_source_horde_medium = 'Trainers',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Franklin Lloyd <Expert Engineer> (Undercity), Nogg <Expert Engineer> (Orgrimmar), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nFranklin Lloyd <Expert Engineer> (Undercity)\nNogg <Expert Engineer> (Orgrimmar)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -6985,6 +7163,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4374,1,3},
 },
 [3942] = {
   id = 3942,
@@ -6994,7 +7173,7 @@ ProfessionatorDB.engineering = {
   recipe_source_alliance_long = 'Trainers',
   recipe_source_horde_short = 'Trainers',
   recipe_source_horde_medium = 'Trainers',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Franklin Lloyd <Expert Engineer> (Undercity), Nogg <Expert Engineer> (Orgrimmar), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nFranklin Lloyd <Expert Engineer> (Undercity)\nNogg <Expert Engineer> (Orgrimmar)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -7027,16 +7206,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4375,1,1},
 },
 [3944] = {
   id = 3944,
   name = 'Flame Deflector',
   recipe_source_alliance_short = 'Schematic: Flame Deflector',
   recipe_source_alliance_medium = 'Dropped in: "Gnomeregan"',
-  recipe_source_alliance_long = 'Dropped by: Mekgineer Thermaplugg (Gnomeregan), Dropped by: STX-04/BD (Gnomeregan), Dropped by: Mekgineer Thermaplugg (Gnomeregan)',
+  recipe_source_alliance_long = 'Dropped by: Mekgineer Thermaplugg (Gnomeregan)\nDropped by: STX-04/BD (Gnomeregan)\nDropped by: Mekgineer Thermaplugg (Gnomeregan)',
   recipe_source_horde_short = 'Schematic: Flame Deflector',
   recipe_source_horde_medium = 'Dropped in: "Gnomeregan"',
-  recipe_source_horde_long = 'Dropped by: Mekgineer Thermaplugg (Gnomeregan), Dropped by: STX-04/BD (Gnomeregan), Dropped by: Mekgineer Thermaplugg (Gnomeregan)',
+  recipe_source_horde_long = 'Dropped by: Mekgineer Thermaplugg (Gnomeregan)\nDropped by: STX-04/BD (Gnomeregan)\nDropped by: Mekgineer Thermaplugg (Gnomeregan)',
   recipe_item_id_alliance = 4411,
   recipe_item_id_horde = 4411,
   recipe_item_id_bop = false,
@@ -7069,6 +7249,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4376,1,1},
 },
 [3945] = {
   id = 3945,
@@ -7078,7 +7259,7 @@ ProfessionatorDB.engineering = {
   recipe_source_alliance_long = 'Trainers',
   recipe_source_horde_short = 'Trainers',
   recipe_source_horde_medium = 'Trainers',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Franklin Lloyd <Expert Engineer> (Undercity), Nogg <Expert Engineer> (Orgrimmar), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nFranklin Lloyd <Expert Engineer> (Undercity)\nNogg <Expert Engineer> (Orgrimmar)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -7099,6 +7280,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {4377,1,1},
 },
 [3946] = {
   id = 3946,
@@ -7108,7 +7290,7 @@ ProfessionatorDB.engineering = {
   recipe_source_alliance_long = 'Trainers',
   recipe_source_horde_short = 'Trainers',
   recipe_source_horde_medium = 'Trainers',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Franklin Lloyd <Expert Engineer> (Undercity), Nogg <Expert Engineer> (Orgrimmar), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nFranklin Lloyd <Expert Engineer> (Undercity)\nNogg <Expert Engineer> (Orgrimmar)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -7133,6 +7315,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {4378,1,5},
 },
 [3947] = {
   id = 3947,
@@ -7142,7 +7325,7 @@ ProfessionatorDB.engineering = {
   recipe_source_alliance_long = 'Trainers',
   recipe_source_horde_short = 'Trainers',
   recipe_source_horde_medium = 'Trainers',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Franklin Lloyd <Expert Engineer> (Undercity), Nogg <Expert Engineer> (Orgrimmar), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nFranklin Lloyd <Expert Engineer> (Undercity)\nNogg <Expert Engineer> (Orgrimmar)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -7167,6 +7350,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {8069,200,200},
 },
 [3949] = {
   id = 3949,
@@ -7176,7 +7360,7 @@ ProfessionatorDB.engineering = {
   recipe_source_alliance_long = 'Trainers',
   recipe_source_horde_short = 'Trainers',
   recipe_source_horde_medium = 'Trainers',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Franklin Lloyd <Expert Engineer> (Undercity), Nogg <Expert Engineer> (Orgrimmar), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nFranklin Lloyd <Expert Engineer> (Undercity)\nNogg <Expert Engineer> (Orgrimmar)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -7209,6 +7393,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {4379,1,1},
 },
 [3950] = {
   id = 3950,
@@ -7218,7 +7403,7 @@ ProfessionatorDB.engineering = {
   recipe_source_alliance_long = 'Trainers',
   recipe_source_horde_short = 'Trainers',
   recipe_source_horde_medium = 'Trainers',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Franklin Lloyd <Expert Engineer> (Undercity), Nogg <Expert Engineer> (Orgrimmar), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nFranklin Lloyd <Expert Engineer> (Undercity)\nNogg <Expert Engineer> (Orgrimmar)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -7255,16 +7440,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4380,2,4},
 },
 [3952] = {
   id = 3952,
   name = 'Minor Recombobulator',
   recipe_source_alliance_short = 'Schematic: Minor Recombobulator',
   recipe_source_alliance_medium = 'Sold in: ',
-  recipe_source_alliance_long = 'Sold by: Fradd Swiftgear <Engineering Supplies> (Wetlands), Sold by: Namdo Bizzfizzle <Engineering Supplies>, Sold by: Namdo Bizzfizzle <Engineering Supplies>',
+  recipe_source_alliance_long = 'Sold by: Fradd Swiftgear <Engineering Supplies> (Wetlands)\nSold by: Namdo Bizzfizzle <Engineering Supplies>\nSold by: Namdo Bizzfizzle <Engineering Supplies>',
   recipe_source_horde_short = 'Schematic: Minor Recombobulator',
   recipe_source_horde_medium = 'Sold in: ',
-  recipe_source_horde_long = 'Sold by: Fradd Swiftgear <Engineering Supplies> (Wetlands), Sold by: Namdo Bizzfizzle <Engineering Supplies>, Sold by: Namdo Bizzfizzle <Engineering Supplies>',
+  recipe_source_horde_long = 'Sold by: Fradd Swiftgear <Engineering Supplies> (Wetlands)\nSold by: Namdo Bizzfizzle <Engineering Supplies>\nSold by: Namdo Bizzfizzle <Engineering Supplies>',
   recipe_item_id_alliance = 14639,
   recipe_item_id_horde = 14639,
   recipe_item_id_bop = false,
@@ -7297,6 +7483,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {4381,1,1},
 },
 [3953] = {
   id = 3953,
@@ -7306,7 +7493,7 @@ ProfessionatorDB.engineering = {
   recipe_source_alliance_long = 'Trainers',
   recipe_source_horde_short = 'Trainers',
   recipe_source_horde_medium = 'Trainers',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Franklin Lloyd <Expert Engineer> (Undercity), Nogg <Expert Engineer> (Orgrimmar), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nFranklin Lloyd <Expert Engineer> (Undercity)\nNogg <Expert Engineer> (Orgrimmar)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -7335,6 +7522,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {4382,1,1},
 },
 [3954] = {
   id = 3954,
@@ -7385,6 +7573,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4383,1,1},
 },
 [3955] = {
   id = 3955,
@@ -7394,7 +7583,7 @@ ProfessionatorDB.engineering = {
   recipe_source_alliance_long = 'Trainers',
   recipe_source_horde_short = 'Trainers',
   recipe_source_horde_medium = 'Trainers',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Franklin Lloyd <Expert Engineer> (Undercity), Nogg <Expert Engineer> (Orgrimmar), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nFranklin Lloyd <Expert Engineer> (Undercity)\nNogg <Expert Engineer> (Orgrimmar)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -7435,6 +7624,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4384,1,1},
 },
 [3956] = {
   id = 3956,
@@ -7444,7 +7634,7 @@ ProfessionatorDB.engineering = {
   recipe_source_alliance_long = 'Trainers',
   recipe_source_horde_short = 'Trainers',
   recipe_source_horde_medium = 'Trainers',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Franklin Lloyd <Expert Engineer> (Undercity), Nogg <Expert Engineer> (Orgrimmar), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nFranklin Lloyd <Expert Engineer> (Undercity)\nNogg <Expert Engineer> (Orgrimmar)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -7477,6 +7667,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4385,1,1},
 },
 [3957] = {
   id = 3957,
@@ -7519,16 +7710,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4386,1,1},
 },
 [3958] = {
   id = 3958,
   name = 'Iron Strut',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T), Springspindle Fizzlegear <Artisan Engineer> (I)',
-  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Springspindle Fizzlegear <Artisan Engineer> (Ironforge)',
+  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nSpringspindle Fizzlegear <Artisan Engineer> (I)',
+  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nSpringspindle Fizzlegear <Artisan Engineer> (Ironforge)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T), Roxxik <Artisan Engineer> (O)',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nRoxxik <Artisan Engineer> (O)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -7553,16 +7745,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4387,1,1},
 },
 [3959] = {
   id = 3959,
   name = 'Discombobulator Ray',
   recipe_source_alliance_short = 'Schematic: Discombobulator Ray',
   recipe_source_alliance_medium = 'Dropped in: "Gnomeregan"',
-  recipe_source_alliance_long = 'Dropped by: Mekgineer Thermaplugg (Gnomeregan), Dropped by: STX-04/BD (Gnomeregan), Dropped by: Mekgineer Thermaplugg (Gnomeregan)',
+  recipe_source_alliance_long = 'Dropped by: Mekgineer Thermaplugg (Gnomeregan)\nDropped by: STX-04/BD (Gnomeregan)\nDropped by: Mekgineer Thermaplugg (Gnomeregan)',
   recipe_source_horde_short = 'Schematic: Discombobulator Ray',
   recipe_source_horde_medium = 'Dropped in: "Gnomeregan"',
-  recipe_source_horde_long = 'Dropped by: Mekgineer Thermaplugg (Gnomeregan), Dropped by: STX-04/BD (Gnomeregan), Dropped by: Mekgineer Thermaplugg (Gnomeregan)',
+  recipe_source_horde_long = 'Dropped by: Mekgineer Thermaplugg (Gnomeregan)\nDropped by: STX-04/BD (Gnomeregan)\nDropped by: Mekgineer Thermaplugg (Gnomeregan)',
   recipe_item_id_alliance = 4413,
   recipe_item_id_horde = 4413,
   recipe_item_id_bop = false,
@@ -7603,6 +7796,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4388,1,1},
 },
 [3960] = {
   id = 3960,
@@ -7653,16 +7847,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4403,1,1},
 },
 [3961] = {
   id = 3961,
   name = 'Gyrochronatom',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T), Springspindle Fizzlegear <Artisan Engineer> (I)',
-  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Springspindle Fizzlegear <Artisan Engineer> (Ironforge)',
+  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nSpringspindle Fizzlegear <Artisan Engineer> (I)',
+  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nSpringspindle Fizzlegear <Artisan Engineer> (Ironforge)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T), Roxxik <Artisan Engineer> (O)',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nRoxxik <Artisan Engineer> (O)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -7695,16 +7890,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4389,1,1},
 },
 [3962] = {
   id = 3962,
   name = 'Iron Grenade',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T), Springspindle Fizzlegear <Artisan Engineer> (I)',
-  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Springspindle Fizzlegear <Artisan Engineer> (Ironforge)',
+  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nSpringspindle Fizzlegear <Artisan Engineer> (I)',
+  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nSpringspindle Fizzlegear <Artisan Engineer> (Ironforge)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T), Roxxik <Artisan Engineer> (O)',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nRoxxik <Artisan Engineer> (O)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -7737,16 +7933,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4390,2,4},
 },
 [3963] = {
   id = 3963,
   name = 'Compact Harvest Reaper Kit',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T), Springspindle Fizzlegear <Artisan Engineer> (I)',
-  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Springspindle Fizzlegear <Artisan Engineer> (Ironforge)',
+  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nSpringspindle Fizzlegear <Artisan Engineer> (I)',
+  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nSpringspindle Fizzlegear <Artisan Engineer> (Ironforge)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T), Roxxik <Artisan Engineer> (O)',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nRoxxik <Artisan Engineer> (O)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -7787,16 +7984,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4391,1,1},
 },
 [3965] = {
   id = 3965,
   name = 'Advanced Target Dummy',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T), Springspindle Fizzlegear <Artisan Engineer> (I)',
-  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Springspindle Fizzlegear <Artisan Engineer> (Ironforge)',
+  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nSpringspindle Fizzlegear <Artisan Engineer> (I)',
+  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nSpringspindle Fizzlegear <Artisan Engineer> (Ironforge)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T), Roxxik <Artisan Engineer> (O)',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nRoxxik <Artisan Engineer> (O)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -7837,6 +8035,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4392,1,1},
 },
 [3966] = {
   id = 3966,
@@ -7879,16 +8078,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4393,1,1},
 },
 [3967] = {
   id = 3967,
   name = 'Big Iron Bomb',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T), Springspindle Fizzlegear <Artisan Engineer> (I)',
-  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Springspindle Fizzlegear <Artisan Engineer> (Ironforge)',
+  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nSpringspindle Fizzlegear <Artisan Engineer> (I)',
+  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nSpringspindle Fizzlegear <Artisan Engineer> (Ironforge)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T), Roxxik <Artisan Engineer> (O)',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nRoxxik <Artisan Engineer> (O)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -7925,6 +8125,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4394,2,2},
 },
 [3968] = {
   id = 3968,
@@ -7971,6 +8172,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4395,1,1},
 },
 [3969] = {
   id = 3969,
@@ -8025,6 +8227,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4396,1,1},
 },
 [3971] = {
   id = 3971,
@@ -8079,6 +8282,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4397,1,1},
 },
 [3972] = {
   id = 3972,
@@ -8117,6 +8321,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {4398,1,1},
 },
 [3973] = {
   id = 3973,
@@ -8126,7 +8331,7 @@ ProfessionatorDB.engineering = {
   recipe_source_alliance_long = 'Trainers',
   recipe_source_horde_short = 'Trainers',
   recipe_source_horde_medium = 'Trainers',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Franklin Lloyd <Expert Engineer> (Undercity), Nogg <Expert Engineer> (Orgrimmar), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nFranklin Lloyd <Expert Engineer> (Undercity)\nNogg <Expert Engineer> (Orgrimmar)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -8147,6 +8352,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {4404,5,5},
 },
 [3977] = {
   id = 3977,
@@ -8189,6 +8395,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4405,1,1},
 },
 [3978] = {
   id = 3978,
@@ -8198,7 +8405,7 @@ ProfessionatorDB.engineering = {
   recipe_source_alliance_long = 'Trainers',
   recipe_source_horde_short = 'Trainers',
   recipe_source_horde_medium = 'Trainers',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Franklin Lloyd <Expert Engineer> (Undercity), Nogg <Expert Engineer> (Orgrimmar), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nFranklin Lloyd <Expert Engineer> (Undercity)\nNogg <Expert Engineer> (Orgrimmar)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -8227,16 +8434,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4406,1,1},
 },
 [3979] = {
   id = 3979,
   name = 'Accurate Scope',
   recipe_source_alliance_short = 'Schematic: Accurate Scope',
-  recipe_source_alliance_medium = 'Sold by: Mazk Snipeshot <Engineering Supplies> (SV), Sold by: Super-Seller 680 (D)',
-  recipe_source_alliance_long = 'Sold by: Mazk Snipeshot <Engineering Supplies> (Stranglethorn Vale), Sold by: Super-Seller 680 (Desolace)',
+  recipe_source_alliance_medium = 'Sold by: Mazk Snipeshot <Engineering Supplies> (SV)\nSold by: Super-Seller 680 (D)',
+  recipe_source_alliance_long = 'Sold by: Mazk Snipeshot <Engineering Supplies> (Stranglethorn Vale)\nSold by: Super-Seller 680 (Desolace)',
   recipe_source_horde_short = 'Schematic: Accurate Scope',
-  recipe_source_horde_medium = 'Sold by: Mazk Snipeshot <Engineering Supplies> (SV), Sold by: Super-Seller 680 (D)',
-  recipe_source_horde_long = 'Sold by: Mazk Snipeshot <Engineering Supplies> (Stranglethorn Vale), Sold by: Super-Seller 680 (Desolace)',
+  recipe_source_horde_medium = 'Sold by: Mazk Snipeshot <Engineering Supplies> (SV)\nSold by: Super-Seller 680 (D)',
+  recipe_source_horde_long = 'Sold by: Mazk Snipeshot <Engineering Supplies> (Stranglethorn Vale)\nSold by: Super-Seller 680 (Desolace)',
   recipe_item_id_alliance = 13310,
   recipe_item_id_horde = 13310,
   recipe_item_id_bop = false,
@@ -8273,6 +8481,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {4407,1,1},
 },
 [6458] = {
   id = 6458,
@@ -8282,7 +8491,7 @@ ProfessionatorDB.engineering = {
   recipe_source_alliance_long = 'Trainers',
   recipe_source_horde_short = 'Trainers',
   recipe_source_horde_medium = 'Trainers',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Franklin Lloyd <Expert Engineer> (Undercity), Nogg <Expert Engineer> (Orgrimmar), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nFranklin Lloyd <Expert Engineer> (Undercity)\nNogg <Expert Engineer> (Orgrimmar)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -8315,6 +8524,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {5507,1,1},
 },
 [7430] = {
   id = 7430,
@@ -8349,16 +8559,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {6219,1,1},
 },
 [8243] = {
   id = 8243,
   name = 'Flash Bomb',
   recipe_source_alliance_short = 'Schematic: Flash Bomb',
   recipe_source_alliance_medium = 'Dropped in: "Gnomeregan"',
-  recipe_source_alliance_long = 'Dropped by: STX-04/BD (Gnomeregan), Dropped by: Mekgineer Thermaplugg (Gnomeregan), Dropped by: Mekgineer Thermaplugg (Gnomeregan)',
+  recipe_source_alliance_long = 'Dropped by: STX-04/BD (Gnomeregan)\nDropped by: Mekgineer Thermaplugg (Gnomeregan)\nDropped by: Mekgineer Thermaplugg (Gnomeregan)',
   recipe_source_horde_short = 'Schematic: Flash Bomb',
   recipe_source_horde_medium = 'Dropped in: "Gnomeregan"',
-  recipe_source_horde_long = 'Dropped by: STX-04/BD (Gnomeregan), Dropped by: Mekgineer Thermaplugg (Gnomeregan), Dropped by: Mekgineer Thermaplugg (Gnomeregan)',
+  recipe_source_horde_long = 'Dropped by: STX-04/BD (Gnomeregan)\nDropped by: Mekgineer Thermaplugg (Gnomeregan)\nDropped by: Mekgineer Thermaplugg (Gnomeregan)',
   recipe_item_id_alliance = 6672,
   recipe_item_id_horde = 6672,
   recipe_item_id_bop = false,
@@ -8387,6 +8598,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {4852,1,1},
 },
 [8334] = {
   id = 8334,
@@ -8396,7 +8608,7 @@ ProfessionatorDB.engineering = {
   recipe_source_alliance_long = 'Trainers',
   recipe_source_horde_short = 'Trainers',
   recipe_source_horde_medium = 'Trainers',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Franklin Lloyd <Expert Engineer> (Undercity), Nogg <Expert Engineer> (Orgrimmar), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nFranklin Lloyd <Expert Engineer> (Undercity)\nNogg <Expert Engineer> (Orgrimmar)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -8429,6 +8641,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {6712,1,1},
 },
 [8339] = {
   id = 8339,
@@ -8463,16 +8676,17 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {6714,1,3},
 },
 [8895] = {
   id = 8895,
   name = 'Goblin Rocket Boots',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T), Vazario Linkgrease <Master Goblin Engineer> (TB)',
-  recipe_source_alliance_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris), Vazario Linkgrease <Master Goblin Engineer> (The Barrens)',
+  recipe_source_alliance_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T)\nVazario Linkgrease <Master Goblin Engineer> (TB)',
+  recipe_source_alliance_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris)\nVazario Linkgrease <Master Goblin Engineer> (The Barrens)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T), Vazario Linkgrease <Master Goblin Engineer> (TB)',
-  recipe_source_horde_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris), Vazario Linkgrease <Master Goblin Engineer> (The Barrens)',
+  recipe_source_horde_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T)\nVazario Linkgrease <Master Goblin Engineer> (TB)',
+  recipe_source_horde_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris)\nVazario Linkgrease <Master Goblin Engineer> (The Barrens)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -8517,6 +8731,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {7189,1,1},
 },
 [9269] = {
   id = 9269,
@@ -8571,6 +8786,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {7506,1,1},
 },
 [9271] = {
   id = 9271,
@@ -8580,7 +8796,7 @@ ProfessionatorDB.engineering = {
   recipe_source_alliance_long = 'Trainers',
   recipe_source_horde_short = 'Trainers',
   recipe_source_horde_medium = 'Trainers',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Franklin Lloyd <Expert Engineer> (Undercity), Nogg <Expert Engineer> (Orgrimmar), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nFranklin Lloyd <Expert Engineer> (Undercity)\nNogg <Expert Engineer> (Orgrimmar)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -8609,6 +8825,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {6533,3,3},
 },
 [9273] = {
   id = 9273,
@@ -8659,6 +8876,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {7148,1,1},
 },
 [12584] = {
   id = 12584,
@@ -8668,7 +8886,7 @@ ProfessionatorDB.engineering = {
   recipe_source_alliance_long = 'Trainers',
   recipe_source_horde_short = 'Trainers',
   recipe_source_horde_medium = 'Trainers',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Franklin Lloyd <Expert Engineer> (Undercity), Nogg <Expert Engineer> (Orgrimmar), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nFranklin Lloyd <Expert Engineer> (Undercity)\nNogg <Expert Engineer> (Orgrimmar)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -8697,16 +8915,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10558,3,3},
 },
 [12585] = {
   id = 12585,
   name = 'Solid Blasting Powder',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T), Springspindle Fizzlegear <Artisan Engineer> (I)',
-  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Springspindle Fizzlegear <Artisan Engineer> (Ironforge)',
+  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nSpringspindle Fizzlegear <Artisan Engineer> (I)',
+  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nSpringspindle Fizzlegear <Artisan Engineer> (Ironforge)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T), Roxxik <Artisan Engineer> (O)',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nRoxxik <Artisan Engineer> (O)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -8727,16 +8946,17 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {10505,1,1},
 },
 [12586] = {
   id = 12586,
   name = 'Solid Dynamite',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T), Springspindle Fizzlegear <Artisan Engineer> (I)',
-  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Springspindle Fizzlegear <Artisan Engineer> (Ironforge)',
+  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nSpringspindle Fizzlegear <Artisan Engineer> (I)',
+  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nSpringspindle Fizzlegear <Artisan Engineer> (Ironforge)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T), Roxxik <Artisan Engineer> (O)',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nRoxxik <Artisan Engineer> (O)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -8761,6 +8981,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {10507,2,2},
 },
 [12587] = {
   id = 12587,
@@ -8803,16 +9024,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10499,1,1},
 },
 [12589] = {
   id = 12589,
   name = 'Mithril Tube',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T), Springspindle Fizzlegear <Artisan Engineer> (I)',
-  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Springspindle Fizzlegear <Artisan Engineer> (Ironforge)',
+  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nSpringspindle Fizzlegear <Artisan Engineer> (I)',
+  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nSpringspindle Fizzlegear <Artisan Engineer> (Ironforge)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T), Roxxik <Artisan Engineer> (O)',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nRoxxik <Artisan Engineer> (O)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -8837,16 +9059,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10559,1,1},
 },
 [12590] = {
   id = 12590,
   name = 'Gyromatic Micro-Adjustor',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T), Springspindle Fizzlegear <Artisan Engineer> (I)',
-  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Springspindle Fizzlegear <Artisan Engineer> (Ironforge)',
+  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nSpringspindle Fizzlegear <Artisan Engineer> (I)',
+  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nSpringspindle Fizzlegear <Artisan Engineer> (Ironforge)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T), Roxxik <Artisan Engineer> (O)',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nRoxxik <Artisan Engineer> (O)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -8871,16 +9094,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10498,1,1},
 },
 [12591] = {
   id = 12591,
   name = 'Unstable Trigger',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T), Springspindle Fizzlegear <Artisan Engineer> (I)',
-  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Springspindle Fizzlegear <Artisan Engineer> (Ironforge)',
+  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nSpringspindle Fizzlegear <Artisan Engineer> (I)',
+  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nSpringspindle Fizzlegear <Artisan Engineer> (Ironforge)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T), Roxxik <Artisan Engineer> (O)',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nRoxxik <Artisan Engineer> (O)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -8917,16 +9141,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10560,1,1},
 },
 [12594] = {
   id = 12594,
   name = 'Fire Goggles',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T), Springspindle Fizzlegear <Artisan Engineer> (I)',
-  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Springspindle Fizzlegear <Artisan Engineer> (Ironforge)',
+  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nSpringspindle Fizzlegear <Artisan Engineer> (I)',
+  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nSpringspindle Fizzlegear <Artisan Engineer> (Ironforge)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T), Roxxik <Artisan Engineer> (O)',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nRoxxik <Artisan Engineer> (O)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -8967,16 +9192,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10500,1,1},
 },
 [12595] = {
   id = 12595,
   name = 'Mithril Blunderbuss',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T), Springspindle Fizzlegear <Artisan Engineer> (I)',
-  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Springspindle Fizzlegear <Artisan Engineer> (Ironforge)',
+  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nSpringspindle Fizzlegear <Artisan Engineer> (I)',
+  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nSpringspindle Fizzlegear <Artisan Engineer> (Ironforge)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T), Roxxik <Artisan Engineer> (O)',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nRoxxik <Artisan Engineer> (O)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -9021,16 +9247,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10508,1,1},
 },
 [12596] = {
   id = 12596,
   name = 'Hi-Impact Mithril Slugs',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T), Springspindle Fizzlegear <Artisan Engineer> (I)',
-  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Springspindle Fizzlegear <Artisan Engineer> (Ironforge)',
+  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nSpringspindle Fizzlegear <Artisan Engineer> (I)',
+  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nSpringspindle Fizzlegear <Artisan Engineer> (Ironforge)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T), Roxxik <Artisan Engineer> (O)',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nRoxxik <Artisan Engineer> (O)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -9059,16 +9286,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10512,200,200},
 },
 [12597] = {
   id = 12597,
   name = 'Deadly Scope',
   recipe_source_alliance_short = 'Schematic: Deadly Scope',
-  recipe_source_alliance_medium = 'Sold by: Knaz Blunderflame <Engineering Supplies> (SV), Sold by: Yuka Screwspigot (BS)',
-  recipe_source_alliance_long = 'Sold by: Knaz Blunderflame <Engineering Supplies> (Stranglethorn Vale), Sold by: Yuka Screwspigot (Burning Steppes)',
+  recipe_source_alliance_medium = 'Sold by: Knaz Blunderflame <Engineering Supplies> (SV)\nSold by: Yuka Screwspigot (BS)',
+  recipe_source_alliance_long = 'Sold by: Knaz Blunderflame <Engineering Supplies> (Stranglethorn Vale)\nSold by: Yuka Screwspigot (Burning Steppes)',
   recipe_source_horde_short = 'Schematic: Deadly Scope',
-  recipe_source_horde_medium = 'Sold by: Knaz Blunderflame <Engineering Supplies> (SV), Sold by: Yuka Screwspigot (BS)',
-  recipe_source_horde_long = 'Sold by: Knaz Blunderflame <Engineering Supplies> (Stranglethorn Vale), Sold by: Yuka Screwspigot (Burning Steppes)',
+  recipe_source_horde_medium = 'Sold by: Knaz Blunderflame <Engineering Supplies> (SV)\nSold by: Yuka Screwspigot (BS)',
+  recipe_source_horde_long = 'Sold by: Knaz Blunderflame <Engineering Supplies> (Stranglethorn Vale)\nSold by: Yuka Screwspigot (Burning Steppes)',
   recipe_item_id_alliance = 10602,
   recipe_item_id_horde = 10602,
   recipe_item_id_bop = false,
@@ -9105,16 +9333,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10546,1,1},
 },
 [12599] = {
   id = 12599,
   name = 'Mithril Casing',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T), Springspindle Fizzlegear <Artisan Engineer> (I)',
-  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Springspindle Fizzlegear <Artisan Engineer> (Ironforge)',
+  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nSpringspindle Fizzlegear <Artisan Engineer> (I)',
+  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nSpringspindle Fizzlegear <Artisan Engineer> (Ironforge)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T), Roxxik <Artisan Engineer> (O)',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nRoxxik <Artisan Engineer> (O)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -9143,16 +9372,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10561,1,1},
 },
 [12603] = {
   id = 12603,
   name = 'Mithril Frag Bomb',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T), Springspindle Fizzlegear <Artisan Engineer> (I)',
-  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Springspindle Fizzlegear <Artisan Engineer> (Ironforge)',
+  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nSpringspindle Fizzlegear <Artisan Engineer> (I)',
+  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nSpringspindle Fizzlegear <Artisan Engineer> (Ironforge)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T), Roxxik <Artisan Engineer> (O)',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nRoxxik <Artisan Engineer> (O)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -9189,6 +9419,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10514,3,3},
 },
 [12607] = {
   id = 12607,
@@ -9235,6 +9466,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10501,1,1},
 },
 [12614] = {
   id = 12614,
@@ -9289,6 +9521,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10510,1,1},
 },
 [12615] = {
   id = 12615,
@@ -9331,6 +9564,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10502,1,1},
 },
 [12616] = {
   id = 12616,
@@ -9381,6 +9615,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10518,1,1},
 },
 [12617] = {
   id = 12617,
@@ -9435,6 +9670,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10506,1,1},
 },
 [12618] = {
   id = 12618,
@@ -9477,6 +9713,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10503,1,1},
 },
 [12619] = {
   id = 12619,
@@ -9523,6 +9760,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10562,4,4},
 },
 [12620] = {
   id = 12620,
@@ -9569,6 +9807,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10548,1,1},
 },
 [12621] = {
   id = 12621,
@@ -9607,6 +9846,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10513,200,200},
 },
 [12622] = {
   id = 12622,
@@ -9661,6 +9901,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10504,1,1},
 },
 [12624] = {
   id = 12624,
@@ -9719,16 +9960,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10576,1,1},
 },
 [12715] = {
   id = 12715,
   name = 'Goblin Rocket Fuel Recipe',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T), Vazario Linkgrease <Master Goblin Engineer> (TB)',
-  recipe_source_alliance_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris), Vazario Linkgrease <Master Goblin Engineer> (The Barrens)',
+  recipe_source_alliance_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T)\nVazario Linkgrease <Master Goblin Engineer> (TB)',
+  recipe_source_alliance_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris)\nVazario Linkgrease <Master Goblin Engineer> (The Barrens)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T), Vazario Linkgrease <Master Goblin Engineer> (TB)',
-  recipe_source_horde_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris), Vazario Linkgrease <Master Goblin Engineer> (The Barrens)',
+  recipe_source_horde_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T)\nVazario Linkgrease <Master Goblin Engineer> (TB)',
+  recipe_source_horde_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris)\nVazario Linkgrease <Master Goblin Engineer> (The Barrens)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -9753,6 +9995,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {10644,1,1},
 },
 [12716] = {
   id = 12716,
@@ -9807,16 +10050,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10577,1,1},
 },
 [12717] = {
   id = 12717,
   name = 'Goblin Mining Helmet',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T), Vazario Linkgrease <Master Goblin Engineer> (TB)',
-  recipe_source_alliance_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris), Vazario Linkgrease <Master Goblin Engineer> (The Barrens)',
+  recipe_source_alliance_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T)\nVazario Linkgrease <Master Goblin Engineer> (TB)',
+  recipe_source_alliance_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris)\nVazario Linkgrease <Master Goblin Engineer> (The Barrens)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T), Vazario Linkgrease <Master Goblin Engineer> (TB)',
-  recipe_source_horde_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris), Vazario Linkgrease <Master Goblin Engineer> (The Barrens)',
+  recipe_source_horde_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T)\nVazario Linkgrease <Master Goblin Engineer> (TB)',
+  recipe_source_horde_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris)\nVazario Linkgrease <Master Goblin Engineer> (The Barrens)',
   recipe_item_id_alliance = 221336,
   recipe_item_id_horde = 221336,
   recipe_item_id_bop = true,
@@ -9853,16 +10097,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10542,1,1},
 },
 [12718] = {
   id = 12718,
   name = 'Goblin Construction Helmet',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T), Vazario Linkgrease <Master Goblin Engineer> (TB)',
-  recipe_source_alliance_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris), Vazario Linkgrease <Master Goblin Engineer> (The Barrens)',
+  recipe_source_alliance_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T)\nVazario Linkgrease <Master Goblin Engineer> (TB)',
+  recipe_source_alliance_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris)\nVazario Linkgrease <Master Goblin Engineer> (The Barrens)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T), Vazario Linkgrease <Master Goblin Engineer> (TB)',
-  recipe_source_horde_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris), Vazario Linkgrease <Master Goblin Engineer> (The Barrens)',
+  recipe_source_horde_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T)\nVazario Linkgrease <Master Goblin Engineer> (TB)',
+  recipe_source_horde_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris)\nVazario Linkgrease <Master Goblin Engineer> (The Barrens)',
   recipe_item_id_alliance = 221335,
   recipe_item_id_horde = 221335,
   recipe_item_id_bop = true,
@@ -9899,16 +10144,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10543,1,1},
 },
 [12754] = {
   id = 12754,
   name = 'The Big One',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T), Vazario Linkgrease <Master Goblin Engineer> (TB)',
-  recipe_source_alliance_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris), Vazario Linkgrease <Master Goblin Engineer> (The Barrens)',
+  recipe_source_alliance_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T)\nVazario Linkgrease <Master Goblin Engineer> (TB)',
+  recipe_source_alliance_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris)\nVazario Linkgrease <Master Goblin Engineer> (The Barrens)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T), Vazario Linkgrease <Master Goblin Engineer> (TB)',
-  recipe_source_horde_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris), Vazario Linkgrease <Master Goblin Engineer> (The Barrens)',
+  recipe_source_horde_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T)\nVazario Linkgrease <Master Goblin Engineer> (TB)',
+  recipe_source_horde_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris)\nVazario Linkgrease <Master Goblin Engineer> (The Barrens)',
   recipe_item_id_alliance = 221341,
   recipe_item_id_horde = 221341,
   recipe_item_id_bop = true,
@@ -9949,16 +10195,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10586,2,2},
 },
 [12755] = {
   id = 12755,
   name = 'Goblin Bomb Dispenser',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T), Vazario Linkgrease <Master Goblin Engineer> (TB)',
-  recipe_source_alliance_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris), Vazario Linkgrease <Master Goblin Engineer> (The Barrens)',
+  recipe_source_alliance_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T)\nVazario Linkgrease <Master Goblin Engineer> (TB)',
+  recipe_source_alliance_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris)\nVazario Linkgrease <Master Goblin Engineer> (The Barrens)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T), Vazario Linkgrease <Master Goblin Engineer> (TB)',
-  recipe_source_horde_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris), Vazario Linkgrease <Master Goblin Engineer> (The Barrens)',
+  recipe_source_horde_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T)\nVazario Linkgrease <Master Goblin Engineer> (TB)',
+  recipe_source_horde_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris)\nVazario Linkgrease <Master Goblin Engineer> (The Barrens)',
   recipe_item_id_alliance = 221340,
   recipe_item_id_horde = 221340,
   recipe_item_id_bop = true,
@@ -10003,16 +10250,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10587,1,1},
 },
 [12758] = {
   id = 12758,
   name = 'Goblin Rocket Helmet',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T), Vazario Linkgrease <Master Goblin Engineer> (TB)',
-  recipe_source_alliance_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris), Vazario Linkgrease <Master Goblin Engineer> (The Barrens)',
+  recipe_source_alliance_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T)\nVazario Linkgrease <Master Goblin Engineer> (TB)',
+  recipe_source_alliance_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris)\nVazario Linkgrease <Master Goblin Engineer> (The Barrens)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T), Vazario Linkgrease <Master Goblin Engineer> (TB)',
-  recipe_source_horde_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris), Vazario Linkgrease <Master Goblin Engineer> (The Barrens)',
+  recipe_source_horde_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T)\nVazario Linkgrease <Master Goblin Engineer> (TB)',
+  recipe_source_horde_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris)\nVazario Linkgrease <Master Goblin Engineer> (The Barrens)',
   recipe_item_id_alliance = 221343,
   recipe_item_id_horde = 221343,
   recipe_item_id_bop = true,
@@ -10053,13 +10301,14 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10588,1,1},
 },
 [12759] = {
   id = 12759,
   name = 'Gnomish Death Ray',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Oglethorpe Obnoticus <Master Gnome Engineer> (SV), Tinkmaster Overspark <Master Gnome Engineer> (I)',
-  recipe_source_alliance_long = 'Oglethorpe Obnoticus <Master Gnome Engineer> (Stranglethorn Vale), Tinkmaster Overspark <Master Gnome Engineer> (Ironforge)',
+  recipe_source_alliance_medium = 'Oglethorpe Obnoticus <Master Gnome Engineer> (SV)\nTinkmaster Overspark <Master Gnome Engineer> (I)',
+  recipe_source_alliance_long = 'Oglethorpe Obnoticus <Master Gnome Engineer> (Stranglethorn Vale)\nTinkmaster Overspark <Master Gnome Engineer> (Ironforge)',
   recipe_source_horde_short = 'Oglethorpe Obnoticus (SV)',
   recipe_source_horde_medium = 'Oglethorpe Obnoticus <Master Gnome Engineer> (SV)',
   recipe_source_horde_long = 'Oglethorpe Obnoticus <Master Gnome Engineer> (Stranglethorn Vale)',
@@ -10107,16 +10356,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10645,1,1},
 },
 [12760] = {
   id = 12760,
   name = 'Goblin Sapper Charge',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T), Vazario Linkgrease <Master Goblin Engineer> (TB)',
-  recipe_source_alliance_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris), Vazario Linkgrease <Master Goblin Engineer> (The Barrens)',
+  recipe_source_alliance_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T)\nVazario Linkgrease <Master Goblin Engineer> (TB)',
+  recipe_source_alliance_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris)\nVazario Linkgrease <Master Goblin Engineer> (The Barrens)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T), Vazario Linkgrease <Master Goblin Engineer> (TB)',
-  recipe_source_horde_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris), Vazario Linkgrease <Master Goblin Engineer> (The Barrens)',
+  recipe_source_horde_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T)\nVazario Linkgrease <Master Goblin Engineer> (TB)',
+  recipe_source_horde_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris)\nVazario Linkgrease <Master Goblin Engineer> (The Barrens)',
   recipe_item_id_alliance = 221338,
   recipe_item_id_horde = 221338,
   recipe_item_id_bop = true,
@@ -10145,13 +10395,14 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {10646,1,1},
 },
 [12895] = {
   id = 12895,
   name = 'Inlaid Mithril Cylinder Plans',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Oglethorpe Obnoticus <Master Gnome Engineer> (SV), Tinkmaster Overspark <Master Gnome Engineer> (I)',
-  recipe_source_alliance_long = 'Oglethorpe Obnoticus <Master Gnome Engineer> (Stranglethorn Vale), Tinkmaster Overspark <Master Gnome Engineer> (Ironforge)',
+  recipe_source_alliance_medium = 'Oglethorpe Obnoticus <Master Gnome Engineer> (SV)\nTinkmaster Overspark <Master Gnome Engineer> (I)',
+  recipe_source_alliance_long = 'Oglethorpe Obnoticus <Master Gnome Engineer> (Stranglethorn Vale)\nTinkmaster Overspark <Master Gnome Engineer> (Ironforge)',
   recipe_source_horde_short = 'Oglethorpe Obnoticus (SV)',
   recipe_source_horde_medium = 'Oglethorpe Obnoticus <Master Gnome Engineer> (SV)',
   recipe_source_horde_long = 'Oglethorpe Obnoticus <Master Gnome Engineer> (Stranglethorn Vale)',
@@ -10179,13 +10430,14 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {10713,1,1},
 },
 [12897] = {
   id = 12897,
   name = 'Gnomish Goggles',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Oglethorpe Obnoticus <Master Gnome Engineer> (SV), Tinkmaster Overspark <Master Gnome Engineer> (I)',
-  recipe_source_alliance_long = 'Oglethorpe Obnoticus <Master Gnome Engineer> (Stranglethorn Vale), Tinkmaster Overspark <Master Gnome Engineer> (Ironforge)',
+  recipe_source_alliance_medium = 'Oglethorpe Obnoticus <Master Gnome Engineer> (SV)\nTinkmaster Overspark <Master Gnome Engineer> (I)',
+  recipe_source_alliance_long = 'Oglethorpe Obnoticus <Master Gnome Engineer> (Stranglethorn Vale)\nTinkmaster Overspark <Master Gnome Engineer> (Ironforge)',
   recipe_source_horde_short = 'Oglethorpe Obnoticus (SV)',
   recipe_source_horde_medium = 'Oglethorpe Obnoticus <Master Gnome Engineer> (SV)',
   recipe_source_horde_long = 'Oglethorpe Obnoticus <Master Gnome Engineer> (Stranglethorn Vale)',
@@ -10233,13 +10485,14 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10545,1,1},
 },
 [12899] = {
   id = 12899,
   name = 'Gnomish Shrink Ray',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Oglethorpe Obnoticus <Master Gnome Engineer> (SV), Tinkmaster Overspark <Master Gnome Engineer> (I)',
-  recipe_source_alliance_long = 'Oglethorpe Obnoticus <Master Gnome Engineer> (Stranglethorn Vale), Tinkmaster Overspark <Master Gnome Engineer> (Ironforge)',
+  recipe_source_alliance_medium = 'Oglethorpe Obnoticus <Master Gnome Engineer> (SV)\nTinkmaster Overspark <Master Gnome Engineer> (I)',
+  recipe_source_alliance_long = 'Oglethorpe Obnoticus <Master Gnome Engineer> (Stranglethorn Vale)\nTinkmaster Overspark <Master Gnome Engineer> (Ironforge)',
   recipe_source_horde_short = 'Oglethorpe Obnoticus (SV)',
   recipe_source_horde_medium = 'Oglethorpe Obnoticus <Master Gnome Engineer> (SV)',
   recipe_source_horde_long = 'Oglethorpe Obnoticus <Master Gnome Engineer> (Stranglethorn Vale)',
@@ -10287,13 +10540,14 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10716,1,1},
 },
 [12902] = {
   id = 12902,
   name = 'Gnomish Net-o-Matic Projector',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Oglethorpe Obnoticus <Master Gnome Engineer> (SV), Tinkmaster Overspark <Master Gnome Engineer> (I)',
-  recipe_source_alliance_long = 'Oglethorpe Obnoticus <Master Gnome Engineer> (Stranglethorn Vale), Tinkmaster Overspark <Master Gnome Engineer> (Ironforge)',
+  recipe_source_alliance_medium = 'Oglethorpe Obnoticus <Master Gnome Engineer> (SV)\nTinkmaster Overspark <Master Gnome Engineer> (I)',
+  recipe_source_alliance_long = 'Oglethorpe Obnoticus <Master Gnome Engineer> (Stranglethorn Vale)\nTinkmaster Overspark <Master Gnome Engineer> (Ironforge)',
   recipe_source_horde_short = 'Oglethorpe Obnoticus (SV)',
   recipe_source_horde_medium = 'Oglethorpe Obnoticus <Master Gnome Engineer> (SV)',
   recipe_source_horde_long = 'Oglethorpe Obnoticus <Master Gnome Engineer> (Stranglethorn Vale)',
@@ -10341,13 +10595,14 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10720,1,1},
 },
 [12903] = {
   id = 12903,
   name = 'Gnomish Harm Prevention Belt',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Oglethorpe Obnoticus <Master Gnome Engineer> (SV), Tinkmaster Overspark <Master Gnome Engineer> (I)',
-  recipe_source_alliance_long = 'Oglethorpe Obnoticus <Master Gnome Engineer> (Stranglethorn Vale), Tinkmaster Overspark <Master Gnome Engineer> (Ironforge)',
+  recipe_source_alliance_medium = 'Oglethorpe Obnoticus <Master Gnome Engineer> (SV)\nTinkmaster Overspark <Master Gnome Engineer> (I)',
+  recipe_source_alliance_long = 'Oglethorpe Obnoticus <Master Gnome Engineer> (Stranglethorn Vale)\nTinkmaster Overspark <Master Gnome Engineer> (Ironforge)',
   recipe_source_horde_short = 'Oglethorpe Obnoticus (SV)',
   recipe_source_horde_medium = 'Oglethorpe Obnoticus <Master Gnome Engineer> (SV)',
   recipe_source_horde_long = 'Oglethorpe Obnoticus <Master Gnome Engineer> (Stranglethorn Vale)',
@@ -10395,13 +10650,14 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10721,1,1},
 },
 [12905] = {
   id = 12905,
   name = 'Gnomish Rocket Boots',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Oglethorpe Obnoticus <Master Gnome Engineer> (SV), Tinkmaster Overspark <Master Gnome Engineer> (I)',
-  recipe_source_alliance_long = 'Oglethorpe Obnoticus <Master Gnome Engineer> (Stranglethorn Vale), Tinkmaster Overspark <Master Gnome Engineer> (Ironforge)',
+  recipe_source_alliance_medium = 'Oglethorpe Obnoticus <Master Gnome Engineer> (SV)\nTinkmaster Overspark <Master Gnome Engineer> (I)',
+  recipe_source_alliance_long = 'Oglethorpe Obnoticus <Master Gnome Engineer> (Stranglethorn Vale)\nTinkmaster Overspark <Master Gnome Engineer> (Ironforge)',
   recipe_source_horde_short = 'Oglethorpe Obnoticus (SV)',
   recipe_source_horde_medium = 'Oglethorpe Obnoticus <Master Gnome Engineer> (SV)',
   recipe_source_horde_long = 'Oglethorpe Obnoticus <Master Gnome Engineer> (Stranglethorn Vale)',
@@ -10449,13 +10705,14 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10724,1,1},
 },
 [12906] = {
   id = 12906,
   name = 'Gnomish Battle Chicken',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Oglethorpe Obnoticus <Master Gnome Engineer> (SV), Tinkmaster Overspark <Master Gnome Engineer> (I)',
-  recipe_source_alliance_long = 'Oglethorpe Obnoticus <Master Gnome Engineer> (Stranglethorn Vale), Tinkmaster Overspark <Master Gnome Engineer> (Ironforge)',
+  recipe_source_alliance_medium = 'Oglethorpe Obnoticus <Master Gnome Engineer> (SV)\nTinkmaster Overspark <Master Gnome Engineer> (I)',
+  recipe_source_alliance_long = 'Oglethorpe Obnoticus <Master Gnome Engineer> (Stranglethorn Vale)\nTinkmaster Overspark <Master Gnome Engineer> (Ironforge)',
   recipe_source_horde_short = 'Oglethorpe Obnoticus (SV)',
   recipe_source_horde_medium = 'Oglethorpe Obnoticus <Master Gnome Engineer> (SV)',
   recipe_source_horde_long = 'Oglethorpe Obnoticus <Master Gnome Engineer> (Stranglethorn Vale)',
@@ -10507,13 +10764,14 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10725,1,1},
 },
 [12907] = {
   id = 12907,
   name = 'Gnomish Mind Control Cap',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Oglethorpe Obnoticus <Master Gnome Engineer> (SV), Tinkmaster Overspark <Master Gnome Engineer> (I)',
-  recipe_source_alliance_long = 'Oglethorpe Obnoticus <Master Gnome Engineer> (Stranglethorn Vale), Tinkmaster Overspark <Master Gnome Engineer> (Ironforge)',
+  recipe_source_alliance_medium = 'Oglethorpe Obnoticus <Master Gnome Engineer> (SV)\nTinkmaster Overspark <Master Gnome Engineer> (I)',
+  recipe_source_alliance_long = 'Oglethorpe Obnoticus <Master Gnome Engineer> (Stranglethorn Vale)\nTinkmaster Overspark <Master Gnome Engineer> (Ironforge)',
   recipe_source_horde_short = 'Oglethorpe Obnoticus (SV)',
   recipe_source_horde_medium = 'Oglethorpe Obnoticus <Master Gnome Engineer> (SV)',
   recipe_source_horde_long = 'Oglethorpe Obnoticus <Master Gnome Engineer> (Stranglethorn Vale)',
@@ -10561,16 +10819,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10726,1,1},
 },
 [12908] = {
   id = 12908,
   name = 'Goblin Dragon Gun',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T), Vazario Linkgrease <Master Goblin Engineer> (TB)',
-  recipe_source_alliance_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris), Vazario Linkgrease <Master Goblin Engineer> (The Barrens)',
+  recipe_source_alliance_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T)\nVazario Linkgrease <Master Goblin Engineer> (TB)',
+  recipe_source_alliance_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris)\nVazario Linkgrease <Master Goblin Engineer> (The Barrens)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T), Vazario Linkgrease <Master Goblin Engineer> (TB)',
-  recipe_source_horde_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris), Vazario Linkgrease <Master Goblin Engineer> (The Barrens)',
+  recipe_source_horde_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T)\nVazario Linkgrease <Master Goblin Engineer> (TB)',
+  recipe_source_horde_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris)\nVazario Linkgrease <Master Goblin Engineer> (The Barrens)',
   recipe_item_id_alliance = 221342,
   recipe_item_id_horde = 221342,
   recipe_item_id_bop = true,
@@ -10615,16 +10874,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10727,1,1},
 },
 [13240] = {
   id = 13240,
   name = 'The Mortar: Reloaded',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T), Vazario Linkgrease <Master Goblin Engineer> (TB)',
-  recipe_source_alliance_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris), Vazario Linkgrease <Master Goblin Engineer> (The Barrens)',
+  recipe_source_alliance_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T)\nVazario Linkgrease <Master Goblin Engineer> (TB)',
+  recipe_source_alliance_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris)\nVazario Linkgrease <Master Goblin Engineer> (The Barrens)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T), Vazario Linkgrease <Master Goblin Engineer> (TB)',
-  recipe_source_horde_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris), Vazario Linkgrease <Master Goblin Engineer> (The Barrens)',
+  recipe_source_horde_medium = 'Nixx Sprocketspring <Master Goblin Engineer> (T)\nVazario Linkgrease <Master Goblin Engineer> (TB)',
+  recipe_source_horde_long = 'Nixx Sprocketspring <Master Goblin Engineer> (Tanaris)\nVazario Linkgrease <Master Goblin Engineer> (The Barrens)',
   recipe_item_id_alliance = 221337,
   recipe_item_id_horde = 221337,
   recipe_item_id_bop = true,
@@ -10661,16 +10921,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {10577,1,1},
 },
 [15255] = {
   id = 15255,
   name = 'Mechanical Repair Kit',
   recipe_source_alliance_short = 'Trainers',
-  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T), Springspindle Fizzlegear <Artisan Engineer> (I)',
-  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Springspindle Fizzlegear <Artisan Engineer> (Ironforge)',
+  recipe_source_alliance_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nSpringspindle Fizzlegear <Artisan Engineer> (I)',
+  recipe_source_alliance_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nSpringspindle Fizzlegear <Artisan Engineer> (Ironforge)',
   recipe_source_horde_short = 'Trainers',
-  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T), Roxxik <Artisan Engineer> (O)',
-  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris), Roxxik <Artisan Engineer> (Orgrimmar)',
+  recipe_source_horde_medium = 'Buzzek Bracketswing <Master Engineer> (T)\nRoxxik <Artisan Engineer> (O)',
+  recipe_source_horde_long = 'Buzzek Bracketswing <Master Engineer> (Tanaris)\nRoxxik <Artisan Engineer> (Orgrimmar)',
   recipe_item_id_alliance = nil,
   recipe_item_id_horde = nil,
   recipe_item_id_bop = nil,
@@ -10707,6 +10968,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {11590,1,1},
 },
 [15628] = {
   id = 15628,
@@ -10757,6 +11019,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {11825,1,1},
 },
 [15633] = {
   id = 15633,
@@ -10811,6 +11074,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {11826,1,1},
 },
 [19567] = {
   id = 19567,
@@ -10857,6 +11121,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {15846,1,1},
 },
 [19788] = {
   id = 19788,
@@ -10887,16 +11152,17 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {15992,1,1},
 },
 [19790] = {
   id = 19790,
   name = 'Thorium Grenade',
   recipe_source_alliance_short = 'Schematic: Thorium Grenade',
-  recipe_source_alliance_medium = 'Sold by: Sovik <Engineering Supplies> (O), Sold by: Gearcutter Cogspinner <Engineering Supplies> (I)',
-  recipe_source_alliance_long = 'Sold by: Sovik <Engineering Supplies> (Orgrimmar), Sold by: Gearcutter Cogspinner <Engineering Supplies> (Ironforge)',
+  recipe_source_alliance_medium = 'Sold by: Sovik <Engineering Supplies> (O)\nSold by: Gearcutter Cogspinner <Engineering Supplies> (I)',
+  recipe_source_alliance_long = 'Sold by: Sovik <Engineering Supplies> (Orgrimmar)\nSold by: Gearcutter Cogspinner <Engineering Supplies> (Ironforge)',
   recipe_source_horde_short = 'Schematic: Thorium Grenade',
-  recipe_source_horde_medium = 'Sold by: Sovik <Engineering Supplies> (O), Sold by: Gearcutter Cogspinner <Engineering Supplies> (I)',
-  recipe_source_horde_long = 'Sold by: Sovik <Engineering Supplies> (Orgrimmar), Sold by: Gearcutter Cogspinner <Engineering Supplies> (Ironforge)',
+  recipe_source_horde_medium = 'Sold by: Sovik <Engineering Supplies> (O)\nSold by: Gearcutter Cogspinner <Engineering Supplies> (I)',
+  recipe_source_horde_long = 'Sold by: Sovik <Engineering Supplies> (Orgrimmar)\nSold by: Gearcutter Cogspinner <Engineering Supplies> (Ironforge)',
   recipe_item_id_alliance = 16041,
   recipe_item_id_horde = 16041,
   recipe_item_id_bop = false,
@@ -10933,16 +11199,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {15993,3,3},
 },
 [19791] = {
   id = 19791,
   name = 'Thorium Widget',
   recipe_source_alliance_short = 'Schematic: Thorium Widget',
-  recipe_source_alliance_medium = 'Sold by: Sovik <Engineering Supplies> (O), Sold by: Gearcutter Cogspinner <Engineering Supplies> (I)',
-  recipe_source_alliance_long = 'Sold by: Sovik <Engineering Supplies> (Orgrimmar), Sold by: Gearcutter Cogspinner <Engineering Supplies> (Ironforge)',
+  recipe_source_alliance_medium = 'Sold by: Sovik <Engineering Supplies> (O)\nSold by: Gearcutter Cogspinner <Engineering Supplies> (I)',
+  recipe_source_alliance_long = 'Sold by: Sovik <Engineering Supplies> (Orgrimmar)\nSold by: Gearcutter Cogspinner <Engineering Supplies> (Ironforge)',
   recipe_source_horde_short = 'Schematic: Thorium Widget',
-  recipe_source_horde_medium = 'Sold by: Sovik <Engineering Supplies> (O), Sold by: Gearcutter Cogspinner <Engineering Supplies> (I)',
-  recipe_source_horde_long = 'Sold by: Sovik <Engineering Supplies> (Orgrimmar), Sold by: Gearcutter Cogspinner <Engineering Supplies> (Ironforge)',
+  recipe_source_horde_medium = 'Sold by: Sovik <Engineering Supplies> (O)\nSold by: Gearcutter Cogspinner <Engineering Supplies> (I)',
+  recipe_source_horde_long = 'Sold by: Sovik <Engineering Supplies> (Orgrimmar)\nSold by: Gearcutter Cogspinner <Engineering Supplies> (Ironforge)',
   recipe_item_id_alliance = 16042,
   recipe_item_id_horde = 16042,
   recipe_item_id_bop = false,
@@ -10975,6 +11242,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {15994,1,1},
 },
 [19792] = {
   id = 19792,
@@ -11029,6 +11297,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {15995,1,1},
 },
 [19793] = {
   id = 19793,
@@ -11079,6 +11348,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {15996,1,1},
 },
 [19794] = {
   id = 19794,
@@ -11129,6 +11399,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {15999,1,1},
 },
 [19795] = {
   id = 19795,
@@ -11167,6 +11438,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {16000,1,1},
 },
 [19796] = {
   id = 19796,
@@ -11225,6 +11497,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {16004,1,1},
 },
 [19799] = {
   id = 19799,
@@ -11271,6 +11544,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {16005,3,3},
 },
 [19800] = {
   id = 19800,
@@ -11309,6 +11583,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {15997,200,200},
 },
 [19814] = {
   id = 19814,
@@ -11367,6 +11642,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {16023,1,1},
 },
 [19815] = {
   id = 19815,
@@ -11409,6 +11685,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {16006,1,1},
 },
 [19819] = {
   id = 19819,
@@ -11459,6 +11736,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {16009,1,1},
 },
 [19825] = {
   id = 19825,
@@ -11505,6 +11783,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {16008,1,1},
 },
 [19830] = {
   id = 19830,
@@ -11563,6 +11842,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {16022,1,1},
 },
 [19831] = {
   id = 19831,
@@ -11605,6 +11885,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {16040,3,3},
 },
 [19833] = {
   id = 19833,
@@ -11663,16 +11944,17 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {16007,1,1},
 },
 [21940] = {
   id = 21940,
   name = 'SnowMaster 9000',
   recipe_source_alliance_short = 'Schematic: Snowmaster 9000',
   recipe_source_alliance_medium = 'Found in: ',
-  recipe_source_alliance_long = 'Contained in: Smokywood Pastures Special Gift, Contained in: Ticking Present, Contained in: Ticking Present',
+  recipe_source_alliance_long = 'Contained in: Smokywood Pastures Special Gift\nContained in: Ticking Present\nContained in: Ticking Present',
   recipe_source_horde_short = 'Schematic: Snowmaster 9000',
   recipe_source_horde_medium = 'Found in: ',
-  recipe_source_horde_long = 'Contained in: Smokywood Pastures Special Gift, Contained in: Ticking Present, Contained in: Ticking Present',
+  recipe_source_horde_long = 'Contained in: Smokywood Pastures Special Gift\nContained in: Ticking Present\nContained in: Ticking Present',
   recipe_item_id_alliance = 17720,
   recipe_item_id_horde = 17720,
   recipe_item_id_bop = false,
@@ -11713,6 +11995,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {17716,1,1},
 },
 [22704] = {
   id = 22704,
@@ -11767,6 +12050,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {18232,1,1},
 },
 [22793] = {
   id = 22793,
@@ -11821,6 +12105,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {18283,1,1},
 },
 [22795] = {
   id = 22795,
@@ -11875,6 +12160,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {18282,1,1},
 },
 [22797] = {
   id = 22797,
@@ -11929,6 +12215,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {18168,1,1},
 },
 [23066] = {
   id = 23066,
@@ -11963,16 +12250,17 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {9318,3,3},
 },
 [23067] = {
   id = 23067,
   name = 'Blue Firework',
   recipe_source_alliance_short = 'Schematic: Blue Firework',
-  recipe_source_alliance_medium = 'Sold by: Darian Singh <Fireworks Vendor> (SC), Sold by: Gearcutter Cogspinner <Engineering Supplies> (I)',
-  recipe_source_alliance_long = 'Sold by: Darian Singh <Fireworks Vendor> (Stormwind City), Sold by: Gearcutter Cogspinner <Engineering Supplies> (Ironforge)',
+  recipe_source_alliance_medium = 'Sold by: Darian Singh <Fireworks Vendor> (SC)\nSold by: Gearcutter Cogspinner <Engineering Supplies> (I)',
+  recipe_source_alliance_long = 'Sold by: Darian Singh <Fireworks Vendor> (Stormwind City)\nSold by: Gearcutter Cogspinner <Engineering Supplies> (Ironforge)',
   recipe_source_horde_short = 'Schematic: Blue Firework',
-  recipe_source_horde_medium = 'Sold by: Darian Singh <Fireworks Vendor> (SC), Sold by: Gearcutter Cogspinner <Engineering Supplies> (I)',
-  recipe_source_horde_long = 'Sold by: Darian Singh <Fireworks Vendor> (Stormwind City), Sold by: Gearcutter Cogspinner <Engineering Supplies> (Ironforge)',
+  recipe_source_horde_medium = 'Sold by: Darian Singh <Fireworks Vendor> (SC)\nSold by: Gearcutter Cogspinner <Engineering Supplies> (I)',
+  recipe_source_horde_long = 'Sold by: Darian Singh <Fireworks Vendor> (Stormwind City)\nSold by: Gearcutter Cogspinner <Engineering Supplies> (Ironforge)',
   recipe_item_id_alliance = 18649,
   recipe_item_id_horde = 18649,
   recipe_item_id_bop = false,
@@ -11997,16 +12285,17 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {9312,3,3},
 },
 [23068] = {
   id = 23068,
   name = 'Green Firework',
   recipe_source_alliance_short = 'Schematic: Green Firework',
-  recipe_source_alliance_medium = 'Sold by: Crazk Sparks <Fireworks Merchant> (SV), Sold by: Gagsprocket <Engineering Goods> (TB)',
-  recipe_source_alliance_long = 'Sold by: Crazk Sparks <Fireworks Merchant> (Stranglethorn Vale), Sold by: Gagsprocket <Engineering Goods> (The Barrens)',
+  recipe_source_alliance_medium = 'Sold by: Crazk Sparks <Fireworks Merchant> (SV)\nSold by: Gagsprocket <Engineering Goods> (TB)',
+  recipe_source_alliance_long = 'Sold by: Crazk Sparks <Fireworks Merchant> (Stranglethorn Vale)\nSold by: Gagsprocket <Engineering Goods> (The Barrens)',
   recipe_source_horde_short = 'Schematic: Green Firework',
-  recipe_source_horde_medium = 'Sold by: Crazk Sparks <Fireworks Merchant> (SV), Sold by: Gagsprocket <Engineering Goods> (TB)',
-  recipe_source_horde_long = 'Sold by: Crazk Sparks <Fireworks Merchant> (Stranglethorn Vale), Sold by: Gagsprocket <Engineering Goods> (The Barrens)',
+  recipe_source_horde_medium = 'Sold by: Crazk Sparks <Fireworks Merchant> (SV)\nSold by: Gagsprocket <Engineering Goods> (TB)',
+  recipe_source_horde_long = 'Sold by: Crazk Sparks <Fireworks Merchant> (Stranglethorn Vale)\nSold by: Gagsprocket <Engineering Goods> (The Barrens)',
   recipe_item_id_alliance = 18648,
   recipe_item_id_horde = 18648,
   recipe_item_id_bop = false,
@@ -12031,6 +12320,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {9313,3,3},
 },
 [23069] = {
   id = 23069,
@@ -12065,6 +12355,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {18588,1,1},
 },
 [23070] = {
   id = 23070,
@@ -12099,6 +12390,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {18641,2,2},
 },
 [23071] = {
   id = 23071,
@@ -12145,6 +12437,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {18631,1,1},
 },
 [23077] = {
   id = 23077,
@@ -12203,6 +12496,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {18634,1,1},
 },
 [23078] = {
   id = 23078,
@@ -12249,6 +12543,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {18587,1,1},
 },
 [23079] = {
   id = 23079,
@@ -12287,6 +12582,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {18637,1,1},
 },
 [23080] = {
   id = 23080,
@@ -12329,6 +12625,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {18594,1,1},
 },
 [23081] = {
   id = 23081,
@@ -12383,6 +12680,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {18638,1,1},
 },
 [23082] = {
   id = 23082,
@@ -12441,6 +12739,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {18639,1,1},
 },
 [23096] = {
   id = 23096,
@@ -12495,6 +12794,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {18645,1,1},
 },
 [23129] = {
   id = 23129,
@@ -12545,6 +12845,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {18660,1,1},
 },
 [23486] = {
   id = 23486,
@@ -12599,6 +12900,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {18984,1,1},
 },
 [23489] = {
   id = 23489,
@@ -12657,6 +12959,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {18986,1,1},
 },
 [23507] = {
   id = 23507,
@@ -12695,6 +12998,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {19026,4,4},
 },
 [24356] = {
   id = 24356,
@@ -12749,6 +13053,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {19999,1,1},
 },
 [24357] = {
   id = 24357,
@@ -12803,6 +13108,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {19998,1,1},
 },
 [26011] = {
   id = 26011,
@@ -12857,6 +13163,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {21277,1,1},
 },
 [26416] = {
   id = 26416,
@@ -12891,6 +13198,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {21558,3,3},
 },
 [26417] = {
   id = 26417,
@@ -12925,6 +13233,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {21559,3,3},
 },
 [26418] = {
   id = 26418,
@@ -12959,6 +13268,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {21557,3,3},
 },
 [26420] = {
   id = 26420,
@@ -12993,6 +13303,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {21589,3,3},
 },
 [26421] = {
   id = 26421,
@@ -13027,6 +13338,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {21590,3,3},
 },
 [26422] = {
   id = 26422,
@@ -13061,6 +13373,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {21592,3,3},
 },
 [26423] = {
   id = 26423,
@@ -13095,6 +13408,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {21571,3,3},
 },
 [26424] = {
   id = 26424,
@@ -13129,6 +13443,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {21574,3,3},
 },
 [26425] = {
   id = 26425,
@@ -13163,6 +13478,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {21576,3,3},
 },
 [26426] = {
   id = 26426,
@@ -13197,6 +13513,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {21714,3,3},
 },
 [26427] = {
   id = 26427,
@@ -13231,6 +13548,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {21716,3,3},
 },
 [26428] = {
   id = 26428,
@@ -13265,6 +13583,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {21718,3,3},
 },
 [26442] = {
   id = 26442,
@@ -13307,6 +13626,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {21569,1,1},
 },
 [26443] = {
   id = 26443,
@@ -13349,6 +13669,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {21570,1,1},
 },
 [28327] = {
   id = 28327,
@@ -13395,6 +13716,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {22728,1,1},
 },
 [424641] = {
   id = 424641,
@@ -13441,6 +13763,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {210147,1,1},
 },
 [431362] = {
   id = 431362,
@@ -13483,6 +13806,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {211427,1,1},
 },
 [435956] = {
   id = 435956,
@@ -13521,6 +13845,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {213383,1,1},
 },
 [435958] = {
   id = 435958,
@@ -13575,6 +13900,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {213390,1,1},
 },
 [435960] = {
   id = 435960,
@@ -13621,6 +13947,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {215115,1,1},
 },
 [435964] = {
   id = 435964,
@@ -13663,6 +13990,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {215127,2,5},
 },
 [435966] = {
   id = 435966,
@@ -13705,6 +14033,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {215168,2,5},
 },
 [446236] = {
   id = 446236,
@@ -13755,6 +14084,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {221025,1,1},
 },
 [446237] = {
   id = 446237,
@@ -13801,6 +14131,7 @@ ProfessionatorDB.engineering = {
   tools = {
   },
 
+  creates_item = {221026,1,1},
 },
 [446238] = {
   id = 446238,
@@ -13851,6 +14182,7 @@ ProfessionatorDB.engineering = {
     },
   },
 
+  creates_item = {221027,1,1},
 },
 }
 

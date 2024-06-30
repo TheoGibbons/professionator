@@ -26,6 +26,10 @@ function Professionator.CalculationEngine:Calculate()
     -- Loop from startLevel to endLevel and populate self.result with the best recipe at each level
     for level = self.startLevel, self.endLevel - 1 do
 
+        Professionator.Utils.dd("")
+        Professionator.Utils.dd("-----------------------------------")
+        Professionator.Utils.dd("")
+
         local bestScoreForThisLevel = math.huge
 
         -- for every possible recipe
@@ -38,20 +42,23 @@ function Professionator.CalculationEngine:Calculate()
                 if self:recipeIsCandidate(recipe, level) then
 
                     -- Save the current recipe at this level
-                    local saveRecipeAtLevel = result:getRecipeAtLevel(level)
-                    local saveInventory = result:getInventory(level - 1):Clone()
+                    --local saveRecipeAtLevel = result:saveRecipeAtLevel(level)
+                    local resultBackup = result:Clone()
 
                     -- Try place this recipe here and see what the overall score is
-                    result:placeRecipeAtLevel(recipe, level)
-                    local score = result:getPreliminaryScore()
+                    local score = result:placeRecipeAtLevel(recipe, level)
+                    Professionator.Utils.dd("score: " .. score .. " | level: " .. level .. " | spellId: " .. spellId .. " | recipe: " .. recipe:getSpellId() .. " | bestScoreForThisLevel: " .. bestScoreForThisLevel)
 
                     if score < bestScoreForThisLevel then
                         -- If this recipe is better than the current best recipe at this level
                         bestScoreForThisLevel = score
                     else
                         -- If not, revert the change
-                        if saveRecipeAtLevel ~= nil then
-                            result:setRecipeAtLevel(level, saveRecipeAtLevel)
+                        --if saveRecipeAtLevel ~= nil then
+                        --    result:restoreRecipeAtLevel(level, saveRecipeAtLevel)
+                        --end
+                        if resultBackup ~= nil then
+                            result = resultBackup
                         end
                     end
 

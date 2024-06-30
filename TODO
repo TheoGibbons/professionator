@@ -1,0 +1,13 @@
+ 1. Right click to never use a recipe (Ill use a command like `/professionator reset` to clear this)
+ 2. Cache calculation result so it doesn't need to be recalculated every time the window opens
+ 3. Add a summary of all reagents the character needs to collect to craft all the recipes in the profession
+    Have a section to show all reagents that the character has in their bags/bank that will be used
+ 4. Add all professions to the database
+ 5. Calculation engine needs to be updated to handle tools (like blacksmith hammer, etc)
+ 6. Calculation engine needs to be updated to check if adding reagents at previous steps will be cheaper to craft the recipe
+ 7. Calculation engine needs to be updated to use the reagents in the bags/bank of the character
+    IN PROGRESS
+
+ Test
+ 1. Test with all professions
+ 2. Different versions of the game (SOD and classic are the main targets)

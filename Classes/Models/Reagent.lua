@@ -17,3 +17,8 @@ end
 function Professionator.Reagent:getCraftingRecipe()
     return ProfessionatorDB[self.professionName][self.id]
 end
+
+function Professionator.Reagent:getId()
+    return self.id
+end
+

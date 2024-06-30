@@ -10,14 +10,16 @@ ProfessionatorUnitTesting = {
 
     RunTests = function()
 
-        --ProfessionatorUnitTesting.test_inventory_item_quantity()
-        --ProfessionatorUnitTesting.test_basic_functionality()
-        --ProfessionatorUnitTesting.test_use_cheapest_recipe()
-        --ProfessionatorUnitTesting.test_high_training_cost()
-        --ProfessionatorUnitTesting.test_cast_time_penalty()
-        --ProfessionatorUnitTesting.test_known_recipe()
-        --ProfessionatorUnitTesting.test_prioritize_recipe_with_inventory_reagents()
-        ProfessionatorUnitTesting.test_prioritize_recipe_with_inventory_reagents_2()
+        ProfessionatorUnitTesting.test_inventory_item_quantity()
+        ProfessionatorUnitTesting.test_basic_functionality()
+        ProfessionatorUnitTesting.test_use_cheapest_recipe()
+        ProfessionatorUnitTesting.test_high_training_cost()
+        ProfessionatorUnitTesting.test_cast_time_penalty()
+        ProfessionatorUnitTesting.test_known_recipe()
+        ProfessionatorUnitTesting.test_prioritize_recipe_with_inventory_reagents()
+        --ProfessionatorUnitTesting.test_prioritize_recipe_with_inventory_reagents_2()
+        ProfessionatorUnitTesting.test_prioritize_recipe_with_inventory_reagents_3()
+        --ProfessionatorUnitTesting.test_prioritize_recipe_with_inventory_reagents_4()
 
     end,
 

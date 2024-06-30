@@ -28,7 +28,13 @@ end
 
 function Professionator.Recipe:getAverageCostToLevel(level, inventory)
     local casts = self:getAverageCastsToLevel(level)
-    return self:getCostToCraft(casts, inventory)
+    local cost = self:getCostToCraft(casts, inventory)
+
+    if cost == nil then
+        return math.huge
+    end
+
+    return cost
 end
 
 function Professionator.Recipe:getSpellId()
@@ -128,7 +134,10 @@ function Professionator.Recipe:getReagents()
     local reagents = {}
 
     for reagentId, reagent in pairs(self.data.reagents) do
-        table.insert(reagents, Professionator.Reagent:Create(self.professionName, reagentId, reagent))
+        table.insert(reagents, {
+            recipe = Professionator.Reagent:Create(self.professionName, reagentId, reagent),
+            quantity = reagent.quantity,
+        });
     end
 
     return reagents
@@ -159,4 +168,17 @@ function Professionator.Recipe:getSourceString(inventory)
     end
 
     return ret
+end
+
+function Professionator.Recipe:getCreatesItem()
+
+    if self.data.creates_item ~= nil then
+        return {
+            id = self.data.creates_item[1],
+            min = self.data.creates_item[2],
+            max = self.data.creates_item[3],
+        }
+    end
+
+    return nil
 end

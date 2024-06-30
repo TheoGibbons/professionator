@@ -25,10 +25,11 @@ Professionator.Pricer = {
     end,
 
     -- Get the cost of a recipe from the auction house or vendor
+    -- NOTE Quantity is not necessarily an integer, because averages are used
     getRecipeCraftCost = function(professionName, spellId, inventory, quantity)
 
-        if not professionName or not spellId or not inventory then
-            Professionator.Utils.debugPrint("ERROR: Invalid input parameters")
+        if not professionName or not spellId then
+            Professionator.Utils.debugPrint({ "ERROR: Invalid input parameters", professionName, spellId })
             return nil
         end
 
@@ -54,20 +55,34 @@ Professionator.Pricer = {
 
             local unitPrice = Professionator.Pricer.getItemCost(reagentId)
 
-            local inventoryQuantity = inventory:getItemQuantity(reagentId)
-            print("reagentId:" .. reagentId .. " Inventory Quantity:" .. inventoryQuantity)
+            local useThisManyFromInventory = 0
 
-            local useThisManyFromInventory = math.min(numberOfReagentsNeeded, inventoryQuantity)
+            if inventory ~= nil then
+                local inventoryQuantity = inventory:getItemQuantity(reagentId)
+                --Professionator.Utils.dd("reagentId:" .. reagentId .. " Inventory Quantity:" .. inventoryQuantity)
 
-            inventory:removeItem(reagentId, useThisManyFromInventory)
+                Professionator.Utils.dd({ "inventory before:" , inventory.items })
+
+                useThisManyFromInventory = math.min(numberOfReagentsNeeded, inventoryQuantity)
+
+                Professionator.Utils.dd("useThisManyFromInventory: " .. useThisManyFromInventory .. " | reagentId: " .. reagentId .. " | spellId: " .. spellId .. " | quantity: " .. quantity .. " | reagent['quantity']: " .. reagent['quantity'])
+
+                if useThisManyFromInventory > 0 then
+                    local removed = inventory:removeItem(reagentId, useThisManyFromInventory)
+                    Professionator.Utils.dd("removed: " .. removed)
+                end
+                Professionator.Utils.dd({ "inventory after:" , inventory.items })
+            end
 
             local acquireThisManyFromAuctionHouse = numberOfReagentsNeeded - useThisManyFromInventory
 
             if unitPrice ~= nil then
                 cost = cost + (acquireThisManyFromAuctionHouse * unitPrice)
             end
+            Professionator.Utils.dd("acquireThisManyFromAuctionHouse: " .. acquireThisManyFromAuctionHouse .. " | reagentId: " .. reagentId .. " | spellId: ")
 
         end
+        Professionator.Utils.dd("cost: " .. cost)
 
         return cost
 

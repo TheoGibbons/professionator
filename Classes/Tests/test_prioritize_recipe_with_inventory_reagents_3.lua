@@ -29,14 +29,63 @@ local setup = function ()
                         },
                     },
                 }),
+                [202] = ProfessionatorUnitTesting.mergeStandardRecipe({
+                    id = 202,
+                    name = "Test Engineering 3",
+                    learned_at = 1,
+                    grey = 50,
+                    yellow = 1,
+                    reagents = {
+                        [11111] = {
+                            name = 'Copper Bar',
+                            quantity = 10,
+                        },
+                    },
+                }),
+                [203] = ProfessionatorUnitTesting.mergeStandardRecipe({
+                    id = 203,
+                    name = "Test Engineering 4",
+                    learned_at = 1,
+                    grey = 50,
+                    yellow = 1,
+                    reagents = {
+                        [11111] = {
+                            name = 'Copper Bar',
+                            quantity = 1,
+                        },
+                        [22222] = {
+                            name = 'Tin Bar',
+                            quantity = 2,
+                        },
+                    },
+                }),
+                [204] = ProfessionatorUnitTesting.mergeStandardRecipe({
+                    id = 204,
+                    name = "Test Engineering 5",
+                    learned_at = 1,
+                    grey = 50,
+                    yellow = 1,
+                    reagents = {
+                        [11111] = {
+                            name = 'Copper Bar',
+                            quantity = 1,
+                        },
+                        [22222] = {
+                            name = 'Tin Bar',
+                            quantity = 1,
+                        },
+                    },
+                }),
             }
         },
         prices = {
-            [11111] = 100,
-            [22222] = 2,
+            [11111] = 15,
+            [22222] = 25,
         },
         playersInventory = Professionator.PlayersInventory:Create({
             inventory = {
+                [100] = 3,
+                [101] = 4,
             },
             bank = {
                 [11111] = 5,
@@ -50,9 +99,9 @@ local tearDown = function ()
     ProfessionatorUnitTesting.setupEnvironment(savedState)
 end
 
-ProfessionatorUnitTesting.test_prioritize_recipe_with_inventory_reagents = function()
+ProfessionatorUnitTesting.test_prioritize_recipe_with_inventory_reagents_3 = function()
 
-    print("Running prioritize recipe with inventory reagents test...")
+    print("Running prioritize recipe with inventory reagents test 3...")
 
     setup()
 

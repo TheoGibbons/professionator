@@ -55,6 +55,8 @@ CLasses\Tests\test_use_cheapest_recipe.lua
 CLasses\Tests\test_high_training_cost.lua
 CLasses\Tests\test_cast_time_penalty.lua
 CLasses\Tests\test_known_recipe.lua
+CLasses\Tests\test_prioritize_recipe_with_inventory_reagents_4.lua
+CLasses\Tests\test_prioritize_recipe_with_inventory_reagents_3.lua
 CLasses\Tests\test_prioritize_recipe_with_inventory_reagents_2.lua
 CLasses\Tests\test_prioritize_recipe_with_inventory_reagents.lua
 CLasses\Tests\test_inventory_item_quantity.lua
